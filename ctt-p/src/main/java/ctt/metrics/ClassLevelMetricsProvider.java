@@ -789,7 +789,7 @@ public class ClassLevelMetricsProvider {
       oracleLinks.put(testClassName, testedClassesForTestClass);
     }
 
-    if (oracleLinks.isEmpty()) {
+    if (oracleLinks.isEmpty() && config.isAutoExtractDeveloperLinks()) {
       oracleLinks = extractDeveloperLinks(project);
     }
 

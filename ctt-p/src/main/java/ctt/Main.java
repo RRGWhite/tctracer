@@ -43,10 +43,12 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
     ArrayList<String> projects = new ArrayList<>();
-    projects.add("apache-ant");
-    projects.add("commons-io");
-    projects.add("commons-lang");
-    projects.add("jfreechart");
+    //projects.add("apache-ant");
+    //projects.add("commons-io");
+    //projects.add("commons-lang");
+    //projects.add("jfreechart");
+    projects.add("stanford-corenlp");
+    projects.add("weka");
 
     singleRun(projects);
     //experimentRun(projects);
@@ -296,6 +298,11 @@ public class Main {
           TechniqueMetricsProvider.computeTechniqueMetrics(
               computedMetrics.getAugmentedClassLevelMetrics().getMetricTable()));
     }
+
+    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config,
+        computedMetrics.getFunctionLevelMetrics().getCandidateTable());
+    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config,
+        computedMetrics.getAugmentedFunctionLevelMetrics().getCandidateTable());
   }
 
   private static ArrayList<String> getTestClassesFromTestCollection(TestCollection testCollection) {

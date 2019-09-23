@@ -24,16 +24,16 @@ public abstract class ResultsWriter {
 
   public static void writeOutMethodLevelTraceabilityScores(
       Configuration config, MethodScoresTensor methodScoresTensor, Main.ScoreType scoreType) {
-    String csvHeader = "test-class,tested-class,score\n";
+    String csvHeader = "test-class;tested-class;score\n";
     for (Technique technique : Utilities.getTechniques(config, Configuration.Level.CLASS, scoreType)) {
       String fileName = "results/test-to-function/" + Utilities.programStartTimeStamp + "/" +
-          Utilities.programStartTimeStamp + "-test-to-function-scores-" + technique + ".csv";
+          Utilities.programStartTimeStamp + "-test-to-function-scores-" + technique + ".tct";
       Utilities.writeStringToFile(csvHeader, fileName, false);
 
       for (String testFqn : methodScoresTensor.getTestsFqns()) {
         for (String functionFqn : methodScoresTensor.getFunctionFqns()) {
-          String rowString = testFqn + "," + functionFqn +
-              "," + methodScoresTensor.getSingleScoreForTestFunctionPair(testFqn, functionFqn,
+          String rowString = testFqn + ";" + functionFqn +
+              ";" + methodScoresTensor.getSingleScoreForTestFunctionPair(testFqn, functionFqn,
               technique) + "\n";
           Utilities.writeStringToFile(rowString, fileName, true);
         }
@@ -61,6 +61,31 @@ public abstract class ResultsWriter {
 
   public static void writeOutMethodLevelTraceabilityPredictions(Configuration config,
       Table<String, Technique, SortedSet<MethodValuePair>> candidateTable) {
+    String csvHeader = "test-class;tested-class;score\n";
+    for (Entry<Technique, Map<String, SortedSet<MethodValuePair>>> col :
+        candidateTable.columnMap().entrySet()) {
+      Technique technique = col.getKey();
+      String fileName = "results/test-to-function/" + Utilities.programStartTimeStamp + "/" +
+          Utilities.programStartTimeStamp + "-" + config.getProjects().get(0) + "-test-to" +
+          "-function-predictions-" + technique + ".tct";
+      Utilities.writeStringToFile(csvHeader, fileName, false);
+
+      for (Entry<String, SortedSet<MethodValuePair>> cell : col.getValue().entrySet()) {
+        for (MethodValuePair functionScorePair : cell.getValue()) {
+          if (functionScorePair != null
+              && functionScorePair.getValue() >= config.getThresholdData().get(technique)) {
+            String rowString = cell.getKey() + ";" + functionScorePair.getMethod() + ";" +
+                    functionScorePair.getValue() + "\n";
+            Utilities.writeStringToFile(rowString, fileName, true);
+          }
+        }
+      }
+    }
+  }
+
+  /*public static void writeOutMethodLevelTraceabilityPredictionsForTechnique(Configuration config,
+                                                                            Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
+                                                                            Technique technique) {
     String csvHeader = "test-class,tested-class\n";
     for (Entry<Technique, Map<String, SortedSet<MethodValuePair>>> col :
         candidateTable.columnMap().entrySet()) {
@@ -79,7 +104,7 @@ public abstract class ResultsWriter {
         }
       }
     }
-  }
+  }*/
 
   public static void writeOutClassLevelTraceabilityPredictions(
       Table<Technique, String, List<String>> traceabilityPredictions) {

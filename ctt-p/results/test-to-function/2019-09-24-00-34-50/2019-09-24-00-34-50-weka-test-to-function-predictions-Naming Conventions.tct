@@ -1,0 +1,13 @@
+test-class;tested-class;score
+weka.classifiers.AbstractClassifierTest.testDatasetIntegrity();weka.classifiers.CheckClassifier.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.classifiers.AbstractClassifierTest.testInstanceWeights();weka.classifiers.CheckClassifier.instanceWeights(boolean, boolean, boolean, boolean, boolean, boolean, int);1.0
+weka.clusterers.AbstractClustererTest.testDatasetIntegrity();weka.clusterers.CheckClusterer.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.clusterers.AbstractClustererTest.testInstanceWeights();weka.clusterers.CheckClusterer.instanceWeights(boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.classifiers.AbstractClassifierTest.testUpdatingEquality();weka.classifiers.CheckClassifier.updatingEquality(boolean, boolean, boolean, boolean, boolean, boolean, int);1.0
+weka.attributeSelection.AbstractAttributeSelectionTest.testDatasetIntegrity();weka.attributeSelection.CheckAttributeSelection.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.datagenerators.AbstractDataGeneratorTest.testMakeData();weka.datagenerators.DataGenerator.makeData(weka.datagenerators.DataGenerator, java.lang.String[]);1.0
+weka.classifiers.functions.supportVector.AbstractKernelTest.testDatasetIntegrity();weka.classifiers.functions.supportVector.CheckKernel.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.associations.AbstractAssociatorTest.testDatasetIntegrity();weka.associations.CheckAssociator.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.clusterers.AbstractClustererTest.testUpdatingEquality();weka.clusterers.CheckClusterer.updatingEquality(boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.core.TrieTest.testClone();weka.core.Trie.clone();1.0
+weka.core.UtilsTest.testVariance();weka.core.Utils.variance(double[]);1.0

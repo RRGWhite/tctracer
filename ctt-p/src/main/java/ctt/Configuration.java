@@ -34,6 +34,9 @@ public class Configuration {
           .put("argouml", corpusPath + "/argouml-v-30-1")
           .put("apache-ant", corpusPath + "/apache-ant")
           .put("dependency-finder", corpusPath + "/dependency-finder")
+          .put("stanford-corenlp", "F:/git/func2oracle/data-generator/datastore/corpus" +
+              "/stanford-corenlp")
+          .put("weka", "F:/git/func2oracle/data-generator/datastore/corpus/weka/weka")
           .build()
       );
 
@@ -302,6 +305,7 @@ public class Configuration {
   private double percentileThreshold = 0.90;
   private double commonThresholdValue = -1.0; // Set if all threshold values are the same (except NS_CONTAINS)
   private boolean createClassLevelGroundTruthSample = false;
+  private boolean autoExtractDeveloperLinks = false;
 
   // List of tests to inspect (print to standard out)
   private String[] testTrackList = {};
@@ -510,6 +514,10 @@ public class Configuration {
 
   public void setTestClassesForGroundTruth(ArrayList<String> testClassesForGroundTruth) {
     this.testClassesForGroundTruth = testClassesForGroundTruth;
+  }
+
+  public boolean isAutoExtractDeveloperLinks() {
+    return autoExtractDeveloperLinks;
   }
 
   public static class Builder {

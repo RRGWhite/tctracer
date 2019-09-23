@@ -1,0 +1,43 @@
+test-class;tested-class;score
+weka.classifiers.AbstractClassifierTest.testDatasetIntegrity();weka.classifiers.CheckClassifier.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.classifiers.AbstractClassifierTest.testInstanceWeights();weka.classifiers.CheckClassifier.instanceWeights(boolean, boolean, boolean, boolean, boolean, boolean, int);1.0
+weka.clusterers.AbstractClustererTest.testDatasetIntegrity();weka.clusterers.CheckClusterer.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.clusterers.AbstractClustererTest.testInstanceWeights();weka.clusterers.CheckClusterer.instanceWeights(boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.classifiers.AbstractClassifierTest.testUpdatingEquality();weka.classifiers.CheckClassifier.updatingEquality(boolean, boolean, boolean, boolean, boolean, boolean, int);1.0
+weka.core.DictionaryBuilderTest.testVectorizeInstanceWordCountsNoClass();weka.core.DictionaryBuilder.vectorizeInstance(weka.core.Instance);1.0
+weka.core.DictionaryBuilderTest.testVectorizeInstanceWordCountsNoClass();weka.core.Instances.instance(int);1.0
+weka.core.DictionaryBuilderTest.testVectorizeInstanceWordPresenceNoClass();weka.core.DictionaryBuilder.vectorizeInstance(weka.core.Instance);1.0
+weka.core.DictionaryBuilderTest.testVectorizeInstanceWordPresenceNoClass();weka.core.Instances.instance(int);1.0
+weka.core.DictionaryBuilderTest.testFinalizeDictionaryNoClass();weka.core.DictionaryBuilder.finalizeDictionary();1.0
+weka.core.DictionaryBuilderTest.testAggregateDictionaries();weka.core.DictionaryBuilder.aggregate(weka.core.DictionaryBuilder);1.0
+weka.core.DictionaryBuilderTest.testSaveLoadDictionaryPlainTextNormalize();weka.core.DictionaryBuilder.loadDictionary(java.io.Reader);1.0
+weka.core.DictionaryBuilderTest.testFinalizeDictionaryNoClassExtraAtts();weka.core.DictionaryBuilder.finalizeDictionary();1.0
+weka.core.DictionaryBuilderTest.testSaveLoadDictionaryPlainTextNoNormalize();weka.core.DictionaryBuilder.loadDictionary(java.io.Reader);1.0
+weka.attributeSelection.AbstractAttributeSelectionTest.testDatasetIntegrity();weka.attributeSelection.CheckAttributeSelection.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.core.TrieTest.testRetainAllPartial();weka.core.Trie.retainAll(java.util.Collection<?>);1.0
+weka.core.TrieTest.testRemoveAllPartial();weka.core.Trie.removeAll(java.util.Collection<?>);1.0
+weka.core.TrieTest.testRemoveAllFull();weka.core.Trie.removeAll(java.util.Collection<?>);1.0
+weka.datagenerators.AbstractDataGeneratorTest.testMakeData();weka.datagenerators.DataGenerator.makeData(weka.datagenerators.DataGenerator, java.lang.String[]);1.0
+weka.classifiers.functions.supportVector.AbstractKernelTest.testDatasetIntegrity();weka.classifiers.functions.supportVector.CheckKernel.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.associations.AbstractAssociatorTest.testDatasetIntegrity();weka.associations.CheckAssociator.datasetIntegrity(boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, boolean);1.0
+weka.clusterers.AbstractClustererTest.testUpdatingEquality();weka.clusterers.CheckClusterer.updatingEquality(boolean, boolean, boolean, boolean, boolean, boolean);1.0
+weka.filters.supervised.instance.SpreadSubsampleTest.testAdjustWeights();weka.core.AbstractInstance.weight();1.0
+weka.filters.unsupervised.attribute.MathExpressionTest.testEquality();weka.core.Utils.eq(double, double);1.0
+weka.filters.unsupervised.attribute.AddExpressionTest.testAddNamed();weka.core.Attribute.name();1.0
+weka.filters.unsupervised.attribute.MergeTwoValuesTest.testFirstValueIndex();weka.core.DenseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.MergeTwoValuesTest.testFirstValueIndex();weka.core.SparseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.MergeTwoValuesTest.testSecondValueIndex();weka.core.DenseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.MergeTwoValuesTest.testSecondValueIndex();weka.core.SparseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.InterquartileRangeTest.testPerAttribute();weka.core.Instances.attribute(int);1.0
+weka.filters.unsupervised.attribute.SwapValuesTest.testFirstValueIndex();weka.core.DenseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.SwapValuesTest.testFirstValueIndex();weka.core.SparseInstance.value(int);1.0
+weka.filters.AbstractTimeSeriesFilterTest.testInstanceRange_X(int);weka.core.Instances.instance(int);1.0
+weka.filters.unsupervised.attribute.NumericToBinaryTest.testSpecificIndex();weka.core.Attribute.index();1.0
+weka.filters.unsupervised.attribute.MakeIndicatorTest.testMultiValueIndication();weka.core.DenseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.MakeIndicatorTest.testMultiValueIndication();weka.core.SparseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.SwapValuesTest.testSecondValueIndex();weka.core.DenseInstance.value(int);1.0
+weka.filters.unsupervised.attribute.SwapValuesTest.testSecondValueIndex();weka.core.SparseInstance.value(int);1.0
+weka.core.TrieTest.testRetainAllFull();weka.core.Trie.retainAll(java.util.Collection<?>);1.0
+weka.core.InstancesTest.testVarianceBehavior();weka.core.Instances.variance(int);1.0
+weka.core.TrieTest.testClone();weka.core.Trie.clone();1.0
+weka.core.UtilsTest.testVariance();weka.core.Utils.variance(double[]);1.0
