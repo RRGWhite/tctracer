@@ -37,6 +37,7 @@ public class Configuration {
           .put("stanford-corenlp", "F:/git/func2oracle/data-generator/datastore/corpus" +
               "/stanford-corenlp")
           .put("weka", "F:/git/func2oracle/data-generator/datastore/corpus/weka/weka")
+          .put("apache-opennlp", "F:/git/func2oracle/data-generator/datastore/corpus/apache-opennlp")
           .build()
       );
 

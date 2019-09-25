@@ -82,7 +82,16 @@ public class CTTSimpleLogParser {
 
           line = br.readLine(); // read the next line containing the test class and name
           String funcname = line.trim();
-          activeHS.cls = funcname.substring(0, funcname.lastIndexOf('.'));
+          if (funcname.equals(">>> TEST START <<< |")) {
+            continue;
+          }
+
+          if (funcname.lastIndexOf('.') > 0) {
+            activeHS.cls = funcname.substring(0, funcname.lastIndexOf('.'));
+          } else {
+            activeHS.cls = "null";
+          }
+
           activeHS.test = funcname.substring(funcname.lastIndexOf('.') + 1);
           callDepthOnTestEntry = getCallDepth(line);
         }

@@ -47,8 +47,9 @@ public class Main {
     //projects.add("commons-io");
     //projects.add("commons-lang");
     //projects.add("jfreechart");
-    projects.add("stanford-corenlp");
-    projects.add("weka");
+    //projects.add("stanford-corenlp");
+    //projects.add("weka");
+    projects.add("apache-opennlp");
 
     singleRun(projects);
     //experimentRun(projects);

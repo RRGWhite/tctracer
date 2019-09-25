@@ -305,7 +305,8 @@ public class FunctionLevelMetricsProvider {
       String test = entry.getKey();
       int idx_test_openParen = test.lastIndexOf('(');
       if (idx_test_openParen == -1) {
-        throw new Error("Invalid test name: " + test);
+        System.out.println("Invalid test name: " + test);
+        continue;
       }
       String testName = test
           .substring(test.lastIndexOf('.', idx_test_openParen) + 1, idx_test_openParen)
