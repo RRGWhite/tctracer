@@ -3708,31 +3708,3 @@ opennlp.tools.namefind.BilouCodecTest.testCompatibilityStartContinue();opennlp.t
 opennlp.tools.ml.ArrayMathTest.testArgmaxException2();opennlp.tools.ml.ArrayMath.argmax(double[]);1.0
 opennlp.tools.ml.ArrayMathTest.testArgmaxException1();opennlp.tools.ml.ArrayMath.argmax(double[]);1.0
 opennlp.tools.ml.ArrayMathTest.testArgmax();opennlp.tools.ml.ArrayMath.argmax(double[]);1.0
-null.>>> TEST START <<< |;opennlp.tools.dictionary.Dictionary.StringListWrapper.<init>(opennlp.tools.dictionary.Dictionary, opennlp.tools.util.StringList);1.0
-null.>>> TEST START <<< |;opennlp.tools.dictionary.Dictionary.StringListWrapper.equals(java.lang.Object);1.0
-null.>>> TEST START <<< |;opennlp.tools.dictionary.Dictionary.StringListWrapper.getStringList();1.0
-null.>>> TEST START <<< |;opennlp.tools.dictionary.Dictionary.StringListWrapper.hashCode();1.0
-null.>>> TEST START <<< |;opennlp.tools.dictionary.Dictionary.contains(opennlp.tools.util.StringList);1.0
-null.>>> TEST START <<< |;opennlp.tools.postag.DefaultPOSContextGenerator.getContext(int, java.lang.Object[], java.lang.String[]);1.0
-null.>>> TEST START <<< |;opennlp.tools.postag.DefaultPOSContextGenerator.getPrefixes(java.lang.String);1.0
-null.>>> TEST START <<< |;opennlp.tools.postag.DefaultPOSContextGenerator.getSuffixes(java.lang.String);1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringList.<init>(java.lang.String);1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringList.compareToIgnoreCase(opennlp.tools.util.StringList);1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringList.getToken(int);1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringList.size();1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringList.toString();1.0
-null.>>> TEST START <<< |;opennlp.tools.util.StringUtil.toLowerCase(java.lang.CharSequence);1.0
-null.>>> TEST END <<<;opennlp.tools.dictionary.Dictionary.StringListWrapper.<init>(opennlp.tools.dictionary.Dictionary, opennlp.tools.util.StringList);1.0
-null.>>> TEST END <<<;opennlp.tools.dictionary.Dictionary.StringListWrapper.equals(java.lang.Object);1.0
-null.>>> TEST END <<<;opennlp.tools.dictionary.Dictionary.StringListWrapper.getStringList();1.0
-null.>>> TEST END <<<;opennlp.tools.dictionary.Dictionary.StringListWrapper.hashCode();1.0
-null.>>> TEST END <<<;opennlp.tools.dictionary.Dictionary.contains(opennlp.tools.util.StringList);1.0
-null.>>> TEST END <<<;opennlp.tools.postag.DefaultPOSContextGenerator.getContext(int, java.lang.Object[], java.lang.String[]);1.0
-null.>>> TEST END <<<;opennlp.tools.postag.DefaultPOSContextGenerator.getPrefixes(java.lang.String);1.0
-null.>>> TEST END <<<;opennlp.tools.postag.DefaultPOSContextGenerator.getSuffixes(java.lang.String);1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringList.<init>(java.lang.String);1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringList.compareToIgnoreCase(opennlp.tools.util.StringList);1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringList.getToken(int);1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringList.size();1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringList.toString();1.0
-null.>>> TEST END <<<;opennlp.tools.util.StringUtil.toLowerCase(java.lang.CharSequence);1.0
