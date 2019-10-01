@@ -39,6 +39,8 @@ public class Configuration {
           .put("weka", "F:/git/func2oracle/data-generator/datastore/corpus/weka/weka")
           .put("apache-opennlp", "F:/git/func2oracle/data-generator/datastore/corpus/apache-opennlp")
           .put("ejml", "F:/git/func2oracle/data-generator/datastore/corpus/ejml")
+          .put("open-liberty", "F:/git/func2oracle/data-generator/datastore/corpus/open-liberty" +
+              "/dev")
           .build()
       );
 

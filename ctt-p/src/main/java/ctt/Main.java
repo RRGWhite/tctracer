@@ -13,6 +13,8 @@ import ctt.types.EvaluationMetrics;
 import ctt.types.HitSpectrum;
 import ctt.types.Technique;
 import ctt.types.TestCollection;
+import org.apache.bcel.verifier.structurals.ExceptionHandler;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.checkerframework.checker.units.qual.A;
@@ -20,8 +22,10 @@ import org.checkerframework.checker.units.qual.A;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -50,8 +54,10 @@ public class Main {
     //projects.add("stanford-corenlp");
     //projects.add("weka");
     //projects.add("apache-opennlp");
-    projects.add("ejml");
+    //projects.add("ejml");
+    projects.add("open-liberty");
 
+    //gatherLogs(projects, false);
     singleRun(projects);
     //experimentRun(projects);
   }
@@ -191,6 +197,38 @@ public class Main {
     experiment.printSummary();
     logger.info("Test set size: {}", testSet.size());
     logger.info("Test set: {}", testSet.toString());
+  }
+
+  private static void gatherLogs(ArrayList<String> projects, boolean deleteCopiedFiles) {
+    for (String project : projects) {
+      Configuration config = new Configuration.Builder()
+          .setProjects(Arrays.asList(project)).build();
+      String cttLogDestDir = config.getProjectBaseDirs().get(project) + "/ctt_logs";
+
+      Random random = new Random();
+      String[] extensions = { "log" };
+      List<File> listOfFiles = (List<File>) FileUtils.listFiles(
+          new File(config.getProjectBaseDirs().get(project)), extensions, true);
+      for (File file : listOfFiles) {
+        if (file.getName().contains("init")) {
+          if (!file.renameTo(new File(cttLogDestDir + "/" + "init-" +
+              random.nextInt(99999) + ".log"))) {
+            Utilities.logger.debug("init log file cant be renamed");
+          }
+          continue;
+        }
+
+        try {
+          Files.copy(file.toPath(), new File(cttLogDestDir + "/" +
+                  file.getName()).toPath(), StandardCopyOption.REPLACE_EXISTING);
+          if (deleteCopiedFiles) {
+            Files.delete(file.toPath());
+          }
+        } catch (IOException e) {
+          Utilities.handleCaughtThrowable(e, false);
+        }
+      }
+    }
   }
 
   private static Path getCoverageReportsPath(String baseDir) {
