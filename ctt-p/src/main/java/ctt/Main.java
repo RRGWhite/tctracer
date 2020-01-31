@@ -48,16 +48,17 @@ public class Main {
   public static void main(String[] args) throws Exception {
     ArrayList<String> projects = new ArrayList<>();
     //projects.add("apache-ant");
-    //projects.add("commons-io");
+    projects.add("commons-io");
     //projects.add("commons-lang");
     //projects.add("jfreechart");
     //projects.add("stanford-corenlp");
     //projects.add("weka");
     //projects.add("apache-opennlp");
     //projects.add("ejml");
-    projects.add("open-liberty");
+    //projects.add("open-liberty");
 
-    //gatherLogs(projects, false);
+    //gatherLogs(projects, true);
+    //deleteLogs(projects);
     singleRun(projects);
     //experimentRun(projects);
   }
@@ -224,6 +225,29 @@ public class Main {
           if (deleteCopiedFiles) {
             Files.delete(file.toPath());
           }
+        } catch (IOException e) {
+          Utilities.handleCaughtThrowable(e, false);
+        }
+      }
+    }
+  }
+
+  private static void deleteLogs(ArrayList<String> projects) {
+    for (String project : projects) {
+      Configuration config = new Configuration.Builder()
+          .setProjects(Arrays.asList(project)).build();
+
+      String[] extensions = { "log" };
+      List<File> listOfFiles = (List<File>) FileUtils.listFiles(
+          new File(config.getProjectBaseDirs().get(project)), extensions, true);
+      for (File file : listOfFiles) {
+        if (file.getPath().contains("ctt_spectrum")) {
+          continue;
+        }
+
+        try {
+          Utilities.logger.info("Deleting file: " + file.getCanonicalPath());
+          Files.delete(file.toPath());
         } catch (IOException e) {
           Utilities.handleCaughtThrowable(e, false);
         }
