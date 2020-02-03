@@ -28,12 +28,13 @@ public class Configuration {
 
   private Map<String, String> projectBaseDirs = Maps
       .newHashMap(ImmutableMap.<String, String>builder()
-          .put("commons-lang", corpusPath + "/commons-lang")
-          .put("jfreechart", corpusPath + "/jfreechart")
-          .put("commons-io", corpusPath + "/commons-io")
-          .put("argouml", corpusPath + "/argouml-v-30-1")
-          .put("apache-ant", corpusPath + "/apache-ant")
-          .put("dependency-finder", corpusPath + "/dependency-finder")
+//          .put("commons-lang", corpusPath + "/commons-lang")
+//          .put("jfreechart", corpusPath + "/jfreechart")
+//          .put("commons-io", corpusPath + "/commons-io")
+//          .put("argouml", corpusPath + "/argouml-v-30-1")
+//          .put("apache-ant", corpusPath + "/apache-ant")
+//          .put("dependency-finder", corpusPath + "/dependency-finder")
+              .put("Test", corpusPath + "/Test")
           .build()
       );
 

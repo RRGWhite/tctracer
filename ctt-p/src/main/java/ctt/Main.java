@@ -46,11 +46,11 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
     ArrayList<String> projects = new ArrayList<>();
-    projects.add("apache-ant");
+//    projects.add("apache-ant");
     //projects.add("commons-io");
     //projects.add("commons-lang");
     //projects.add("jfreechart");
-
+    projects.add("Test");
     //gatherLogs(projects, true);
     //deleteLogs(projects);
     singleRun(projects);
@@ -63,7 +63,7 @@ public class Main {
       Configuration config = new Configuration.Builder()
           .setProjects(Arrays.asList(project))
           .setIsSingleProject(true)
-          .setParseCttLogs(false)
+          .setParseCttLogs(true)
           .build();
 
       // Parse execution trace -> produce hit spectra.
