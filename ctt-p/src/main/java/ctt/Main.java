@@ -13,8 +13,6 @@ import ctt.types.EvaluationMetrics;
 import ctt.types.HitSpectrum;
 import ctt.types.Technique;
 import ctt.types.TestCollection;
-import org.apache.bcel.verifier.structurals.ExceptionHandler;
-import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.checkerframework.checker.units.qual.A;
@@ -22,10 +20,8 @@ import org.checkerframework.checker.units.qual.A;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -47,15 +43,10 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
     ArrayList<String> projects = new ArrayList<>();
-    //projects.add("apache-ant");
-    projects.add("commons-io");
+    projects.add("apache-ant");
+    //projects.add("commons-io");
     //projects.add("commons-lang");
     //projects.add("jfreechart");
-    //projects.add("stanford-corenlp");
-    //projects.add("weka");
-    //projects.add("apache-opennlp");
-    //projects.add("ejml");
-    //projects.add("open-liberty");
 
     //gatherLogs(projects, true);
     //deleteLogs(projects);
@@ -362,11 +353,6 @@ public class Main {
           TechniqueMetricsProvider.computeTechniqueMetrics(
               computedMetrics.getAugmentedClassLevelMetrics().getMetricTable()));
     }
-
-    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config,
-        computedMetrics.getFunctionLevelMetrics().getCandidateTable());
-    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config,
-        computedMetrics.getAugmentedFunctionLevelMetrics().getCandidateTable());
   }
 
   private static ArrayList<String> getTestClassesFromTestCollection(TestCollection testCollection) {

@@ -144,6 +144,10 @@ public class FunctionLevelMetricsProvider {
 
     //ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable);
 
+    Map<String, SortedSet<MethodValuePair>> groundTruthMap =
+        candidateTable.column(Technique.GROUND_TRUTH);
+    ResultsWriter.writeOutMethodLevelGroundTruth(config, groundTruthMap);
+
     // Compute evaluation metrics for each test
     // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
     Table<Technique, String, EvaluationMetrics> metricTable = computeEvaluationMetrics(config,
@@ -168,6 +172,9 @@ public class FunctionLevelMetricsProvider {
       TechniqueMetricsProvider.printTechniqueMetrics(Utilities.getTechniques(config, Configuration.Level.METHOD,
           Main.ScoreType.PURE), techniqueMetrics);
     }
+
+    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable,
+        Main.ScoreType.PURE);
 
     return new FunctionLevelMetrics(methodScoresTensor, relevanceTable, aggregatedResults,
         candidateTable,
@@ -231,6 +238,9 @@ public class FunctionLevelMetricsProvider {
       TechniqueMetricsProvider.printTechniqueMetrics(Utilities.getTechniques(config,
           Configuration.Level.METHOD, Main.ScoreType.AUGMENTED), techniqueMetrics);
     }
+
+    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable,
+        Main.ScoreType.AUGMENTED);
 
     return new FunctionLevelMetrics(augmentedMethodScoresTensor, null,
         aggregatedResults, candidateTable, metricTable);
@@ -559,8 +569,9 @@ public class FunctionLevelMetricsProvider {
     // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
     Table<Technique, String, EvaluationMetrics> metricTable = HashBasedTable.create();
 
-    // For each test, get the ground truth answer, then measure the other techniques against the ground truth answer.
+    //HashMap<String, SortedSet<MethodValuePair>> groundTruthMap = new HashMap<>();
 
+    // For each test, get the ground truth answer, then measure the other techniques against the ground truth answer.
     for (Map.Entry<String, Map<Technique, SortedSet<MethodValuePair>>> testEntry : candidateTable
         .rowMap().entrySet()) {
       String test = testEntry.getKey();
@@ -568,6 +579,7 @@ public class FunctionLevelMetricsProvider {
       // Obtain ground truth data
       Map<Technique, SortedSet<MethodValuePair>> techniqueMap = testEntry.getValue();
       SortedSet<MethodValuePair> groundTruthPairSet = techniqueMap.get(Technique.GROUND_TRUTH);
+      //groundTruthMap.put(test, groundTruthPairSet);
 
       if (groundTruthPairSet == null && CONFIG_NAMING_CONVENTIONS_AS_GROUND_TRUTH) {
         // If configured to do so, in the absence of ground truth, use Naming Conventions - Contains candidate set
@@ -651,6 +663,7 @@ public class FunctionLevelMetricsProvider {
         // System.out.printf("No ground truth data for test %s.%n", test);
       }
     }
+    //ResultsWriter.writeOutMethodLevelGroundTruth(groundTruthMap);
     return metricTable;
   }
 

@@ -34,13 +34,6 @@ public class Configuration {
           .put("argouml", corpusPath + "/argouml-v-30-1")
           .put("apache-ant", corpusPath + "/apache-ant")
           .put("dependency-finder", corpusPath + "/dependency-finder")
-          .put("stanford-corenlp", "F:/git/func2oracle/data-generator/datastore/corpus" +
-              "/stanford-corenlp")
-          .put("weka", "F:/git/func2oracle/data-generator/datastore/corpus/weka/weka")
-          .put("apache-opennlp", "F:/git/func2oracle/data-generator/datastore/corpus/apache-opennlp")
-          .put("ejml", "F:/git/func2oracle/data-generator/datastore/corpus/ejml")
-          .put("open-liberty", "F:/git/func2oracle/data-generator/datastore/corpus/open-liberty" +
-              "/dev")
           .build()
       );
 

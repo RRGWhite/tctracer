@@ -88,7 +88,8 @@ public class ClassLevelMetricsProvider {
       printPredictedClassToClassLinks(traceabilityPredictions);
     }
 
-    ResultsWriter.writeOutClassLevelTraceabilityPredictions(traceabilityPredictions);
+    ResultsWriter.writeOutClassLevelTraceabilityPredictions(config, traceabilityPredictions,
+        Main.ScoreType.PURE);
 
     Table<Technique, String, EvaluationMetrics> evaluationMetricsTable =
         computeEvaluationMetrics(traceabilityPredictions, Main.ScoreType.PURE);
@@ -126,7 +127,8 @@ public class ClassLevelMetricsProvider {
       printPredictedClassToClassLinks(traceabilityPredictions);
     }
 
-    ResultsWriter.writeOutClassLevelTraceabilityPredictions(traceabilityPredictions);
+    ResultsWriter.writeOutClassLevelTraceabilityPredictions(config, traceabilityPredictions,
+        Main.ScoreType.AUGMENTED);
 
     Table<Technique, String, EvaluationMetrics> evaluationMetricsTable =
         computeEvaluationMetrics(traceabilityPredictions, Main.ScoreType.AUGMENTED);
@@ -135,7 +137,6 @@ public class ClassLevelMetricsProvider {
         evaluationMetricsTable);
 
     return augmentedClassLevelMetrics;
-
   }
 
   private void initMaps(TestCollection testCollection) {

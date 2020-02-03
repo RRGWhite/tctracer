@@ -7,6 +7,7 @@ import ctt.types.Technique;
 import ctt.types.scores.clazz.ClassScoresTensor;
 import ctt.types.scores.method.MethodScoresTensor;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -24,16 +25,16 @@ public abstract class ResultsWriter {
 
   public static void writeOutMethodLevelTraceabilityScores(
       Configuration config, MethodScoresTensor methodScoresTensor, Main.ScoreType scoreType) {
-    String csvHeader = "test-class;tested-class;score\n";
+    String csvHeader = "test-class,tested-class,score\n";
     for (Technique technique : Utilities.getTechniques(config, Configuration.Level.CLASS, scoreType)) {
       String fileName = "results/test-to-function/" + Utilities.programStartTimeStamp + "/" +
-          Utilities.programStartTimeStamp + "-test-to-function-scores-" + technique + ".tct";
+          Utilities.programStartTimeStamp + "-test-to-function-scores-" + technique + ".csv";
       Utilities.writeStringToFile(csvHeader, fileName, false);
 
       for (String testFqn : methodScoresTensor.getTestsFqns()) {
         for (String functionFqn : methodScoresTensor.getFunctionFqns()) {
-          String rowString = testFqn + ";" + functionFqn +
-              ";" + methodScoresTensor.getSingleScoreForTestFunctionPair(testFqn, functionFqn,
+          String rowString = testFqn + "," + functionFqn +
+              "," + methodScoresTensor.getSingleScoreForTestFunctionPair(testFqn, functionFqn,
               technique) + "\n";
           Utilities.writeStringToFile(rowString, fileName, true);
         }
@@ -60,65 +61,60 @@ public abstract class ResultsWriter {
   }
 
   public static void writeOutMethodLevelTraceabilityPredictions(Configuration config,
-      Table<String, Technique, SortedSet<MethodValuePair>> candidateTable) {
-    String csvHeader = "test-class;tested-class;score\n";
+      Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
+                                                                Main.ScoreType scoreType) {
+    String csvHeader = "test,tested-method\n";
+    String projects = Utilities.getProjectsString(config);
+    String rq = scoreType == Main.ScoreType.PURE ? "rq1" : "rq4";
     for (Entry<Technique, Map<String, SortedSet<MethodValuePair>>> col :
         candidateTable.columnMap().entrySet()) {
       Technique technique = col.getKey();
       String fileName = "results/test-to-function/" + Utilities.programStartTimeStamp + "/" +
-          Utilities.programStartTimeStamp + "-" + config.getProjects().get(0) + "-test-to" +
-          "-function-predictions-" + technique + ".tct";
+          Utilities.programStartTimeStamp + "-" + projects + "-test-to-function-predictions" +
+          "-" + technique.toString().toLowerCase() + "-" + rq + ".csv";
       Utilities.writeStringToFile(csvHeader, fileName, false);
+
+      String file2Name = "../../artefacts/method-level-predicted-links/" + projects + "-test-to-function-predictions" +
+          "-" + technique.toString().toLowerCase() + "-" + rq + ".csv";
+      Utilities.writeStringToFile(csvHeader, file2Name, false);
 
       for (Entry<String, SortedSet<MethodValuePair>> cell : col.getValue().entrySet()) {
         for (MethodValuePair functionScorePair : cell.getValue()) {
-          if (functionScorePair != null
+          if (functionScorePair != null && config.getThresholdData().get(technique) != null
               && functionScorePair.getValue() >= config.getThresholdData().get(technique)) {
-            String rowString = cell.getKey() + ";" + functionScorePair.getMethod() + ";" +
-                    functionScorePair.getValue() + "\n";
+            String rowString = "\"" + cell.getKey() + "\",\"" + functionScorePair.getMethod() +
+                "\"\n";
             Utilities.writeStringToFile(rowString, fileName, true);
+            Utilities.writeStringToFile(rowString, file2Name, true);
           }
         }
       }
     }
   }
 
-  /*public static void writeOutMethodLevelTraceabilityPredictionsForTechnique(Configuration config,
-                                                                            Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
-                                                                            Technique technique) {
+  public static void writeOutClassLevelTraceabilityPredictions(Configuration config,
+      Table<Technique, String, List<String>> traceabilityPredictions, Main.ScoreType scoreType) {
     String csvHeader = "test-class,tested-class\n";
-    for (Entry<Technique, Map<String, SortedSet<MethodValuePair>>> col :
-        candidateTable.columnMap().entrySet()) {
-      Technique technique = col.getKey();
-      String fileName = "results/test-to-function/" + Utilities.programStartTimeStamp + "/" +
-          Utilities.programStartTimeStamp + "-test-to-function-predictions-" + technique + ".csv";
-      Utilities.writeStringToFile(csvHeader, fileName, false);
-
-      for (Entry<String, SortedSet<MethodValuePair>> cell : col.getValue().entrySet()) {
-        for (MethodValuePair functionScorePair : cell.getValue()) {
-          if (functionScorePair != null
-              && functionScorePair.getValue() >= config.getThresholdData().get(technique)) {
-            String rowString = cell.getKey() + "," + functionScorePair + "\n";
-            Utilities.writeStringToFile(rowString, fileName, true);
-          }
-        }
-      }
-    }
-  }*/
-
-  public static void writeOutClassLevelTraceabilityPredictions(
-      Table<Technique, String, List<String>> traceabilityPredictions) {
-    String csvHeader = "test-class,tested-class\n";
-    for (Entry<Technique, Map<String, List<String>>> row : traceabilityPredictions.rowMap().entrySet()) {
+    String projects = Utilities.getProjectsString(config);
+    String rq = scoreType == Main.ScoreType.PURE ? "rq2" : "rq3";
+    for (Entry<Technique, Map<String, List<String>>> row :
+        traceabilityPredictions.rowMap().entrySet()) {
       String fileName = "results/class-to-class/" + Utilities.programStartTimeStamp + "/" +
-          Utilities.programStartTimeStamp + "-class-to-class-predictions-" + row.getKey() + ".csv";
+          Utilities.programStartTimeStamp + "-" + projects + "-class-to-class-predictions-" +
+          row.getKey().toString().toLowerCase() + "-" + rq + ".csv";
       Utilities.writeStringToFile(csvHeader, fileName, false);
+
+      String file2Name = "../../artefacts/class-level-predicted-links/" + projects + "-class-to" +
+          "-tested-class-predictions" + "-" + row.getKey().toString().toLowerCase() + "-" + rq +
+          ".csv";
+      Utilities.writeStringToFile(csvHeader, file2Name, false);
 
       for (Entry<String, List<String>> cell : row.getValue().entrySet()) {
         for (String testedClass : cell.getValue()) {
           if (testedClass != null) {
             String rowString = cell.getKey() + "," + testedClass + "\n";
             Utilities.writeStringToFile(rowString, fileName, true);
+            Utilities.writeStringToFile(rowString, file2Name, true);
           }
         }
       }
@@ -189,6 +185,26 @@ public abstract class ResultsWriter {
     }
 
     dataString += "\n" + config.toString() + "\n";
+    Utilities.writeStringToFile(dataString, fileName, true);
+  }
+
+  public static void writeOutMethodLevelGroundTruth(Configuration config,
+      Map<String, SortedSet<MethodValuePair>> groundTruthMap) {
+    String projects = Utilities.getProjectsString(config);
+    String fileName = "../../artefacts/method-level-ground-truth/" + projects +
+        ".csv";
+
+    String csvHeader = "project,test-fqn,tested-method-fqn\n";
+    Utilities.writeStringToFile(csvHeader, fileName, false);
+
+    String dataString = "";
+    for (Entry<String, SortedSet<MethodValuePair>> entry : groundTruthMap.entrySet()) {
+      for (MethodValuePair methodValuePair : entry.getValue()) {
+        dataString += projects + ",\"" + entry.getKey() + "\",\"" +
+            methodValuePair.getMethod() + "\"\n";
+      }
+    }
+
     Utilities.writeStringToFile(dataString, fileName, true);
   }
 }
