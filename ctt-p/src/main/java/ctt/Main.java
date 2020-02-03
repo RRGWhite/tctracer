@@ -15,13 +15,16 @@ import ctt.types.Technique;
 import ctt.types.TestCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.commons.io.FileUtils;
 import org.checkerframework.checker.units.qual.A;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -61,7 +64,6 @@ public class Main {
           .setProjects(Arrays.asList(project))
           .setIsSingleProject(true)
           .setParseCttLogs(false)
-          //.setCallDepthDiscountFactor(0.5)
           .build();
 
       // Parse execution trace -> produce hit spectra.
