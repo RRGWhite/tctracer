@@ -24,7 +24,7 @@ public class Configuration {
   private Configuration() {
   }
 
-  private String corpusPath = "../corpus";
+  private String corpusPath = "corpus";
 
   private Map<String, String> projectBaseDirs = Maps
       .newHashMap(ImmutableMap.<String, String>builder()
