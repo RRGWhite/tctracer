@@ -48,7 +48,8 @@ public class Main {
     ArrayList<String> projects = new ArrayList<>();
     //projects.add("apache-ant");
     //projects.add("commons-io");
-    projects.add("commons-lang");
+    //projects.add("commons-lang");
+    projects.add("commons-collections");
     //projects.add("jfreechart");
 
     //gatherLogs(projects, true);
@@ -63,7 +64,7 @@ public class Main {
       Configuration config = new Configuration.Builder()
           .setProjects(Arrays.asList(project))
           .setIsSingleProject(true)
-          .setParseCttLogs(false)
+          .setParseCttLogs(true)
           .build();
 
       // Parse execution trace -> produce hit spectra.

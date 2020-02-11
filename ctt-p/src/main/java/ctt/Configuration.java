@@ -34,6 +34,7 @@ public class Configuration {
           .put("argouml", corpusPath + "/argouml-v-30-1")
           .put("apache-ant", corpusPath + "/apache-ant")
           .put("dependency-finder", corpusPath + "/dependency-finder")
+          .put("commons-collections", corpusPath + "/ccollections")
           .build()
       );
 

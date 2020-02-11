@@ -63,7 +63,7 @@ public abstract class ResultsWriter {
   public static void writeOutMethodLevelTraceabilityPredictions(Configuration config,
       Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
                                                                 Main.ScoreType scoreType) {
-    String csvHeader = "test,tested-method\n";
+    String csvHeader = "test,tested-method,score\n";
     String projects = Utilities.getProjectsString(config);
     String rq = scoreType == Main.ScoreType.PURE ? "rq1" : "rq4";
     for (Entry<Technique, Map<String, SortedSet<MethodValuePair>>> col :
@@ -74,8 +74,11 @@ public abstract class ResultsWriter {
           "-" + technique.toString().toLowerCase() + "-" + rq + ".csv";
       Utilities.writeStringToFile(csvHeader, fileName, false);
 
-      String file2Name = "../../artefacts/method-level-predicted-links/" + projects + "-test-to-function-predictions" +
-          "-" + technique.toString().toLowerCase() + "-" + rq + ".csv";
+      /*String file2Name = "../../artefacts/method-level-predicted-links/" + projects + "-test-to"
+          + "-function-predictions" +
+          "-" + technique.toString().toLowerCase() + "-" + rq + ".csv";*/
+      String file2Name = "results/for-relatest/method-level-predicted-links/" + projects + "-" +
+          technique.toString().toLowerCase() + ".tct";
       Utilities.writeStringToFile(csvHeader, file2Name, false);
 
       for (Entry<String, SortedSet<MethodValuePair>> cell : col.getValue().entrySet()) {
@@ -83,7 +86,7 @@ public abstract class ResultsWriter {
           if (functionScorePair != null && config.getThresholdData().get(technique) != null
               && functionScorePair.getValue() >= config.getThresholdData().get(technique)) {
             String rowString = "\"" + cell.getKey() + "\",\"" + functionScorePair.getMethod() +
-                "\"\n";
+                "\",\"" + functionScorePair.getValue() + "\"\n";
             Utilities.writeStringToFile(rowString, fileName, true);
             Utilities.writeStringToFile(rowString, file2Name, true);
           }
