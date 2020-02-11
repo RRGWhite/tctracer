@@ -1,0 +1,62 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.LazySortedMapTest",
+      "test": "testTransformerDecorate()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.functors.FactoryTransformer.factoryTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.TransformerUtils.asTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.\u003cinit\u003e(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.lazySortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.LazySortedMap.lazySortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.LazySortedMapTest",
+      "test": "testSortOrder()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.subMap(K, K)": 0,
+        "org.apache.commons.collections4.map.LazySortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.comparator()": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.FactoryTransformer.factoryTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.getSortedMap()": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.lazySortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 2,
+        "org.apache.commons.collections4.map.LazySortedMap.headMap(K)": 0,
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazyMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.LazySortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.lastKey()": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.\u003cinit\u003e(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.map.LazySortedMap.firstKey()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazySortedMap.tailMap(K)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.LazySortedMap.comparator()",
+        "org.apache.commons.collections4.map.LazySortedMap.lastKey()",
+        "org.apache.commons.collections4.map.LazySortedMap.firstKey()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.LazySortedMapTest",
+      "test": "testMapGet()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

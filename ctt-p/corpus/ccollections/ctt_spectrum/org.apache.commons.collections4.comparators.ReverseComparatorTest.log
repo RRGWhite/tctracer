@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.ReverseComparatorTest",
+      "test": "testSerializeDeserializeThenCompare()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.equals(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

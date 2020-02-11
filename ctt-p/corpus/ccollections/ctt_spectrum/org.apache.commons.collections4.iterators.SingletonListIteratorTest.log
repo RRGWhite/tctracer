@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.SingletonListIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.\u003cinit\u003e(E)": 1,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.next()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SingletonListIteratorTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.\u003cinit\u003e(E)": 1,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.nextIndex()": 0,
+        "org.apache.commons.collections4.iterators.SingletonListIterator.previousIndex()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.previous()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.next()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.nextIndex()",
+        "org.apache.commons.collections4.iterators.SingletonListIterator.previousIndex()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

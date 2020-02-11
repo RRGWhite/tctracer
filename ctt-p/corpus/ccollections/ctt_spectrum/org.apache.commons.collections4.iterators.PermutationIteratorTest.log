@@ -1,0 +1,81 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testPermutatorHasMore()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testEmptyCollection()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()",
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testPermutationException()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testPermutationResultSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testPermutationExhaustivity()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PermutationIteratorTest",
+      "test": "testPermutationUnicity()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PermutationIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PermutationIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PermutationIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

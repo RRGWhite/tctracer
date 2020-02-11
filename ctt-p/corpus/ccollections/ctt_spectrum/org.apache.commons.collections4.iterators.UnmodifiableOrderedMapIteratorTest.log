@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIteratorTest",
+      "test": "testOrderedMapIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.ListOrderedMap.listOrderedMap(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.ListOrderedMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.ListOrderedMap\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator.\u003cinit\u003e(org.apache.commons.collections4.OrderedMapIterator\u003cK, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.mapIterator()": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator.unmodifiableOrderedMapIterator(org.apache.commons.collections4.OrderedMapIterator\u003cK, ? extends V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIteratorTest.makeEmptyIterator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIteratorTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.ListOrderedMap.listOrderedMap(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.ListOrderedMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.ListOrderedMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator.\u003cinit\u003e(org.apache.commons.collections4.OrderedMapIterator\u003cK, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.ListOrderedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.ListOrderedMap.mapIterator()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator.unmodifiableOrderedMapIterator(org.apache.commons.collections4.OrderedMapIterator\u003cK, ? extends V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator.unmodifiableOrderedMapIterator(org.apache.commons.collections4.OrderedMapIterator\u003cK, ? extends V\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

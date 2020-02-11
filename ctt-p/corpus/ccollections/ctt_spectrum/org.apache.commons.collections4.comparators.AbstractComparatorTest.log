@@ -1,0 +1,102 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.AbstractComparatorTest",
+      "test": "testRandomListSort()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 2,
+        "org.apache.commons.collections4.ComparatorUtils.transformedComparator(java.util.Comparator\u003cO\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.compare(I, I)": 1,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()": 0,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.AbstractComparatorTest",
+      "test": "testReverseListSort()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 2,
+        "org.apache.commons.collections4.ComparatorUtils.transformedComparator(java.util.Comparator\u003cO\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.compare(I, I)": 1,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()": 0,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.AbstractComparatorTest",
+      "test": "testEmptyListSort()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 2,
+        "org.apache.commons.collections4.ComparatorUtils.transformedComparator(java.util.Comparator\u003cO\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.AbstractComparatorTest.sortObjects(java.util.List\u003cT\u003e, java.util.Comparator\u003c? super T\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.AbstractComparatorTest",
+      "test": "testComparatorCompatibility()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ComparatorUtils.transformedComparator(java.util.Comparator\u003cO\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.readResolve()": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromDisk(java.lang.String)": 0,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromStream(java.io.InputStream)": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()": 0,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getCompatibilityVersion()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.compare(I, I)": 1,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.skipSerializedCanonicalTests()": 0,
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.getComparableObjectsOrdered()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.AbstractComparatorTest",
+      "test": "testComparatorIsSerializable()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 2,
+        "org.apache.commons.collections4.ComparatorUtils.transformedComparator(java.util.Comparator\u003cO\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 2,
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.TransformingComparatorTest.makeObject()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.NullPredicateTest",
+      "test": "ensurePredicateCanBeTypedWithoutWarning()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 0,
+        "org.apache.commons.collections4.functors.NullPredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.NullPredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.NullPredicateTest",
+      "test": "testNullPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.NullPredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

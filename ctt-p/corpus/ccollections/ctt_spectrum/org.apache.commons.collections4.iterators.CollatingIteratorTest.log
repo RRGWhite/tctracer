@@ -1,0 +1,228 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testIterateOddEven()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testIterateEvenOdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testIterateFibEvenOdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testNullComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testIterateEven()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testIterateEvenEven()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()",
+        "org.apache.commons.collections4.iterators.CollatingIterator.getIteratorIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testRemoveFromDouble()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testGetSetComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.getComparator()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.getComparator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.CollatingIteratorTest",
+      "test": "testRemoveFromSingle()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.CollatingIterator.checkNotStarted()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.addIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.least()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.setComparator(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.start()": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyValueSet(java.util.BitSet)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.set(int)": 2,
+        "org.apache.commons.collections4.iterators.CollatingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.anyHasNext(java.util.List\u003cjava.util.Iterator\u003c? extends E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.iterators.CollatingIterator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, int)": 0,
+        "org.apache.commons.collections4.iterators.CollatingIterator.clear(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.CollatingIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

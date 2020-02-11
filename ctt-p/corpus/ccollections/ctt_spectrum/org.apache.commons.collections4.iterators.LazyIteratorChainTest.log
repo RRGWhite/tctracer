@@ -1,0 +1,111 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.LazyIteratorChainTest",
+      "test": "testEmptyChain()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.remove()": 1,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.next()": 1,
+        "null.nextIterator(int)": 2,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.EmptyIterator.emptyIterator()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.LazyIteratorChainTest)": 1,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LazyIteratorChainTest",
+      "test": "testFirstIteratorIsEmptyBug()",
+      "hitSet": {
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.LazyIteratorChainTest, java.util.List, java.util.List)": 0,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.updateCurrentIterator()": 1,
+        "null.nextIterator(int)": 2,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()",
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LazyIteratorChainTest",
+      "test": "testRemoveFromFilteredIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 2,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 1,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 2,
+        "null.evaluate(java.lang.Integer)": 4,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.remove()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.LazyIteratorChainTest)": 0,
+        "org.apache.commons.collections4.IteratorUtils.chainedIterator(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LazyIteratorChainTest",
+      "test": "testRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.updateCurrentIterator()": 1,
+        "null.nextIterator(int)": 2,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.\u003cinit\u003e()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.LazyIteratorChainTest)": 1,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()",
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.remove()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LazyIteratorChainTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.updateCurrentIterator()": 1,
+        "null.nextIterator(int)": 2,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.LazyIteratorChainTest)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.next()",
+        "org.apache.commons.collections4.iterators.LazyIteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

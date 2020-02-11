@@ -1,0 +1,178 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testGetIndexed()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKey(int)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKey(int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testGetKeysSimpleConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testConstructorsByArrayNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.size()": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[])": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testConstructors()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K, K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testGetKeysArrayConstructorCloned()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testEqualsAfterSerializationOfDerivedClass()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.hashCode()": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.readResolve()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.hashCode()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testConstructorsByArray()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testEqualsAfterSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.hashCode()": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.readResolve()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKeyTest.SystemHashCodeSimulatingKey.hashCode()",
+        "org.apache.commons.collections4.keyvalue.MultiKey.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.hashCode()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.hashCode()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testGetKeysArrayConstructorNonCloned()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.getKeys()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.MultiKeyTest",
+      "test": "testEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K[], boolean)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.\u003cinit\u003e(K, K)": 0,
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.MultiKey.equals(java.lang.Object)",
+        "org.apache.commons.collections4.keyvalue.MultiKey.calculateHashCode(java.lang.Object[])"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

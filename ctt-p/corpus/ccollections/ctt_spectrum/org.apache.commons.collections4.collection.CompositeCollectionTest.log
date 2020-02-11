@@ -1,0 +1,268 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testAddAllToCollection()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 2,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.iterator()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.size()",
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testAddMutator()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.collection.CompositeCollectionTest)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.setMutator(org.apache.commons.collections4.collection.CompositeCollection.org.apache.commons.collections4.collection.CompositeCollection$CollectionMutator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.add(E)": 0,
+        "null.add(org.apache.commons.collections4.collection.CompositeCollection\u003cE\u003e, java.util.List\u003cjava.util.Collection\u003cE\u003e\u003e, E)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testClear()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.isEmpty()": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.clear()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.isEmpty()",
+        "org.apache.commons.collections4.collection.CompositeCollection.clear()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testMultipleCollectionsSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testRetainAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.retainAll(java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testContainsAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.containsAll(java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.containsAll(java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testRemoveComposited()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.collection.CompositeCollectionTest)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.setMutator(org.apache.commons.collections4.collection.CompositeCollection.org.apache.commons.collections4.collection.CompositeCollection$CollectionMutator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.removeComposited(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.size()",
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testAddAllMutator()",
+      "hitSet": {
+        "null.addAll(org.apache.commons.collections4.collection.CompositeCollection\u003cE\u003e, java.util.List\u003cjava.util.Collection\u003cE\u003e\u003e, java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.collection.CompositeCollectionTest)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.setMutator(org.apache.commons.collections4.collection.CompositeCollection.org.apache.commons.collections4.collection.CompositeCollection$CollectionMutator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addAll(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testUnsupportedRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.isEmpty()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.verify()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 2,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.CompositeCollection.iterator()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.verify()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testToCollection()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.toCollection()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.toArray()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 2,
+        "org.apache.commons.collections4.collection.CompositeCollection.size()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.iterator()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.IteratorChain.next()",
+        "org.apache.commons.collections4.collection.CompositeCollection.size()",
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testIsEmpty()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.isEmpty()": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.isEmpty()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.collection.CompositeCollectionTest)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.setMutator(org.apache.commons.collections4.collection.CompositeCollection.org.apache.commons.collections4.collection.CompositeCollection$CollectionMutator\u003cE\u003e)": 1,
+        "null.remove(org.apache.commons.collections4.collection.CompositeCollection\u003cE\u003e, java.util.List\u003cjava.util.Collection\u003cE\u003e\u003e, java.lang.Object)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.remove()": 0,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.iterator()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.CompositeCollectionTest",
+      "test": "testRemoveAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.CompositeCollection.addComposited(java.util.Collection\u003cE\u003e, java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.\u003cinit\u003e()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.collection.CompositeCollectionTest)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.setMutator(org.apache.commons.collections4.collection.CompositeCollection.org.apache.commons.collections4.collection.CompositeCollection$CollectionMutator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.CompositeCollection.removeAll(java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.CompositeCollection.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

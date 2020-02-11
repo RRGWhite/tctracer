@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.set.MapBackedSet2Test",
+      "test": "testCanonicalFullCollectionExists()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.set.MapBackedSet2Test",
+      "test": "testCanonicalEmptyCollectionExists()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.set.MapBackedSet2Test",
+      "test": "testOrdering()",
+      "hitSet": {
+        "org.apache.commons.collections4.set.MapBackedSet.iterator()": 0,
+        "org.apache.commons.collections4.set.MapBackedSet.\u003cinit\u003e(java.util.Map\u003cE, ? super V\u003e, V)": 4,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.LinkIterator.nextEntry()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getValue()": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.LinkEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.removeEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e)": 4,
+        "org.apache.commons.collections4.set.MapBackedSet.size()": 0,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.KeySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractLinkedMap\u003cK, ?\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.updateEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, V)": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.KeySet.iterator()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.KeySet.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, ?\u003e)": 2,
+        "org.apache.commons.collections4.map.LinkedMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.set.MapBackedSet.mapBackedSet(java.util.Map\u003cE, ? super V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 3,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.init()": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.removeEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.\u003cinit\u003e(int, float, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.set.MapBackedSet.add(E)": 0,
+        "org.apache.commons.collections4.set.MapBackedSet.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.remove(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getKey()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float, int)": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.LinkIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractLinkedMap\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.removeMapping(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.setValue(V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.keySet()": 1,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.createKeySetIterator()": 2,
+        "org.apache.commons.collections4.map.AbstractLinkedMap.KeySetIterator.next()": 0,
+        "org.apache.commons.collections4.set.MapBackedSet.mapBackedSet(java.util.Map\u003cE, ? super V\u003e, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.isEqualKey(java.lang.Object, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.destroyEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.set.MapBackedSet.size()",
+        "org.apache.commons.collections4.map.AbstractLinkedMap.KeySetIterator.next()",
+        "org.apache.commons.collections4.set.MapBackedSet.remove(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

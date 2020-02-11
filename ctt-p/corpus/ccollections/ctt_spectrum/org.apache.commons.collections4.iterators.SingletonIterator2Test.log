@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.SingletonIterator2Test",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SingletonIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SingletonIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.SingletonIterator.\u003cinit\u003e(E, boolean)": 1,
+        "org.apache.commons.collections4.iterators.SingletonIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SingletonIterator.next()",
+        "org.apache.commons.collections4.iterators.SingletonIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SingletonIterator2Test",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SingletonIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SingletonIterator.\u003cinit\u003e(E, boolean)": 1,
+        "org.apache.commons.collections4.iterators.SingletonIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SingletonIterator.next()",
+        "org.apache.commons.collections4.iterators.SingletonIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

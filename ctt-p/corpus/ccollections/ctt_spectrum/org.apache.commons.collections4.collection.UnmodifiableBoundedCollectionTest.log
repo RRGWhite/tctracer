@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollectionTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.list.FixedSizeList.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection.unmodifiableBoundedCollection(org.apache.commons.collections4.BoundedCollection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.FixedSizeList.fixedSizeList(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection.\u003cinit\u003e(org.apache.commons.collections4.BoundedCollection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection.unmodifiableBoundedCollection(org.apache.commons.collections4.BoundedCollection\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollectionTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.list.FixedSizeList.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection.unmodifiableBoundedCollection(org.apache.commons.collections4.BoundedCollection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.FixedSizeList.fixedSizeList(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection.\u003cinit\u003e(org.apache.commons.collections4.BoundedCollection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollectionTest.makeFullCollection()",
+        "org.apache.commons.collections4.collection.UnmodifiableBoundedCollectionTest.makeObject()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

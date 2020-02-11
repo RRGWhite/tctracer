@@ -1,0 +1,39 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectArrayListIteratorTest",
+      "test": "testListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.getStartIndex()": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[], int, int)": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.hasPrevious()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.previous()",
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectArrayListIteratorTest",
+      "test": "testListIteratorSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[], int, int)": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.set(E)": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

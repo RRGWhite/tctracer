@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.collection.UnmodifiableCollectionTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.UnmodifiableCollectionTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.UnmodifiableCollectionTest.makeObject()",
+        "org.apache.commons.collections4.collection.UnmodifiableCollectionTest.makeFullCollection()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

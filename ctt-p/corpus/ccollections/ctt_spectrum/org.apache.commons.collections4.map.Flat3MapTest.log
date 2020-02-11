@@ -1,0 +1,398 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testToString()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.toString()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.toString()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testEquals1()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testEquals2()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.equals(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testClone2()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.createDelegateMap()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.clone()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float, int)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.convertToMap()": 1,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testClone4()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.HashedMap.clone()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.createDelegateMap()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap._putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.entrySet()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getValue()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.clone()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.clear()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.clear()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.clone()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.containsKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntrySetIterator()": 6,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 6,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 7,
+        "org.apache.commons.collections4.map.Flat3Map.convertToMap()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.hasNext()": 5,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 3,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 7,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySet.iterator()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.ensureCapacity(int)": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySetIterator.next()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getKey()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float, int)": 3,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateNewCapacity(int)": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.nextEntry()": 6,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.isEqualKey(java.lang.Object, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testSerialisation4()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.createDelegateMap()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashMapIterator.next()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getValue()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashMapIterator.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.mapIterator()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.containsKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.map.Flat3Map.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.convertToMap()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.currentEntry()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getKey()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float, int)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.nextEntry()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.isEqualKey(java.lang.Object, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testEntryIteratorSetValue3()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.entrySet()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.hasNext()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.nextEntry()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e, int)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.iterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testMapIteratorSetValue1()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getKey()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testMapIteratorSetValue3()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getKey()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testCollections261()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.remove(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testSerialisation0()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.emptyMapIterator()": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testEntryIteratorSetValue2()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.entrySet()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.hasNext()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.nextEntry()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e, int)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.iterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testSerialisation2()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.next()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getKey()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testEntryIteratorSetValue1()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.entrySet()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.hasNext()": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.nextEntry()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntryIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapEntry.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e, int)": 2,
+        "org.apache.commons.collections4.map.Flat3Map.EntrySet.iterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.Flat3MapTest",
+      "test": "testMapIteratorSetValue2()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.Flat3Map.size()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.mapIterator()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.setValue(V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.hasNext()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.next()": 0,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getValue()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.getKey()": 1,
+        "org.apache.commons.collections4.map.Flat3Map.FlatMapIterator.\u003cinit\u003e(org.apache.commons.collections4.map.Flat3Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.Flat3Map.put(K, V)": 0,
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.Flat3Map.size()",
+        "org.apache.commons.collections4.map.Flat3Map.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.Flat3Map.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

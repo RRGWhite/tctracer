@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.DefaultMapEntryTest",
+      "test": "testConstructors()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.keyvalue.DefaultMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.DefaultKeyValue.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.DefaultMapEntry.\u003cinit\u003e(java.util.Map.java.util.Map$Entry\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.setValue(V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()",
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.DefaultMapEntryTest",
+      "test": "testSelfReferenceHandling()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.keyvalue.DefaultMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.setValue(V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testGet()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "org.apache.commons.collections4.map.CompositeMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testPut()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "null.put(org.apache.commons.collections4.map.CompositeMap\u003cK, V\u003e, java.util.Map\u003cK, V\u003e[], K, V)": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.map.CompositeMapTest)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.put(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.put(K, V)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testResolveCollision()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.map.CompositeMapTest)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "null.resolveCollision(org.apache.commons.collections4.map.CompositeMap\u003cK, V\u003e, java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e, java.util.Collection\u003cK\u003e)": 1,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testRemoveFromUnderlying()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testRemoveComposited()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.map.CompositeMap.removeComposited(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testRemoveFromComposited()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.CompositeMap.remove(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testAddComposited()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.CompositeMapTest",
+      "test": "testPutAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.list()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.map.CompositeMapTest)": 0,
+        "org.apache.commons.collections4.map.CompositeMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e[], org.apache.commons.collections4.map.CompositeMap.org.apache.commons.collections4.map.CompositeMap$MapMutator\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.setCardinality(O, int)": 2,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "null.putAll(org.apache.commons.collections4.map.CompositeMap\u003cK, V\u003e, java.util.Map\u003cK, V\u003e[], java.util.Map\u003c? extends K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.intersection(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.min(java.lang.Object)": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 3,
+        "org.apache.commons.collections4.CollectionUtils.SetOperationCardinalityHelper.iterator()": 2,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 4,
+        "org.apache.commons.collections4.map.CompositeMap.addComposited(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.CompositeMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

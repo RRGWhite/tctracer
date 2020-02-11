@@ -1,0 +1,67 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.bag.PredicatedSortedBagTest",
+      "test": "testDecorate()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.iterator()": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.decorated()": 1,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.predicatedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.hasNext()": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.decorated()": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.bag.PredicatedSortedBagTest)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.\u003cinit\u003e(org.apache.commons.collections4.bag.AbstractMapBag\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.PredicatedSortedBagTest",
+      "test": "testSortOrder()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.iterator()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 3,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.comparator()": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.add(E)": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.validate(E)": 1,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.predicatedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.last()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.hasNext()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.bag.PredicatedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.decorated()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.bag.PredicatedSortedBagTest)": 1,
+        "null.evaluate(T)": 2,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.first()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.\u003cinit\u003e(org.apache.commons.collections4.bag.AbstractMapBag\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.last()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.bag.TreeBag.add(E)": 1,
+        "org.apache.commons.collections4.bag.TreeBag.getMap()": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.decorated()": 2,
+        "org.apache.commons.collections4.bag.TreeBag.comparator()": 1,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.first()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getMap()": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.comparator()",
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.first()",
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.last()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

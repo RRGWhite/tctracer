@@ -1,0 +1,98 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "nullLowComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.NullComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, boolean)": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.NullComparator.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.comparableComparator()": 0,
+        "org.apache.commons.collections4.ComparatorUtils.nullLowComparator(java.util.Comparator\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.NullComparator.compare(E, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "nullHighComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.NullComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e, boolean)": 1,
+        "org.apache.commons.collections4.comparators.NullComparator.compare(E, E)": 0,
+        "org.apache.commons.collections4.ComparatorUtils.nullHighComparator(java.util.Comparator\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.NullComparator.compare(E, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "max()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.naturalComparator()": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.reversedComparator(java.util.Comparator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.ComparatorUtils.max(E, E, java.util.Comparator\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ComparatorUtils.max(E, E, java.util.Comparator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "min()",
+      "hitSet": {
+        "org.apache.commons.collections4.ComparatorUtils.min(E, E, java.util.Comparator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.naturalComparator()": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.reversedComparator(java.util.Comparator\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ComparatorUtils.min(E, E, java.util.Comparator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "booleanComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e(boolean)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.booleanComparator(boolean)": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.compare(java.lang.Boolean, java.lang.Boolean)": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.booleanComparator(boolean)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.BooleanComparator.compare(java.lang.Boolean, java.lang.Boolean)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ComparatorUtilsTest",
+      "test": "chainedComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkLocked()": 3,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.addComparator(java.util.Comparator\u003cE\u003e, boolean)": 2,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 1,
+        "org.apache.commons.collections4.ComparatorUtils.naturalComparator()": 0,
+        "org.apache.commons.collections4.ComparatorUtils.chainedComparator(java.util.Comparator\u003cE\u003e[])": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.addComparator(java.util.Comparator\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.splitmap.TransformedSplitMapTest",
+      "test": "testFullMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformKey(J)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformValue(U)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformingMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.put(J, U)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.readResolve()": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.entrySet()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.entrySet()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.splitmap.TransformedSplitMapTest",
+      "test": "testMapIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.hasNext()": 0,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.getValue()": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformKey(J)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformValue(U)": 1,
+        "null.transform(java.lang.String)": 2,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.reset()": 1,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.getKey()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.\u003cinit\u003e(java.util.Set\u003cjava.util.Map.java.util.Map$Entry\u003cK, V\u003e\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.mapIterator()": 0,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.next()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformingMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.put(J, U)": 0,
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.current()": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.entrySet()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()",
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.getValue()",
+        "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter.getKey()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.splitmap.TransformedSplitMapTest",
+      "test": "testTransformedMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformKey(J)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformValue(U)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.containsValue(java.lang.Object)": 0,
+        "null.transform(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()": 0,
+        "null.transform(java.lang.Integer)": 0,
+        "null.transform(java.lang.Object)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformingMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.put(J, U)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.get(java.lang.Object)",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.containsValue(java.lang.Object)",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.remove(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.splitmap.TransformedSplitMapTest",
+      "test": "testEmptyMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 0,
+        "org.apache.commons.collections4.splitmap.TransformedSplitMap.transformingMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super J, ? extends K\u003e, org.apache.commons.collections4.Transformer\u003c? super U, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.readResolve()": 1,
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.entrySet()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.size()",
+        "org.apache.commons.collections4.splitmap.AbstractIterableGetMapDecorator.entrySet()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

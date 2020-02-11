@@ -1,0 +1,97 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.PredicatedSortedMapTest",
+      "test": "testPut()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.MapEntry.\u003cinit\u003e(java.util.Map.java.util.Map$Entry\u003cK, V\u003e, org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.PredicatedMap.isSetValueChecking()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.MapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.predicatedSortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 2,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntryDecorator.getMapEntry()": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 3,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntryDecorator.\u003cinit\u003e(java.util.Map.java.util.Map$Entry\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.EntrySetIterator.\u003cinit\u003e(java.util.Iterator\u003cjava.util.Map.java.util.Map$Entry\u003cK, V\u003e\u003e, org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.map.PredicatedMap.validate(K, V)": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.entrySet()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 3,
+        "org.apache.commons.collections4.map.PredicatedMap.checkSetValue(V)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsValue(java.lang.Object)": 0,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.EntrySet.\u003cinit\u003e(java.util.Set\u003cjava.util.Map.java.util.Map$Entry\u003cK, V\u003e\u003e, org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 3,
+        "null.evaluate(java.lang.Object)": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 1,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.EntrySet.iterator()": 0,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.EntrySetIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsValue(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PredicatedSortedMapTest",
+      "test": "testEntrySet()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.PredicatedMap.validate(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.entrySet()": 0,
+        "org.apache.commons.collections4.map.PredicatedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.PredicatedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 2,
+        "org.apache.commons.collections4.map.PredicatedMap.isSetValueChecking()": 2,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.EntrySet.\u003cinit\u003e(java.util.Set\u003cjava.util.Map.java.util.Map$Entry\u003cK, V\u003e\u003e, org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.predicatedSortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.entrySet()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PredicatedSortedMapTest",
+      "test": "testSortOrder()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PredicatedSortedMap.getSortedMap()": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.lastKey()": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.validate(K, V)": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.PredicatedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.headMap(K)": 0,
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "null.evaluate(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.predicatedSortedMap(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 2,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.firstKey()": 0,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.subMap(K, K)": 0,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.tailMap(K)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedSortedMap.comparator()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PredicatedSortedMap.lastKey()",
+        "org.apache.commons.collections4.map.PredicatedSortedMap.firstKey()",
+        "org.apache.commons.collections4.map.PredicatedSortedMap.comparator()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

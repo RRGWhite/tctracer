@@ -1,0 +1,57 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.SingletonMapTest",
+      "test": "testKeyValue()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.SingletonMap.size()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.getValue()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.getKey()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.SingletonMap.size()",
+        "org.apache.commons.collections4.map.SingletonMap.getValue()",
+        "org.apache.commons.collections4.map.SingletonMap.getKey()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.SingletonMapTest",
+      "test": "testBoundedMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.SingletonMap.size()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.isFull()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.map.SingletonMap.maxSize()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.SingletonMap.size()",
+        "org.apache.commons.collections4.map.SingletonMap.isFull()",
+        "org.apache.commons.collections4.map.SingletonMap.maxSize()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.SingletonMapTest",
+      "test": "testClone()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.SingletonMap.isEqualValue(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.SingletonMap.size()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.SingletonMap.getValue()": 2,
+        "org.apache.commons.collections4.map.SingletonMap.clone()": 0,
+        "org.apache.commons.collections4.map.SingletonMap.getKey()": 2,
+        "org.apache.commons.collections4.map.SingletonMap.isEqualKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.SingletonMap.containsValue(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.SingletonMap.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.SingletonMap.size()",
+        "org.apache.commons.collections4.map.SingletonMap.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.SingletonMap.containsValue(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

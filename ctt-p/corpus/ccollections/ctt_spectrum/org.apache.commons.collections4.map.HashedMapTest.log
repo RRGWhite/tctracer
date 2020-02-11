@@ -1,0 +1,80 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.HashedMapTest",
+      "test": "testClone()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.HashedMap.clone()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap._putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.entrySet()": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getValue()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.clone()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntrySetIterator()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 6,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.hasNext()": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySetIterator.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap\u003cK, V\u003e)": 6,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySet.iterator()": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.ensureCapacity(int)": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.EntrySetIterator.next()": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.getKey()": 4,
+        "org.apache.commons.collections4.map.AbstractHashedMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateNewCapacity(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashIterator.nextEntry()": 5,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.isEqualKey(java.lang.Object, java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 1,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateThreshold(int, float)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractHashedMap.get(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractHashedMap.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.HashedMapTest",
+      "test": "testInternalState()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateNewCapacity(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float)": 0,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e(int, float)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateThreshold(int, float)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.HashedMapTest",
+      "test": "testInitialCapacityZero()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateNewCapacity(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 0,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateThreshold(int, float)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

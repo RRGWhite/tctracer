@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectArrayIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[], int, int)": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectArrayIteratorTest",
+      "test": "testNullArray()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectArrayIteratorTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.\u003cinit\u003e(E[])": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.\u003cinit\u003e(E[], int, int)": 1,
+        "org.apache.commons.collections4.iterators.ObjectArrayListIteratorTest.makeObject()": 0,
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectArrayListIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectArrayIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testRemovingElementsAndIteratingForward()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.remove()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.add(E)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.set(E)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testLooping0()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testLooping1()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 1,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testLooping2()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testJoggingOverBoundary()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testConstructorEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testRemovingElementsAndIteratingBackwards()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.remove()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testNextAndPreviousIndex()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previousIndex()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.nextIndex()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previousIndex()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.nextIndex()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingListIteratorTest",
+      "test": "testJoggingNotOverBoundary()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingListIterator._reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingListIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingListIterator.previous()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

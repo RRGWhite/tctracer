@@ -1,0 +1,55 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.StaticBucketMapTest",
+      "test": "test_containsValue_nullMatchesIncorrectly()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.StaticBucketMap.Node.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.Lock.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.getHash(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.containsValue(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.StaticBucketMap.containsValue(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.StaticBucketMapTest",
+      "test": "test_containsKey_nullMatchesIncorrectly()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.StaticBucketMap.Node.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.Lock.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.getHash(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.\u003cinit\u003e(int)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.StaticBucketMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.StaticBucketMapTest",
+      "test": "test_get_nullMatchesIncorrectly()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.StaticBucketMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.Node.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.Lock.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.StaticBucketMap.getHash(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.StaticBucketMap.\u003cinit\u003e(int)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.StaticBucketMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

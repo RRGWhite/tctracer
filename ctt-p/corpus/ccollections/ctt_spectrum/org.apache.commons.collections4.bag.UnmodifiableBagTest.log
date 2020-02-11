@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.bag.UnmodifiableBagTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.UnmodifiableBag.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.UnmodifiableBagTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.UnmodifiableBagTest.makeObject()",
+        "org.apache.commons.collections4.bag.UnmodifiableBagTest.makeFullCollection()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

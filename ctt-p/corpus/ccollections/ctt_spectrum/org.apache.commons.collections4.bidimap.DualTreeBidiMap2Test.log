@@ -1,0 +1,130 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.bidimap.DualTreeBidiMap2Test",
+      "test": "testCollections364()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.\u003cinit\u003e(java.util.Comparator\u003c? super K\u003e, java.util.Comparator\u003c? super V\u003e)": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 0,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.valueComparator()": 0,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.valueComparator()",
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bidimap.DualTreeBidiMap2Test",
+      "test": "testSerializeDeserializeCheckComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.\u003cinit\u003e(java.util.Comparator\u003c? super K\u003e, java.util.Comparator\u003c? super V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.comparableComparator()": 1,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.AbstractObjectTest.isTestSerialization()": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bidimap.DualTreeBidiMap2Test",
+      "test": "testComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 2,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.View.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySet.\u003cinit\u003e(org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, ?\u003e)": 3,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.keySet()": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMapTest.getMap()": 4,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.EntrySet.\u003cinit\u003e(org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, V\u003e)": 3,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.entrySet()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bidimap.AbstractOrderedBidiMapTest.getMap()": 2,
+        "org.apache.commons.collections4.map.AbstractMapTest.getMap()": 5,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.\u003cinit\u003e(java.util.Comparator\u003c? super K\u003e, java.util.Comparator\u003c? super V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapTest.views()": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.comparableComparator()": 2,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bidimap.AbstractBidiMapTest.getMap()": 3,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()": 0,
+        "org.apache.commons.collections4.map.AbstractMapTest.resetEmpty()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.comparator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bidimap.DualTreeBidiMap2Test",
+      "test": "testComparator2()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.\u003cinit\u003e(java.util.Comparator\u003c? super K\u003e, java.util.Comparator\u003c? super V\u003e)": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 0,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.lastKey()": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.put(K, V)": 0,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.firstKey()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.lastKey()",
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.firstKey()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bidimap.DualTreeBidiMap2Test",
+      "test": "testSortOrder()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySet.iterator()": 0,
+        "org.apache.commons.collections4.map.AbstractMapTest.makeFullMap()": 3,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.View.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySet.\u003cinit\u003e(org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, ?\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.keySet()": 0,
+        "org.apache.commons.collections4.map.AbstractMapTest.getAsList(java.lang.Object[])": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.compare(E, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleValues()": 5,
+        "org.apache.commons.collections4.comparators.ComparableComparator.comparableComparator()": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleKeys()": 0,
+        "org.apache.commons.collections4.comparators.ReverseComparator.\u003cinit\u003e(java.util.Comparator\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapTest.addSampleMappings(java.util.Map\u003c? super K, ? super V\u003e)": 4,
+        "org.apache.commons.collections4.map.AbstractIterableMapTest.makeFullMap()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2,
+        "org.apache.commons.collections4.bidimap.AbstractSortedBidiMapTest.makeFullMap()": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 5,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.size()": 5,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySetIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.bidimap.AbstractSortedBidiMapTest.isAllowNullValue()": 6,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.put(K, V)": 5,
+        "org.apache.commons.collections4.bidimap.AbstractBidiMapTest.makeFullMap()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 2,
+        "org.apache.commons.collections4.bidimap.DualTreeBidiMap.\u003cinit\u003e(java.util.Comparator\u003c? super K\u003e, java.util.Comparator\u003c? super V\u003e)": 5,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySetIterator.\u003cinit\u003e(java.util.Iterator\u003cK\u003e, org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, ?\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.iterator()": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.createKeySetIterator(java.util.Iterator\u003cK\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.bidimap.AbstractSortedBidiMapTest.isAllowNullKey()": 1,
+        "org.apache.commons.collections4.bidimap.AbstractBidiMapTest.isAllowDuplicateValues()": 6
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bidimap.AbstractSortedBidiMapTest.makeFullMap()",
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.KeySetIterator.next()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

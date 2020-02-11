@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.TrieUtilsTest",
+      "test": "testUnmodifiableTrie()",
+      "hitSet": {
+        "org.apache.commons.collections4.trie.analyzer.StringKeyAnalyzer.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.TrieUtils.unmodifiableTrie(org.apache.commons.collections4.Trie\u003cK, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.trie.PatriciaTrie.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.trie.AbstractPatriciaTrie.\u003cinit\u003e(org.apache.commons.collections4.trie.KeyAnalyzer\u003c? super K\u003e)": 0,
+        "org.apache.commons.collections4.trie.UnmodifiableTrie.unmodifiableTrie(org.apache.commons.collections4.Trie\u003cK, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.trie.AbstractPatriciaTrie.TrieEntry.\u003cinit\u003e(K, V, int)": 0,
+        "org.apache.commons.collections4.trie.AbstractBitwiseTrie.\u003cinit\u003e(org.apache.commons.collections4.trie.KeyAnalyzer\u003c? super K\u003e)": 0,
+        "org.apache.commons.collections4.trie.UnmodifiableTrie.\u003cinit\u003e(org.apache.commons.collections4.Trie\u003cK, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.trie.KeyAnalyzer.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.trie.AbstractBitwiseTrie.BasicEntry.\u003cinit\u003e(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TrieUtils.unmodifiableTrie(org.apache.commons.collections4.Trie\u003cK, ? extends V\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.ComparatorChainTest",
+      "test": "testComparatorChainOnMinvaluedCompatator()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.addComparator(java.util.Comparator\u003cE\u003e, boolean)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.comparators.ComparatorChainTest)": 0,
+        "null.compare(java.lang.Integer, java.lang.Integer)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.ComparatorChainTest",
+      "test": "testBadNoopComparatorChain()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.ComparatorChainTest",
+      "test": "testListComparatorChain()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.ComparatorChainTest",
+      "test": "testNoopComparatorChain()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkLocked()": 2,
+        "org.apache.commons.collections4.comparators.ComparableComparator.compare(E, E)": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.addComparator(java.util.Comparator\u003cE\u003e, boolean)": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.addComparator(java.util.Comparator\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.ComparatorChainTest",
+      "test": "testBadListComparatorChain()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparatorChain.checkChainIntegrity()": 1,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.compare(E, E)": 0,
+        "org.apache.commons.collections4.comparators.ComparatorChain.\u003cinit\u003e(java.util.List\u003cjava.util.Comparator\u003cE\u003e\u003e, java.util.BitSet)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.set.UnmodifiableSetTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSet.unmodifiableSet(java.util.Set\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSet.\u003cinit\u003e(java.util.Set\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.set.AbstractSerializableSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.set.UnmodifiableSetTest.makeFullCollection()",
+        "org.apache.commons.collections4.set.UnmodifiableSetTest.makeObject()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.set.UnmodifiableSetTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSet.unmodifiableSet(java.util.Set\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.set.UnmodifiableSet.\u003cinit\u003e(java.util.Set\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.set.AbstractSerializableSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.set.UnmodifiableSet.unmodifiableSet(java.util.Set\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

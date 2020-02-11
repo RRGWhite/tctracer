@@ -1,0 +1,103 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.DefaultedMapTest",
+      "test": "testMapGet2()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.defaultedMap(java.util.Map\u003cK, V\u003e, V)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.DefaultedMapTest",
+      "test": "testMapGet3()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.DefaultedMap.defaultedMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.factoryTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 2,
+        "org.apache.commons.collections4.functors.FactoryTransformer.\u003cinit\u003e(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.DefaultedMapTest",
+      "test": "testMapGet4()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.DefaultedMap.defaultedMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "null.transform(K)": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.map.DefaultedMapTest)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.DefaultedMapTest",
+      "test": "testMapGet()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 0,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(V)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.map.DefaultedMap.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.DefaultedMap.get(java.lang.Object)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

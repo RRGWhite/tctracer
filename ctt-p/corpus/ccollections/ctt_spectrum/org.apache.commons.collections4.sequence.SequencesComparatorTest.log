@@ -1,0 +1,137 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.sequence.SequencesComparatorTest",
+      "test": "testExecution()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 2,
+        "org.apache.commons.collections4.sequence.InsertCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 2,
+        "org.apache.commons.collections4.sequence.EditScript.visit(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 2,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.DefaultEquator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.DeleteCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 2,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 3,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 0,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 3,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.EditCommand.getObject()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 4,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.sequence.KeepCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.sequence.SequencesComparatorTest.ExecutionVisitor.getString()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.sequence.SequencesComparatorTest",
+      "test": "testMinimal()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 2,
+        "org.apache.commons.collections4.sequence.EditScript.getModifications()": 0,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 0,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 2,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 4,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.sequence.EditScript.getModifications()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.sequence.SequencesComparatorTest",
+      "test": "testLength()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 2,
+        "org.apache.commons.collections4.sequence.EditScript.getModifications()": 0,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 3,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 0,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 3,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 2,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 4,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.sequence.EditScript.getModifications()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.sequence.SequencesComparatorTest",
+      "test": "testShadok()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 2,
+        "org.apache.commons.collections4.sequence.InsertCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 2,
+        "org.apache.commons.collections4.sequence.EditScript.visit(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.DeleteCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 2,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 0,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 3,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.EditCommand.getObject()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 4,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.KeepCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.sequence.SequencesComparatorTest.ExecutionVisitor.getString()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

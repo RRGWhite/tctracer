@@ -1,0 +1,361 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testPredicateTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.TransformerUtils.asTransformer(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.PredicateTransformer.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.PredicateTransformer.predicateTransformer(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.PredicateTransformer.transform(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.PredicateTransformer.transform(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testMapTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 0,
+        "org.apache.commons.collections4.TransformerUtils.mapTransformer(java.util.Map\u003c? super I, ? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 2,
+        "org.apache.commons.collections4.functors.MapTransformer.mapTransformer(java.util.Map\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.MapTransformer.transform(I)": 0,
+        "org.apache.commons.collections4.functors.MapTransformer.\u003cinit\u003e(java.util.Map\u003c? super I, ? extends O\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TransformerUtils.mapTransformer(java.util.Map\u003c? super I, ? extends O\u003e)",
+        "org.apache.commons.collections4.functors.MapTransformer.transform(I)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testConstantTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 2,
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 1,
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 2,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)",
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testNullTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 1,
+        "org.apache.commons.collections4.TransformerUtils.nullTransformer()": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TransformerUtils.nullTransformer()",
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testStringValueTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 0,
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)": 0,
+        "org.apache.commons.collections4.functors.StringValueTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testInvokerTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 0,
+        "org.apache.commons.collections4.TransformerUtils.invokerTransformer(java.lang.String)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testChainedTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Transformer\u003c?, ?\u003e[])": 2,
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.functors.ChainedTransformer.\u003cinit\u003e(boolean, org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ChainedTransformer.transform(T)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 2,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.TransformerUtils.chainedTransformer(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ChainedTransformer.chainedTransformer(java.util.Collection\u003c? extends org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 1,
+        "org.apache.commons.collections4.functors.ChainedTransformer.chainedTransformer(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.ChainedTransformer.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e[])": 2,
+        "org.apache.commons.collections4.TransformerUtils.chainedTransformer(java.util.Collection\u003c? extends org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.ChainedTransformer.transform(T)",
+        "org.apache.commons.collections4.TransformerUtils.chainedTransformer(java.util.Collection\u003c? extends org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e\u003e)",
+        "org.apache.commons.collections4.TransformerUtils.chainedTransformer(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testSwitchMapTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Transformer\u003c?, ?\u003e[])": 3,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.switchMapTransformer(java.util.Map\u003cI, org.apache.commons.collections4.Transformer\u003cI, O\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[])": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.SwitchTransformer.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 3,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.functors.SwitchTransformer.\u003cinit\u003e(boolean, org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 3,
+        "org.apache.commons.collections4.functors.SwitchTransformer.transform(I)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 1,
+        "org.apache.commons.collections4.functors.SwitchTransformer.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.SwitchTransformer.transform(I)",
+        "org.apache.commons.collections4.TransformerUtils.switchMapTransformer(java.util.Map\u003cI, org.apache.commons.collections4.Transformer\u003cI, O\u003e\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testInvokerTransformer2()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.TransformerUtils.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testExceptionTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.ExceptionTransformer.exceptionTransformer()": 1,
+        "org.apache.commons.collections4.TransformerUtils.exceptionTransformer()": 0,
+        "org.apache.commons.collections4.functors.ExceptionTransformer.transform(I)": 0,
+        "org.apache.commons.collections4.functors.ExceptionTransformer.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TransformerUtils.exceptionTransformer()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testSwitchTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ConstantTransformer.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.SwitchTransformer.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 2,
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(java.util.Map\u003corg.apache.commons.collections4.Predicate\u003cI\u003e, org.apache.commons.collections4.Transformer\u003cI, O\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.SwitchTransformer.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Transformer\u003c?, ?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[])": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 1,
+        "org.apache.commons.collections4.functors.SwitchTransformer.\u003cinit\u003e(boolean, org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 2,
+        "org.apache.commons.collections4.functors.SwitchTransformer.transform(I)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.SwitchTransformer.switchTransformer(java.util.Map\u003c? extends org.apache.commons.collections4.Predicate\u003c? super I\u003e, ? extends org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.SwitchTransformer.transform(I)",
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e[], org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e[])",
+        "org.apache.commons.collections4.TransformerUtils.switchTransformer(java.util.Map\u003corg.apache.commons.collections4.Predicate\u003cI\u003e, org.apache.commons.collections4.Transformer\u003cI, O\u003e\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testSingletonPatternInSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ExceptionTransformer.readResolve()": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.readResolve()": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 0,
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.readResolve()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testExecutorTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.nopClosure()": 0,
+        "org.apache.commons.collections4.functors.ClosureTransformer.\u003cinit\u003e(org.apache.commons.collections4.Closure\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.TransformerUtils.asTransformer(org.apache.commons.collections4.Closure\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.ClosureTransformer.closureTransformer(org.apache.commons.collections4.Closure\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.ClosureTransformer.transform(T)": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 1,
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.ClosureTransformer.transform(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testFactoryTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 1,
+        "org.apache.commons.collections4.functors.FactoryTransformer.factoryTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.ConstantFactory.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.nullFactory()": 0,
+        "org.apache.commons.collections4.TransformerUtils.asTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 1,
+        "org.apache.commons.collections4.functors.FactoryTransformer.\u003cinit\u003e(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.functors.FactoryTransformer.transform(I)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.FactoryTransformer.transform(I)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testIfTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.TransformerUtils.ifTransformer(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.\u003cinit\u003e(O)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.TransformerUtils.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.functors.IfTransformer.ifTransformer(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 2,
+        "org.apache.commons.collections4.functors.ConstantTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.functors.IfTransformer.transform(I)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.TransformerUtilsTest)": 0,
+        "org.apache.commons.collections4.functors.ConstantTransformer.constantTransformer(O)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.ifTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 0,
+        "null.evaluate(java.lang.Integer)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.IfTransformer.ifTransformer(org.apache.commons.collections4.Predicate\u003c? super I\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.IfTransformer.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super I\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.IfTransformer.transform(I)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testCloneTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 1,
+        "org.apache.commons.collections4.functors.CloneTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.CloneTransformer.cloneTransformer()": 1,
+        "org.apache.commons.collections4.functors.CloneTransformer.transform(T)": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.create()": 1,
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.TransformerUtils.cloneTransformer()": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 2,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.\u003cinit\u003e(T)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.CloneTransformer.transform(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testInstantiateTransformerNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateTransformer.instantiateTransformer(java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.TransformerUtils.instantiateTransformer(java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.functors.InstantiateTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.InstantiateTransformer.transform(java.lang.Class\u003c? extends T\u003e)": 0,
+        "org.apache.commons.collections4.TransformerUtils.instantiateTransformer()": 0,
+        "org.apache.commons.collections4.functors.InstantiateTransformer.\u003cinit\u003e(java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.functors.InstantiateTransformer.instantiateTransformer()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.InstantiateTransformer.transform(java.lang.Class\u003c? extends T\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.TransformerUtilsTest",
+      "test": "testNopTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantTransformer.nullTransformer()": 1,
+        "org.apache.commons.collections4.TransformerUtils.nullTransformer()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 0,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TransformerUtils.nullTransformer()",
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

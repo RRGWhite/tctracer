@@ -1,0 +1,48 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.UnmodifiableSortedMapTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.unmodifiableSortedMap(java.util.SortedMap\u003cK, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleKeys()": 2,
+        "org.apache.commons.collections4.map.AbstractSortedMapTest.isAllowNullKey()": 3,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.isAllowNullValue()": 3,
+        "org.apache.commons.collections4.map.AbstractMapTest.addSampleMappings(java.util.Map\u003c? super K, ? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.isAllowDuplicateValues()": 3,
+        "org.apache.commons.collections4.map.AbstractSortedMapDecorator.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleValues()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.unmodifiableSortedMap(java.util.SortedMap\u003cK, ? extends V\u003e)",
+        "org.apache.commons.collections4.map.UnmodifiableSortedMapTest.makeFullMap()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.UnmodifiableSortedMapTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.unmodifiableSortedMap(java.util.SortedMap\u003cK, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleKeys()": 2,
+        "org.apache.commons.collections4.map.AbstractSortedMapTest.isAllowNullKey()": 3,
+        "org.apache.commons.collections4.map.AbstractMapTest.isAllowNullValue()": 3,
+        "org.apache.commons.collections4.map.AbstractMapTest.addSampleMappings(java.util.Map\u003c? super K, ? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapTest.isAllowDuplicateValues()": 3,
+        "org.apache.commons.collections4.map.AbstractSortedMapDecorator.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapTest.getSampleValues()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.UnmodifiableSortedMapTest.makeObject()",
+        "org.apache.commons.collections4.map.UnmodifiableSortedMapTest.makeFullMap()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

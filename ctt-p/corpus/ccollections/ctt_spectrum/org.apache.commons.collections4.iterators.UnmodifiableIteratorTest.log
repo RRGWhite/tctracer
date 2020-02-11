@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableIteratorTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableIteratorTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableIteratorTest.makeEmptyIterator()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

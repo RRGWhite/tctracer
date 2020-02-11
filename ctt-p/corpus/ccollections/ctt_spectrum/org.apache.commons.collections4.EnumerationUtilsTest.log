@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.EnumerationUtilsTest",
+      "test": "testToListWithHashtable()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.EnumerationUtils.toList(java.util.Enumeration\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.IteratorUtils.toList(java.util.Iterator\u003c? extends E\u003e, int)": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.EnumerationIterator.\u003cinit\u003e(java.util.Enumeration\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.IteratorUtils.toList(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.EnumerationIterator.hasNext()": 3,
+        "org.apache.commons.collections4.iterators.EnumerationIterator.\u003cinit\u003e(java.util.Enumeration\u003c? extends E\u003e, java.util.Collection\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.iterators.EnumerationIterator.next()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.EnumerationUtils.toList(java.util.Enumeration\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.EnumerationUtilsTest",
+      "test": "getFromEnumeration()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.EnumerationUtils.get(java.util.Enumeration\u003cT\u003e, int)": 0,
+        "org.apache.commons.collections4.CollectionUtils.checkIndexBounds(int)": 1,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.EnumerationUtils.get(java.util.Enumeration\u003cT\u003e, int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.EnumerationUtilsTest",
+      "test": "testToListWithStringTokenizer()",
+      "hitSet": {
+        "org.apache.commons.collections4.EnumerationUtils.toList(java.util.StringTokenizer)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.EnumerationUtils.toList(java.util.StringTokenizer)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

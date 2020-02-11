@@ -1,0 +1,155 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testTransformedSortedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.TransformedSortedBag.transformingSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.TransformedSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.BagUtils.transformingSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.TransformedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.transformingSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testUnmodifiableSortedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.BagUtils.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testUnmodifiableBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0,
+        "org.apache.commons.collections4.BagUtils.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.unmodifiableBag(org.apache.commons.collections4.Bag\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testPredicatedSortedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.iterator()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.hasNext()": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.BagUtils.predicatedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.\u003cinit\u003e(org.apache.commons.collections4.bag.AbstractMapBag\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.predicatedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.bag.PredicatedSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.predicatedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testSynchronizedSortedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.SynchronizedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.SynchronizedSortedBag.synchronizedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.SynchronizedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.BagUtils.synchronizedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.SynchronizedSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.synchronizedSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testPredicatedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.iterator()": 2,
+        "org.apache.commons.collections4.BagUtils.predicatedBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.hasNext()": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.PredicatedBag.predicatedBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.\u003cinit\u003e(org.apache.commons.collections4.bag.AbstractMapBag\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.predicatedBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testSynchronizedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.BagUtils.synchronizedBag(org.apache.commons.collections4.Bag\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.bag.SynchronizedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.SynchronizedBag.synchronizedBag(org.apache.commons.collections4.Bag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.SynchronizedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.synchronizedBag(org.apache.commons.collections4.Bag\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.BagUtilsTest",
+      "test": "testTransformedBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.BagUtils.transformingBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.TransformedBag.transformingBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.TransformedBag.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.BagUtils.transformingBag(org.apache.commons.collections4.Bag\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

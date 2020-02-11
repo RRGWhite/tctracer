@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.collection.TransformedCollectionTest",
+      "test": "testTransformedCollection()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.transform(E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.add(E)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.transformingCollection(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.TransformedCollectionTest",
+      "test": "testTransformedCollection_decorateTransform()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.transformedCollection(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

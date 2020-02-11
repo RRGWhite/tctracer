@@ -1,0 +1,59 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 4,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.TreeBag.comparator()": 3,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 3,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 5,
+        "org.apache.commons.collections4.bag.AbstractSortedBagTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getMap()": 5,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1,
+        "org.apache.commons.collections4.bag.TreeBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.getMap()": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 4,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.comparator()": 3,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 3,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 5,
+        "org.apache.commons.collections4.bag.AbstractSortedBagTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getMap()": 5,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1,
+        "org.apache.commons.collections4.bag.TreeBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.getMap()": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.makeObject()",
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.makeFullCollection()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

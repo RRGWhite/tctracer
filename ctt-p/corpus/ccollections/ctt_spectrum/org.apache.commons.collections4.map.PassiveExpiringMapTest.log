@@ -1,0 +1,290 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testZeroTimeToLive()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(long)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.\u003cinit\u003e(long)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeIfExpired(java.lang.Object, long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.expirationTime(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testContainsValue()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.containsValue(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsValue(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.containsValue(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testExpiration()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 3,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(long)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 3,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.validateAndConvertToMillis(long, java.util.concurrent.TimeUnit)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.\u003cinit\u003e(long)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeIfExpired(java.lang.Object, long)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.\u003cinit\u003e(long, java.util.concurrent.TimeUnit)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.expirationTime(K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 3,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 4,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMapTest.validateExpiration(java.util.Map\u003cjava.lang.String, java.lang.String\u003e, long)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.size()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testValues()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.values()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.values()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.values()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testIsEmpty()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isEmpty()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.isEmpty()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isEmpty()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testEntrySet()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.entrySet()": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.entrySet()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.entrySet()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testKeySet()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.keySet()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.keySet()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.keySet()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testContainsKey()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeIfExpired(java.lang.Object, long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 3,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testDecoratedMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.size()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeIfExpired(java.lang.Object, long)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeAllExpired(long)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.size()",
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testGet()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.isExpired(long, java.lang.Long)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.now()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.put(K, V)": 2,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.removeIfExpired(java.lang.Object, long)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.remove(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.remove(java.lang.Object)": 3,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.PassiveExpiringMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.map.PassiveExpiringMapTest",
+      "test": "testConstructors()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(long, java.util.concurrent.TimeUnit)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.validateAndConvertToMillis(long, java.util.concurrent.TimeUnit)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(long, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.ConstantTimeToLiveExpirationPolicy.\u003cinit\u003e(long)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e, java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.PassiveExpiringMap.\u003cinit\u003e(org.apache.commons.collections4.map.PassiveExpiringMap.org.apache.commons.collections4.map.PassiveExpiringMap$ExpirationPolicy\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

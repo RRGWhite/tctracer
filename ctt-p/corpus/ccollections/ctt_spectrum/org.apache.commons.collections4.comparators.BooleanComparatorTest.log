@@ -1,0 +1,51 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.BooleanComparatorTest",
+      "test": "testConstructors()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e(boolean)": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.compare(java.lang.Boolean, java.lang.Boolean)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.BooleanComparatorTest.allTests(boolean, org.apache.commons.collections4.comparators.BooleanComparator)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.BooleanComparatorTest",
+      "test": "testEqualsCompatibleInstance()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e(boolean)": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.getFalseFirstComparator()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.getTrueFirstComparator()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.booleanComparator(boolean)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.BooleanComparator.\u003cinit\u003e(boolean)",
+        "org.apache.commons.collections4.comparators.BooleanComparator.getFalseFirstComparator()",
+        "org.apache.commons.collections4.comparators.BooleanComparator.getTrueFirstComparator()",
+        "org.apache.commons.collections4.comparators.BooleanComparator.equals(java.lang.Object)",
+        "org.apache.commons.collections4.comparators.BooleanComparator.booleanComparator(boolean)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.BooleanComparatorTest",
+      "test": "testStaticFactoryMethods()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.BooleanComparator.getFalseFirstComparator()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.getTrueFirstComparator()": 0,
+        "org.apache.commons.collections4.comparators.BooleanComparator.compare(java.lang.Boolean, java.lang.Boolean)": 2,
+        "org.apache.commons.collections4.comparators.BooleanComparator.booleanComparator(boolean)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.BooleanComparatorTest.allTests(boolean, org.apache.commons.collections4.comparators.BooleanComparator)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.queue.UnmodifiableQueueTest",
+      "test": "testQueueRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.queue.AbstractQueueTest.getCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetEmpty()": 0,
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.\u003cinit\u003e(java.util.Queue\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 2,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.\u003cinit\u003e(java.util.Queue\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.remove()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.UnmodifiableQueueTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.\u003cinit\u003e(java.util.Queue\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.\u003cinit\u003e(java.util.Queue\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.UnmodifiableQueueTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.\u003cinit\u003e(java.util.Queue\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.\u003cinit\u003e(java.util.Queue\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.queue.UnmodifiableQueueTest.makeObject()",
+        "org.apache.commons.collections4.queue.UnmodifiableQueueTest.makeFullCollection()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

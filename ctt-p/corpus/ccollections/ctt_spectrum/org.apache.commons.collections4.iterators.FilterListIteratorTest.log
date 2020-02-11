@@ -1,0 +1,317 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testTruePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testFailingHasNextBug()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 0,
+        "null.evaluate(java.lang.Integer)": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testEvens()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testFours()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testOdds()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testFalsePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testCollections360()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.iterator()": 3,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 5,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testNextChangesPrevious()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.nextNextPrevious(java.util.ListIterator\u003c?\u003e, java.util.ListIterator\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testPreviousChangesNext()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.previousPreviousNext(java.util.ListIterator\u003c?\u003e, java.util.ListIterator\u003c?\u003e)",
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkForward(java.util.ListIterator\u003c?\u003e, java.util.ListIterator\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testManual()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 0,
+        "null.evaluate(java.lang.Integer)": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()",
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testThrees()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testNestedSixes()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testNestedSixes2()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testNestedSixes3()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterListIterator.setPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previous()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.nextIndex()": 1,
+        "null.evaluate(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.iterators.FilterListIterator.previousIndex()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasPrevious()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearNextObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.clearPreviousObject()": 2,
+        "org.apache.commons.collections4.iterators.FilterListIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterListIterator.setNextObject()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.FilterListIteratorTest",
+      "test": "testWalkLists()",
+      "hitSet": {},
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterListIteratorTest.walkLists(java.util.List\u003cE\u003e, java.util.ListIterator\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

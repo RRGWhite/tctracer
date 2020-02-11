@@ -1,0 +1,206 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testSameAsDecorated()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testOffsetGreaterThanSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveFirst()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testNegativeMax()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testBounded()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveUnsupported()",
+      "hitSet": {
+        "null.remove()": 1,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.BoundedIteratorTest, java.util.Iterator)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveMiddle()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveCalledTwice()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveLast()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testNegativeOffset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testMaxGreaterThanSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testEmptyBounded()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.checkBounds()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.BoundedIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.BoundedIteratorTest",
+      "test": "testRemoveWithoutCallingNext()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.BoundedIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.BoundedIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, long, long)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.TransformingComparatorTest",
+      "test": "testEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.ComparableComparator.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e, java.util.Comparator\u003cO\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.comparators.ComparableComparator.comparableComparator()": 0,
+        "org.apache.commons.collections4.comparators.TransformingComparator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.comparators.TransformingComparator.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super I, ? extends O\u003e)": 0,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.TransformingComparator.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

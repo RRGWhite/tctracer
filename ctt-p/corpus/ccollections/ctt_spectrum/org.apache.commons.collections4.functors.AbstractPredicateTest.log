@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.AbstractPredicateTest",
+      "test": "predicateSanityTests()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 1,
+        "org.apache.commons.collections4.functors.NullPredicateTest.generatePredicate()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NullPredicateTest.generatePredicate()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

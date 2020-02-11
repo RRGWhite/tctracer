@@ -1,0 +1,100 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "allTrue()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.AbstractCompositePredicateTest.getPredicateInstance(java.lang.Boolean[])": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 3,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 1,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "oneTruePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.coerce(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "emptyCollectionToGetInstance()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 2,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "emptyArrayToGetInstance()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "oneFalsePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.coerce(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AllPredicateTest",
+      "test": "trueAndFalseCombined()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.AbstractCompositePredicateTest.getPredicateInstance(java.lang.Boolean[])": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 3,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 1,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.getTestValue()": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

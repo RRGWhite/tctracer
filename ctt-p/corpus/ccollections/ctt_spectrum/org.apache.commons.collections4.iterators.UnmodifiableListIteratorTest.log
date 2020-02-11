@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableListIteratorTest",
+      "test": "testListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.UnmodifiableListIterator.umodifiableListIterator(java.util.ListIterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableListIteratorTest.makeEmptyIterator()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableListIteratorTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.UnmodifiableListIterator.umodifiableListIterator(java.util.ListIterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableListIterator.\u003cinit\u003e(java.util.ListIterator\u003c? extends E\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableListIterator.umodifiableListIterator(java.util.ListIterator\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

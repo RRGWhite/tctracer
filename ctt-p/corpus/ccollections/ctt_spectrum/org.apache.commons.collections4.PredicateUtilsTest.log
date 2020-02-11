@@ -1,0 +1,927 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testTruePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.\u003cinit\u003e()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()",
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx3()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx4()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx5()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FalsePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicateEx6()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx3()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx4()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx5()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicateEx6()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAndPredicateEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AndPredicate.andPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.andPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAsPredicateTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 1,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testEitherPredicateEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.PredicateUtils.eitherPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicate2()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAsPredicateTransformerEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAsPredicateTransformerEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 1,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsFalsePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullIsFalsePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.NullIsFalsePredicate.nullIsFalsePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.PredicateUtils.nullIsFalsePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.NullIsFalsePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NullIsFalsePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNeitherPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.neitherPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.NonePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NonePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx3()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx4()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx5()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicateEx6()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInstanceOfPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstanceofPredicate.instanceOfPredicate(java.lang.Class\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.functors.InstanceofPredicate.\u003cinit\u003e(java.lang.Class\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.PredicateUtils.instanceofPredicate(java.lang.Class\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.functors.InstanceofPredicate.evaluate(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.PredicateUtils.instanceofPredicate(java.lang.Class\u003c?\u003e)",
+        "org.apache.commons.collections4.functors.InstanceofPredicate.evaluate(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testIsNotNullPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.notNullPredicate()": 0,
+        "org.apache.commons.collections4.functors.NotNullPredicate.notNullPredicate()": 1,
+        "org.apache.commons.collections4.functors.NotNullPredicate.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.NotNullPredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.PredicateUtils.notNullPredicate()",
+        "org.apache.commons.collections4.functors.NotNullPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAndPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.AndPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.AndPredicate.andPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.andPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.AndPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AndPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testFalsePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()",
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAnyPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.AnyPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.anyPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.AnyPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AnyPredicate.anyPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AnyPredicate.evaluate(T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNonePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.NonePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.NonePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.NonePredicate.evaluate(T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx3()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx4()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx5()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicateEx6()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsExceptionPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.NullIsExceptionPredicate.nullIsExceptionPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.NullIsExceptionPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.PredicateUtils.nullIsExceptionPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.NullIsExceptionPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NullIsExceptionPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicate2Ex1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicate2Ex2()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicate2Ex3()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testUniquePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.UniquePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.UniquePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.UniquePredicate.uniquePredicate()": 1,
+        "org.apache.commons.collections4.PredicateUtils.uniquePredicate()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.UniquePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testEitherPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.PredicateUtils.eitherPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.OnePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.OnePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNotPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.NotPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.PredicateUtils.notPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.NotPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.NotPredicate.notPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NotPredicate.evaluate(T)",
+        "org.apache.commons.collections4.PredicateUtils.notPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsExceptionPredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullIsExceptionPredicate.nullIsExceptionPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nullIsExceptionPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicateEx2()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicateEx3()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testSingletonPatternInSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ExceptionPredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.readResolve()": 1,
+        "org.apache.commons.collections4.functors.NotNullPredicate.readResolve()": 1,
+        "org.apache.commons.collections4.functors.NullPredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.ExceptionPredicate.readResolve()": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.readResolve()": 1,
+        "org.apache.commons.collections4.functors.NullPredicate.readResolve()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOrPredicateEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.orPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.OrPredicate.orPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsFalsePredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullIsFalsePredicate.nullIsFalsePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nullIsFalsePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOnePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.PredicateUtils.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.OnePredicate.onePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.OnePredicate.evaluate(T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNeitherPredicateEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.PredicateUtils.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.NonePredicate.nonePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.PredicateUtils.neitherPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testAllPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.coerce(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AbstractQuantifierPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AllPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1,
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AllPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testTransformedPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TransformedPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.PredicateUtils.transformedPredicate(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.functors.TransformedPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.MapTransformer.mapTransformer(java.util.Map\u003c? super I, ? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.MapTransformer.transform(I)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TransformedPredicate.transformedPredicate(org.apache.commons.collections4.Transformer\u003c? super T, ? extends T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.mapTransformer(java.util.Map\u003c? super I, ? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.MapTransformer.\u003cinit\u003e(java.util.Map\u003c? super I, ? extends O\u003e)": 2,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TransformedPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testInvokerPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.invokerPredicate(java.lang.String)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.transformerPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerPredicate.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 3,
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.PredicateUtils.asPredicate(org.apache.commons.collections4.Transformer\u003c? super T, java.lang.Boolean\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TransformerPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testOrPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.orPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.OrPredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.OrPredicate.orPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.functors.OrPredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.OrPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsTruePredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullIsTruePredicate.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.NullIsTruePredicate.evaluate(T)": 0,
+        "org.apache.commons.collections4.functors.NullIsTruePredicate.nullIsTruePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nullIsTruePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NullIsTruePredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testExceptionPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.PredicateUtils.exceptionPredicate()": 0,
+        "org.apache.commons.collections4.functors.ExceptionPredicate.exceptionPredicate()": 1,
+        "org.apache.commons.collections4.functors.ExceptionPredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.PredicateUtils.exceptionPredicate()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNotPredicateEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.PredicateUtils.notPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0,
+        "org.apache.commons.collections4.functors.NotPredicate.notPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testNullIsTruePredicateEx1()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullIsTruePredicate.nullIsTruePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.PredicateUtils.nullIsTruePredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.PredicateUtilsTest",
+      "test": "testIdentityPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 0,
+        "org.apache.commons.collections4.functors.IdentityPredicate.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.IdentityPredicate.identityPredicate(T)": 1,
+        "org.apache.commons.collections4.PredicateUtils.identityPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.IdentityPredicate.evaluate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.PredicateUtils.identityPredicate(T)",
+        "org.apache.commons.collections4.functors.IdentityPredicate.evaluate(T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

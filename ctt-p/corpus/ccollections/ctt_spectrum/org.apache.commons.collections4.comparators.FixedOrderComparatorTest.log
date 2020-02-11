@@ -1,0 +1,102 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testLock()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.UnknownObjectBehavior.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e(T[])": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.addAsEqual(T, T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testArrayConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e(T[])": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 2,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparatorTest.assertComparatorYieldsOrder(java.lang.String[], java.util.Comparator\u003cjava.lang.String\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testConstructorPlusAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 2,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparatorTest.assertComparatorYieldsOrder(java.lang.String[], java.util.Comparator\u003cjava.lang.String\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testAddAsEqual()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e(T[])": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 2,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.addAsEqual(T, T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testUnknownObjectBehavior()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.getUnknownObjectBehavior()": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e(T[])": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 2,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.UnknownObjectBehavior.values()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.setUnknownObjectBehavior(org.apache.commons.collections4.comparators.FixedOrderComparator$UnknownObjectBehavior)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparatorTest.assertComparatorYieldsOrder(java.lang.String[], java.util.Comparator\u003cjava.lang.String\u003e)",
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.getUnknownObjectBehavior()",
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.comparators.FixedOrderComparatorTest",
+      "test": "testListConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.add(T)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.\u003cinit\u003e(java.util.List\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.checkLocked()": 1,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.isLocked()": 2,
+        "org.apache.commons.collections4.comparators.FixedOrderComparator.compare(T, T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.comparators.FixedOrderComparatorTest.assertComparatorYieldsOrder(java.lang.String[], java.util.Comparator\u003cjava.lang.String\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

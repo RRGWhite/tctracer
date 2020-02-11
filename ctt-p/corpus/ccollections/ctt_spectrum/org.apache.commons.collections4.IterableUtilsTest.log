@@ -1,0 +1,409 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "testToStringWithNullArguments()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.FluentIterable.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.IteratorUtils.toString(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)": 0,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 2,
+        "null.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "forEachButLast()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.TransformerClosure.transformerClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 2,
+        "org.apache.commons.collections4.IteratorUtils.forEachButLast(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.forEachButLast(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 3,
+        "org.apache.commons.collections4.ClosureUtils.invokerClosure(java.lang.String)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.forEachButLast(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "countMatches()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.IterableUtils.emptyIterable()": 2,
+        "org.apache.commons.collections4.IterableUtils.countMatches(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.FluentIterable.\u003cinit\u003e()": 2,
+        "null.iterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 6,
+        "org.apache.commons.collections4.IterableUtils.emptyIfNull(java.lang.Iterable\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 3,
+        "null.evaluate(java.lang.Number)": 5,
+        "org.apache.commons.collections4.IterableUtils.checkNotNull(java.lang.Iterable\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.IterableUtils.filteredIterable(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "null.\u003cinit\u003e(java.lang.Iterable, org.apache.commons.collections4.Predicate)": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 5,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 5,
+        "org.apache.commons.collections4.IterableUtils.size(java.lang.Iterable\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 7,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.countMatches(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "partition()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIterable()": 2,
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 3,
+        "null.iterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 4,
+        "org.apache.commons.collections4.CollectionUtils.addAll(java.util.Collection\u003cC\u003e, java.lang.Iterable\u003c? extends C\u003e)": 2,
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Factory\u003cR\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])": 1,
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e)": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 3,
+        "null.evaluate(java.lang.Number)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 3,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 5,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 0,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.extractSingleton(java.util.Collection\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])",
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e)",
+        "org.apache.commons.collections4.CollectionUtils.extractSingleton(java.util.Collection\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "frequencyOfNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.functors.NullPredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.FluentIterable.\u003cinit\u003e()": 2,
+        "null.iterator()": 3,
+        "org.apache.commons.collections4.IterableUtils.emptyIfNull(java.lang.Iterable\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 3,
+        "org.apache.commons.collections4.IterableUtils.frequency(java.lang.Iterable\u003cE\u003e, T)": 0,
+        "org.apache.commons.collections4.IterableUtils.checkNotNull(java.lang.Iterable\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.IterableUtils.filteredIterable(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "null.\u003cinit\u003e(java.lang.Iterable, org.apache.commons.collections4.Predicate)": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 5,
+        "org.apache.commons.collections4.IterableUtils.size(java.lang.Iterable\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.functors.NullPredicate.evaluate(T)": 5
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.frequency(java.lang.Iterable\u003cE\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "testToString()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.StringValueTransformer.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.IteratorUtils.toString(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)": 2,
+        "org.apache.commons.collections4.IteratorUtils.toString(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e)": 1,
+        "null.transform(java.lang.Integer)": 3,
+        "org.apache.commons.collections4.TransformerUtils.stringValueTransformer()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)": 0,
+        "org.apache.commons.collections4.IteratorUtils.toString(java.util.Iterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.functors.StringValueTransformer.transform(T)": 3,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 3,
+        "org.apache.commons.collections4.functors.StringValueTransformer.stringValueTransformer()": 3,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e)",
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "partitionMultiplePredicates()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 2,
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Factory\u003cR\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])": 1,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 3,
+        "null.evaluate(java.lang.Number)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.partition(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "forEach()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.IteratorUtils.forEach(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.TransformerClosure.transformerClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.IterableUtils.forEach(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 3,
+        "org.apache.commons.collections4.ClosureUtils.invokerClosure(java.lang.String)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.forEach(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "frequency()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "org.apache.commons.collections4.FluentIterable.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 5,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 1,
+        "null.\u003cinit\u003e(java.lang.Iterable, org.apache.commons.collections4.Predicate)": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 5,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 5,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 7,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 1,
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.IterableUtils.emptyIterable()": 2,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "null.iterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 6,
+        "org.apache.commons.collections4.IterableUtils.emptyIfNull(java.lang.Iterable\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.frequency(java.lang.Iterable\u003cE\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.IterableUtils.checkNotNull(java.lang.Iterable\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getCount(java.lang.Object)": 1,
+        "org.apache.commons.collections4.IterableUtils.filteredIterable(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.size(java.lang.Iterable\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.frequency(java.lang.Iterable\u003cE\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "find()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.find(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.find(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.find(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "getFromIterable()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.iterator()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.hasNext()": 2,
+        "org.apache.commons.collections4.CollectionUtils.checkIndexBounds(int)": 1,
+        "org.apache.commons.collections4.IterableUtils.get(java.lang.Iterable\u003cT\u003e, int)": 0,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.next()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.BagIterator.\u003cinit\u003e(org.apache.commons.collections4.bag.AbstractMapBag\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.IteratorUtils.get(java.util.Iterator\u003cE\u003e, int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.get(java.lang.Iterable\u003cT\u003e, int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "forEachFailure()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 4,
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.transformerClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)": 2,
+        "org.apache.commons.collections4.IterableUtils.forEach(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.functors.TransformerClosure.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 3,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 3,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.ClosureUtils.invokerClosure(java.lang.String)": 0,
+        "org.apache.commons.collections4.IteratorUtils.forEach(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "testToStringDelimiter()",
+      "hitSet": {
+        "null.transform(java.lang.Integer)": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)": 0,
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)": 0,
+        "org.apache.commons.collections4.IteratorUtils.toString(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.toString(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, java.lang.String\u003e, java.lang.String, java.lang.String, java.lang.String)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "matchesAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.matchesAll(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.IterableUtils.matchesAll(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "null.evaluate(java.lang.Integer)": 2,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.matchesAll(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "matchesAny()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 3,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.IteratorUtils.matchesAny(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "null.evaluate(java.lang.Number)": 3,
+        "org.apache.commons.collections4.IterableUtils.matchesAny(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.matchesAny(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "indexOf()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 2,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.IterableUtilsTest",
+      "test": "containsWithEquator()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 2,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 3,
+        "org.apache.commons.collections4.IteratorUtils.matchesAny(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.IterableUtils.contains(java.lang.Iterable\u003c? extends E\u003e, E, org.apache.commons.collections4.Equator\u003c? super E\u003e)": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)": 0,
+        "null.equate(java.lang.String, java.lang.String)": 5,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 4,
+        "org.apache.commons.collections4.IterableUtils.matchesAny(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.IterableUtils.contains(java.lang.Iterable\u003c? extends E\u003e, E, org.apache.commons.collections4.Equator\u003c? super E\u003e)",
+        "null.\u003cinit\u003e(org.apache.commons.collections4.IterableUtilsTest)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

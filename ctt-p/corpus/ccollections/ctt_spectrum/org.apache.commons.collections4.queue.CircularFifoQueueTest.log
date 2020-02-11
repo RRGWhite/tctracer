@@ -1,0 +1,346 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testGetIndex()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.AbstractQueueTest.getCollection()": 1,
+        "org.apache.commons.collections4.queue.AbstractQueueTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 3,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.get(int)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.queue.CircularFifoQueue.get(int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testCircularFifoQueueRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.AbstractQueueTest.verify()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 1,
+        "org.apache.commons.collections4.queue.AbstractQueueTest.getCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.verify()": 2,
+        "org.apache.commons.collections4.queue.AbstractQueueTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "null.next()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 3,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 2,
+        "null.hasNext()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()",
+        "org.apache.commons.collections4.queue.CircularFifoQueueTest.verify()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError1()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError2()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()",
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError3()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError4()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError5()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError6()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError7()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError8()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRemoveError9()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.decrement(int)": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "null.remove()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testCircularFifoQueueCircular()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.peek()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 0,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.queue.CircularFifoQueue.peek()",
+        "null.next()",
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()",
+        "null.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testConstructorException1()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testConstructorException2()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testConstructorException3()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.queue.CircularFifoQueueTest",
+      "test": "testRepeatedSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.CircularFifoQueue.writeObject(java.io.ObjectOutputStream)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.iterator()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.add(E)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.readObject(java.io.ObjectInputStream)": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isEmpty()": 2,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.\u003cinit\u003e(int)": 0,
+        "null.next()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.isAtFullCapacity()": 1,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.remove()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.queue.CircularFifoQueue)": 1,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.queue.CircularFifoQueue.increment(int)": 1
+      },
+      "callsBeforeAssert": [
+        "null.next()",
+        "org.apache.commons.collections4.queue.CircularFifoQueue.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

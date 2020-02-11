@@ -1,0 +1,58 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest",
+      "test": "testConstructors()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(org.apache.commons.collections4.KeyValue\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(java.util.Map.java.util.Map$Entry\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.DefaultKeyValue.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()",
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest",
+      "test": "testAccessorsAndMutators()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()",
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest",
+      "test": "testSelfReferenceHandling()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

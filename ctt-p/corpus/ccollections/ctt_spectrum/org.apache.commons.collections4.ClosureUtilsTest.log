@@ -1,0 +1,246 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testChainedClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.chainedClosure(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 0,
+        "org.apache.commons.collections4.ClosureUtils.chainedClosure(java.util.Collection\u003c? extends org.apache.commons.collections4.Closure\u003c? super E\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.ChainedClosure.chainedClosure(java.util.Collection\u003c? extends org.apache.commons.collections4.Closure\u003c? super E\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Closure\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ChainedClosure.\u003cinit\u003e(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ChainedClosure.chainedClosure(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 1,
+        "org.apache.commons.collections4.functors.ChainedClosure.\u003cinit\u003e(boolean, org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 2,
+        "org.apache.commons.collections4.functors.ChainedClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ClosureUtils.chainedClosure(org.apache.commons.collections4.Closure\u003c? super E\u003e[])",
+        "org.apache.commons.collections4.ClosureUtils.chainedClosure(java.util.Collection\u003c? extends org.apache.commons.collections4.Closure\u003c? super E\u003e\u003e)",
+        "org.apache.commons.collections4.functors.ChainedClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testWhileClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FalsePredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.WhileClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.UniquePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.ClosureUtils.nopClosure()": 0,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.WhileClosure.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, boolean)": 2,
+        "org.apache.commons.collections4.functors.UniquePredicate.uniquePredicate()": 1,
+        "org.apache.commons.collections4.PredicateUtils.uniquePredicate()": 0,
+        "org.apache.commons.collections4.ClosureUtils.whileClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.functors.UniquePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.WhileClosure.whileClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, boolean)": 1,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.WhileClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testInvokeClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String)": 2,
+        "org.apache.commons.collections4.functors.TransformerClosure.transformerClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 2,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.TransformerClosure.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 3,
+        "org.apache.commons.collections4.functors.InvokerTransformer.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.functors.InvokerTransformer.invokerTransformer(java.lang.String)": 1,
+        "org.apache.commons.collections4.ClosureUtils.invokerClosure(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.ClosureUtils.invokerClosure(java.lang.String)": 0,
+        "org.apache.commons.collections4.functors.InvokerTransformer.\u003cinit\u003e(java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testSwitchMapClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.functors.SwitchClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Closure\u003c?\u003e[])": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 3,
+        "org.apache.commons.collections4.functors.SwitchClosure.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)": 1,
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.ClosureUtils.switchMapClosure(java.util.Map\u003c? extends E, org.apache.commons.collections4.Closure\u003cE\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 1,
+        "org.apache.commons.collections4.functors.SwitchClosure.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.SwitchClosure.\u003cinit\u003e(boolean, org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.SwitchClosure.execute(E)",
+        "org.apache.commons.collections4.ClosureUtils.switchMapClosure(java.util.Map\u003c? extends E, org.apache.commons.collections4.Closure\u003cE\u003e\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testDoWhileClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.WhileClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.UniquePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.UniquePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.WhileClosure.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, boolean)": 2,
+        "org.apache.commons.collections4.functors.UniquePredicate.uniquePredicate()": 1,
+        "org.apache.commons.collections4.ClosureUtils.doWhileClosure(org.apache.commons.collections4.Closure\u003c? super E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.PredicateUtils.uniquePredicate()": 0,
+        "org.apache.commons.collections4.functors.WhileClosure.whileClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, boolean)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.WhileClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testExceptionClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ExceptionClosure.execute(E)": 0,
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.ClosureUtils.exceptionClosure()": 0,
+        "org.apache.commons.collections4.functors.ExceptionClosure.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.ExceptionClosure.exceptionClosure()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ClosureUtils.exceptionClosure()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testIfClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.TruePredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FalsePredicate.falsePredicate()": 0,
+        "org.apache.commons.collections4.functors.IfClosure.ifClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.IfClosure.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.IfClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.ClosureUtils.ifClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.ClosureUtils.ifClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.functors.IfClosure.ifClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.TruePredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 2,
+        "org.apache.commons.collections4.functors.FalsePredicate.evaluate(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.IfClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testSingletonPatternInSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.readResolve()": 1,
+        "org.apache.commons.collections4.functors.ExceptionClosure.readResolve()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testSwitchClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.SwitchClosure.execute(E)": 0,
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 0,
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(java.util.Map\u003corg.apache.commons.collections4.Predicate\u003cE\u003e, org.apache.commons.collections4.Closure\u003cE\u003e\u003e)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Closure\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 2,
+        "org.apache.commons.collections4.functors.SwitchClosure.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)": 1,
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.functors.TruePredicate.truePredicate()": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.copy(org.apache.commons.collections4.Closure\u003c? super E\u003e[])": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.SwitchClosure.\u003cinit\u003e(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.SwitchClosure.\u003cinit\u003e(boolean, org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 2,
+        "org.apache.commons.collections4.functors.SwitchClosure.switchClosure(java.util.Map\u003corg.apache.commons.collections4.Predicate\u003cE\u003e, org.apache.commons.collections4.Closure\u003cE\u003e\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.SwitchClosure.execute(E)",
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(org.apache.commons.collections4.Predicate\u003c? super E\u003e[], org.apache.commons.collections4.Closure\u003c? super E\u003e[])",
+        "org.apache.commons.collections4.ClosureUtils.switchClosure(java.util.Map\u003corg.apache.commons.collections4.Predicate\u003cE\u003e, org.apache.commons.collections4.Closure\u003cE\u003e\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testNopClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.nopClosure()": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 1,
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.NOPClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testTransformerClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 0,
+        "org.apache.commons.collections4.functors.TransformerClosure.transformerClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 1,
+        "org.apache.commons.collections4.ClosureUtils.nopClosure()": 0,
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.TransformerClosure.\u003cinit\u003e(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)": 2,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ClosureUtils.asClosure(org.apache.commons.collections4.Transformer\u003c? super E, ?\u003e)",
+        "org.apache.commons.collections4.functors.TransformerClosure.execute(E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ClosureUtilsTest",
+      "test": "testForClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.ClosureUtils.forClosure(int, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.functors.ForClosure.forClosure(int, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.functors.ForClosure.\u003cinit\u003e(int, org.apache.commons.collections4.Closure\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.functors.ForClosure.execute(E)": 0,
+        "org.apache.commons.collections4.functors.NOPClosure.nopClosure()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ClosureUtils.forClosure(int, org.apache.commons.collections4.Closure\u003c? super E\u003e)",
+        "org.apache.commons.collections4.functors.ForClosure.execute(E)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

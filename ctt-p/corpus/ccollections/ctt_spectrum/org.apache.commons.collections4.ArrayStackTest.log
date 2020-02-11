@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.ArrayStackTest",
+      "test": "testSearch()",
+      "hitSet": {
+        "org.apache.commons.collections4.ArrayStack.push(E)": 0,
+        "org.apache.commons.collections4.ArrayStack.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ArrayStack.search(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ArrayStack.search(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ArrayStackTest",
+      "test": "testPushPeekPop()",
+      "hitSet": {
+        "org.apache.commons.collections4.ArrayStack.push(E)": 0,
+        "org.apache.commons.collections4.ArrayStack.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ArrayStack.empty()": 0,
+        "org.apache.commons.collections4.ArrayStack.peek()": 0,
+        "org.apache.commons.collections4.ArrayStack.pop()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ArrayStack.push(E)",
+        "org.apache.commons.collections4.ArrayStack.empty()",
+        "org.apache.commons.collections4.ArrayStack.peek()",
+        "org.apache.commons.collections4.ArrayStack.pop()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ArrayStackTest",
+      "test": "testNewStack()",
+      "hitSet": {
+        "org.apache.commons.collections4.ArrayStack.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ArrayStack.empty()": 0,
+        "org.apache.commons.collections4.ArrayStack.peek()": 0,
+        "org.apache.commons.collections4.ArrayStack.pop()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ArrayStack.empty()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

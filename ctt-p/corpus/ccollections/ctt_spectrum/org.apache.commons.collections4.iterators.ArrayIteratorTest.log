@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ArrayIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.reset()": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.checkBound(int, int, java.lang.String)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIteratorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ArrayIteratorTest",
+      "test": "testNullArray()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int)": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ArrayIteratorTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.checkBound(int, int, java.lang.String)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ArrayListIteratorTest.makeObject()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()",
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

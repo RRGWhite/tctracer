@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.IteratorEnumerationTest",
+      "test": "testEnumeration()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.nextElement()": 0,
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.getIterator()": 0,
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.hasMoreElements()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.nextElement()",
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.getIterator()",
+        "org.apache.commons.collections4.iterators.IteratorEnumeration.hasMoreElements()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

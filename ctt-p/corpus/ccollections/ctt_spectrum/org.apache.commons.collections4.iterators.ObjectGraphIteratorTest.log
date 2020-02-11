@@ -1,0 +1,252 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_Transformed1()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_Transformed2()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_Transformed3()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructor_null_next()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_IteratorOfIterators()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructorIteration_Simple()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructorIteration_Empty()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_RootNoTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_IteratorOfIteratorsWithEmptyIterators()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 0,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 5,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructor_null_remove()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructorIteration_WithEmptyIterators()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.hasNext()": 5,
+        "org.apache.commons.collections4.iterators.EmptyIterator.resettableEmptyIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.IteratorUtils.emptyIterator()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteration_RootNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(E, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructorRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()",
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructor_null1()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ObjectGraphIteratorTest",
+      "test": "testIteratorConstructorIteration_SimpleNoHasNext()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNextByIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.findNext(E)": 3,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.updateCurrentIterator()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ObjectGraphIterator.next()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

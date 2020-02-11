@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.EqualPredicateTest",
+      "test": "testNullArgumentEqualsNullPredicate()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 0,
+        "org.apache.commons.collections4.functors.NullPredicate.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.EqualPredicateTest",
+      "test": "testPredicateTypeCanBeSuperClassOfObject()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.EqualPredicateTest",
+      "test": "objectFactoryUsesEqualsForTest()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

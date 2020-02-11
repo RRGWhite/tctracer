@@ -1,0 +1,48 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.NodeCachingLinkedListTest",
+      "test": "testShrinkCache()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.\u003cinit\u003e(int)": 2,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.removeAllNodes()": 0,
+        "org.apache.commons.collections4.list.AbstractLinkedList.addNodeBefore(org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e, E)": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedList.removeAllNodes()": 1,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.setMaximumCacheSize(int)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isRemoveSupported()": 0,
+        "org.apache.commons.collections4.list.AbstractLinkedList.Node.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.addNodeToCache(org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractLinkedList.addAll(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.createNode(E)": 3,
+        "org.apache.commons.collections4.list.AbstractLinkedList.createNode(E)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetEmpty()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractLinkedList.Node.setValue(E)": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedList.getNode(int, boolean)": 0,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedCollection()": 1,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedList.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedListTest.checkNodes()": 0,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.getNodeFromCache()": 2,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.isCacheFull()": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedList.createHeaderNode()": 3,
+        "org.apache.commons.collections4.list.AbstractLinkedList.removeNode(org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractLinkedList.addNode(org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e, org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractLinkedList.init()": 2,
+        "org.apache.commons.collections4.list.AbstractLinkedListTest.getCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 2,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.shrinkCacheToMaximumSize()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isAddSupported()": 0,
+        "org.apache.commons.collections4.list.NodeCachingLinkedList.removeNode(org.apache.commons.collections4.list.AbstractLinkedList.org.apache.commons.collections4.list.AbstractLinkedList$Node\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 3,
+        "org.apache.commons.collections4.list.AbstractLinkedList.Node.\u003cinit\u003e(E)": 5,
+        "org.apache.commons.collections4.list.AbstractLinkedList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractLinkedListTest.checkNodes()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

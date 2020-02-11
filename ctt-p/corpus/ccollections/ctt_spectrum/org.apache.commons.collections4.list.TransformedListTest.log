@@ -1,0 +1,69 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.TransformedListTest",
+      "test": "testTransformedList_decorateTransform()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollectionTest.StringToInteger.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.list.TransformedList.transformedList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollectionTest.StringToInteger.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.list.TransformedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.TransformedListTest",
+      "test": "testTransformedList()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.TransformedList.transformingList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.TransformedList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.TransformedList.listIterator(int)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.getListIterator()": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.addAll(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollectionTest.StringToInteger.transform(java.lang.Object)": 2,
+        "org.apache.commons.collections4.list.TransformedList.TransformedListIterator.set(E)": 0,
+        "org.apache.commons.collections4.list.TransformedList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.TransformedCollection.add(E)": 0,
+        "org.apache.commons.collections4.list.TransformedList.TransformedListIterator.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.TransformedList.TransformedListIterator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.TransformedList.getList()": 1,
+        "org.apache.commons.collections4.list.TransformedList.add(int, E)": 0,
+        "org.apache.commons.collections4.list.TransformedList.get(int)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.clear()": 0,
+        "org.apache.commons.collections4.list.TransformedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.TransformedCollection.transform(E)": 1,
+        "org.apache.commons.collections4.list.TransformedList.listIterator()": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.transform(java.util.Collection\u003c? extends E\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.remove(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.TransformedList.get(int)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

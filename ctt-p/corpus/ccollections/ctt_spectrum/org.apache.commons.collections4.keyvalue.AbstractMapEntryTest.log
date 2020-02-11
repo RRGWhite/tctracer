@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.AbstractMapEntryTest",
+      "test": "testToString()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest.makeMapEntry()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest.makeMapEntry(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.toString()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.AbstractMapEntryTest",
+      "test": "testEqualsAndHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest.makeMapEntry()": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntryTest.makeMapEntry(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.UnmodifiableMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 1,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.hashCode()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.hashCode()",
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.equals(java.lang.Object)",
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

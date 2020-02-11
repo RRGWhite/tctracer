@@ -1,0 +1,80 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ReverseListIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.reset()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ReverseListIteratorTest",
+      "test": "testEmptyListIteratorIsIndeedEmpty()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ReverseListIteratorTest",
+      "test": "testReverse()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previous()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ReverseListIteratorTest",
+      "test": "testWalkForwardAndBack()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ReverseListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previousIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.nextIndex()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.previous()",
+        "org.apache.commons.collections4.iterators.ReverseListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

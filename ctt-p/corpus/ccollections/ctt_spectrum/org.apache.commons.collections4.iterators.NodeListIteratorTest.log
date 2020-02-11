@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.NodeListIteratorTest",
+      "test": "testEmptyIteratorWithNodeConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.NodeListIterator.\u003cinit\u003e(org.w3c.dom.Node)": 0,
+        "\u003e\u003e\u003e TEST START \u003c\u003c\u003c |": -1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

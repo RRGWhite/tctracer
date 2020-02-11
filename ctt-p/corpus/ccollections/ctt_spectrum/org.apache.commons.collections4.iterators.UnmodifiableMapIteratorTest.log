@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableMapIteratorTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.mapIterator()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIterator.unmodifiableMapIterator(org.apache.commons.collections4.MapIterator\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.put(K, V)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIterator.\u003cinit\u003e(org.apache.commons.collections4.MapIterator\u003c? extends K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.BidiMapIterator.\u003cinit\u003e(org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.DualHashBidiMap.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIterator.unmodifiableMapIterator(org.apache.commons.collections4.MapIterator\u003c? extends K, ? extends V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.UnmodifiableMapIteratorTest",
+      "test": "testMapIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, java.util.Map\u003cV, K\u003e)": 1,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.mapIterator()": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIterator.unmodifiableMapIterator(org.apache.commons.collections4.MapIterator\u003c? extends K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIterator.\u003cinit\u003e(org.apache.commons.collections4.MapIterator\u003c? extends K, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.bidimap.AbstractDualBidiMap.BidiMapIterator.\u003cinit\u003e(org.apache.commons.collections4.bidimap.AbstractDualBidiMap\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.bidimap.DualHashBidiMap.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.UnmodifiableMapIteratorTest.makeEmptyIterator()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

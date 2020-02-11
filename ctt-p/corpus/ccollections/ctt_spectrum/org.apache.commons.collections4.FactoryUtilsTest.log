@@ -1,0 +1,224 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "instantiateFactorySimple()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e)",
+        "org.apache.commons.collections4.FactoryUtilsTest.Mock3.getValue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryPublicCopyConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "instantiateFactoryNoConstructor()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryPublicSerializationError()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.create()": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0,
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.Throwable)": 1,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.\u003cinit\u003e(T)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryPublicCloneMethod()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeCloneFactory.create()": 0,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeCloneFactory.\u003cinit\u003e(T, java.lang.reflect.Method)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeCloneFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testNullFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.nullFactory()": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.ConstantFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.nullFactory()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testConstantFactoryNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 0,
+        "org.apache.commons.collections4.FactoryUtils.constantFactory(T)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.ConstantFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.constantFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testSingletonPatternInSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ExceptionFactory.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)": 0,
+        "org.apache.commons.collections4.functors.ExceptionFactory.readResolve()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.TestUtils.assertSameAfterSerialization(java.lang.String, java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "instantiateFactoryMismatch()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "instantiateFactoryNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testConstantFactoryConstant()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ConstantFactory.create()": 0,
+        "org.apache.commons.collections4.FactoryUtils.constantFactory(T)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.\u003cinit\u003e(T)": 2,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.ConstantFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.constantFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryPublicSerialization()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.create()": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0,
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.\u003cinit\u003e(T)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.PrototypeFactory.PrototypeSerializationFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "instantiateFactoryComplex()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 1,
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 0,
+        "org.apache.commons.collections4.functors.InstantiateFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])": 2,
+        "org.apache.commons.collections4.functors.InstantiateFactory.findConstructor()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.InstantiateFactory.create()",
+        "org.apache.commons.collections4.FactoryUtils.instantiateFactory(java.lang.Class\u003cT\u003e, java.lang.Class\u003c?\u003e[], java.lang.Object[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testExceptionFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.String)": 1,
+        "org.apache.commons.collections4.functors.ExceptionFactory.create()": 0,
+        "org.apache.commons.collections4.functors.ExceptionFactory.exceptionFactory()": 1,
+        "org.apache.commons.collections4.FactoryUtils.exceptionFactory()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.FactoryUtils.exceptionFactory()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.FactoryUtilsTest",
+      "test": "testPrototypeFactoryPublicBad()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.PrototypeFactory.prototypeFactory(T)": 1,
+        "org.apache.commons.collections4.FactoryUtils.prototypeFactory(T)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

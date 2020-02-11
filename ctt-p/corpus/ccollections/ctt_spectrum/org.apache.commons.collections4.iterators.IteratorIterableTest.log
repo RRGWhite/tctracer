@@ -1,0 +1,41 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.IteratorIterableTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.IteratorIterable.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.IteratorIterable.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, boolean)": 0,
+        "null.next()": 1,
+        "null.\u003cinit\u003e(java.util.Iterator)": 1,
+        "org.apache.commons.collections4.iterators.IteratorIterable.createTypesafeIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "null.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.IteratorIterable.iterator()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.IteratorIterableTest.verifyIteration(java.lang.Iterable\u003cjava.lang.Number\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.IteratorIterableTest",
+      "test": "testMultipleUserIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ListIteratorWrapper.hasNext()": 2,
+        "org.apache.commons.collections4.iterators.IteratorIterable.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, boolean)": 0,
+        "null.next()": 1,
+        "null.\u003cinit\u003e(java.util.Iterator)": 1,
+        "org.apache.commons.collections4.iterators.ListIteratorWrapper.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.IteratorIterable.createTypesafeIterator(java.util.Iterator\u003c? extends E\u003e)": 0,
+        "null.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.ListIteratorWrapper.reset()": 2,
+        "org.apache.commons.collections4.iterators.ListIteratorWrapper.next()": 2,
+        "org.apache.commons.collections4.iterators.IteratorIterable.iterator()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.IteratorIterableTest.verifyIteration(java.lang.Iterable\u003cjava.lang.Number\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

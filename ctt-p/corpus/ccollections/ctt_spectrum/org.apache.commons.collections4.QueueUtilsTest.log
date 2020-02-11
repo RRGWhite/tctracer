@@ -1,0 +1,68 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.QueueUtilsTest",
+      "test": "testTransformedQueue()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.TransformedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2,
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.\u003cinit\u003e(java.util.Queue\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.QueueUtils.transformingQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 0,
+        "org.apache.commons.collections4.queue.TransformedQueue.transformingQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 1,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.\u003cinit\u003e(java.util.Queue\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.queue.TransformedQueue.\u003cinit\u003e(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.QueueUtils.transformingQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Transformer\u003c? super E, ? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.QueueUtilsTest",
+      "test": "testEmptyQueue()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.isEmpty()": 0,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.add(java.lang.Object)": 0,
+        "org.apache.commons.collections4.QueueUtils.emptyQueue()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.isEmpty()",
+        "org.apache.commons.collections4.QueueUtils.emptyQueue()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.QueueUtilsTest",
+      "test": "testUnmodifiableQueue()",
+      "hitSet": {
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.queue.AbstractQueueDecorator.\u003cinit\u003e(java.util.Queue\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.QueueUtils.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.queue.UnmodifiableQueue.\u003cinit\u003e(java.util.Queue\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.QueueUtils.unmodifiableQueue(java.util.Queue\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.QueueUtilsTest",
+      "test": "testPredicatedQueue()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.QueueUtils.predicatedQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.queue.PredicatedQueue.predicatedQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.queue.PredicatedQueue.\u003cinit\u003e(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.QueueUtils.predicatedQueue(java.util.Queue\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.map.LazyMapTest",
+      "test": "testMapGet()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

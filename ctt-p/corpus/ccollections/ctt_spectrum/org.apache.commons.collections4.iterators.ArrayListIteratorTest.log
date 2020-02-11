@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.ArrayListIteratorTest",
+      "test": "testListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.previous()": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.checkBound(int, int, java.lang.String)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.hasPrevious()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ArrayListIterator.previous()",
+        "org.apache.commons.collections4.iterators.ArrayListIterator.hasPrevious()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.ArrayListIteratorTest",
+      "test": "testListIteratorSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.ArrayListIterator.set(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.checkBound(int, int, java.lang.String)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.iterators.ArrayListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.ArrayIterator.\u003cinit\u003e(java.lang.Object)": 1,
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.ArrayIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

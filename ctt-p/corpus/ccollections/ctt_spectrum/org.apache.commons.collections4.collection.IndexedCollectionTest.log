@@ -1,0 +1,130 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.collection.IndexedCollectionTest",
+      "test": "testDecoratedCollectionIsIndexedOnCreation()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.IndexedCollection.addToIndex(C)": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.\u003cinit\u003e(java.util.Map\u003cK, ? super C\u003e, org.apache.commons.collections4.Factory\u003cC\u003e)": 4,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 4,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super C\u003e, java.lang.Class\u003cC\u003e)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.\u003cinit\u003e(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e, org.apache.commons.collections4.MultiMap\u003cK, C\u003e, boolean)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.createCollection(int)": 5,
+        "org.apache.commons.collections4.collection.IndexedCollection.reindex()": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.put(K, java.lang.Object)": 4,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.map.MultiValueMap.clear()": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.uniqueIndexedCollection(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.iterator()": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.create()": 6,
+        "org.apache.commons.collections4.collection.IndexedCollection.nonUniqueIndexedCollection(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super java.util.Collection\u003cV\u003e\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.getCollection(java.lang.Object)": 5,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.IndexedCollectionTest",
+      "test": "testEnsureDuplicateObjectsCauseException()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.IndexedCollection.addToIndex(C)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.\u003cinit\u003e(java.util.Map\u003cK, ? super C\u003e, org.apache.commons.collections4.Factory\u003cC\u003e)": 5,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 5,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.add(E)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super C\u003e, java.lang.Class\u003cC\u003e)": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.\u003cinit\u003e(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e, org.apache.commons.collections4.MultiMap\u003cK, C\u003e, boolean)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.createCollection(int)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.reindex()": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.put(K, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.collection.IndexedCollection.uniqueIndexedCollection(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.clear()": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.add(C)": 0,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.create()": 4,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super java.util.Collection\u003cV\u003e\u003e)": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.getCollection(java.lang.Object)": 3,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 5,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.IndexedCollectionTest",
+      "test": "testAddedObjectsCanBeRetrievedByKey()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.IndexedCollection.addToIndex(C)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.\u003cinit\u003e(java.util.Map\u003cK, ? super C\u003e, org.apache.commons.collections4.Factory\u003cC\u003e)": 5,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 5,
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.add(E)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super C\u003e, java.lang.Class\u003cC\u003e)": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.\u003cinit\u003e(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e, org.apache.commons.collections4.MultiMap\u003cK, C\u003e, boolean)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.createCollection(int)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.reindex()": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.put(K, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.map.MultiValueMap.clear()": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.add(C)": 0,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.create()": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.nonUniqueIndexedCollection(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super java.util.Collection\u003cV\u003e\u003e)": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.getCollection(java.lang.Object)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.addAll(java.util.Collection\u003c? extends C\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 5,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.collection.IndexedCollectionTest",
+      "test": "testReindexUpdatesIndexWhenDecoratedCollectionIsModifiedSeparately()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.IndexedCollection.addToIndex(C)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.\u003cinit\u003e(java.util.Map\u003cK, ? super C\u003e, org.apache.commons.collections4.Factory\u003cC\u003e)": 4,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super C\u003e, java.lang.Class\u003cC\u003e)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.\u003cinit\u003e(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e, org.apache.commons.collections4.MultiMap\u003cK, C\u003e, boolean)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.createCollection(int)": 3,
+        "org.apache.commons.collections4.collection.IndexedCollection.reindex()": 0,
+        "org.apache.commons.collections4.map.MultiValueMap.put(K, java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.collection.IndexedCollection.uniqueIndexedCollection(java.util.Collection\u003cC\u003e, org.apache.commons.collections4.Transformer\u003cC, K\u003e)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.clear()": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.create()": 4,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super java.util.Collection\u003cV\u003e\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.getCollection(java.lang.Object)": 3,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.IndexedCollection.get(K)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

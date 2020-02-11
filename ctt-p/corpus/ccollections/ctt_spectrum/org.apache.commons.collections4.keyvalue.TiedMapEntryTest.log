@@ -1,0 +1,27 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.TiedMapEntryTest",
+      "test": "testConstructors()",
+      "hitSet": {},
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.keyvalue.TiedMapEntryTest",
+      "test": "testSetValue()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, K)": 0,
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.setValue(V)": 0,
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.getKey()": 0,
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.getValue()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.setValue(V)",
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.getKey()",
+        "org.apache.commons.collections4.keyvalue.TiedMapEntry.getValue()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

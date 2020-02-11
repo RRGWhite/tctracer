@@ -1,0 +1,232 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "disjunction()",
+      "hitSet": {
+        "org.apache.commons.collections4.SetUtils.disjunction(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "null.size()": 0,
+        "null.evaluate(E)": 6,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.IteratorUtils.unmodifiableIterator(java.util.Iterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.SetUtils.difference(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 3,
+        "null.\u003cinit\u003e(java.util.Set)": 2,
+        "org.apache.commons.collections4.SetUtils.SetView.iterator()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.SetUtils$SetView, org.apache.commons.collections4.SetUtils$SetView)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 5,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 4,
+        "null.createIterator()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 2,
+        "org.apache.commons.collections4.SetUtils.SetView.size()": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.unmodifiableSortedSet(java.util.SortedSet\u003cE\u003e)": 0,
+        "null.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.\u003cinit\u003e(java.util.SortedSet\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.hasNext()": 0,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 4,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.SetUtils.emptySet()": 0,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.Predicate)": 2,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.IteratorUtils.chainedIterator(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.disjunction(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)",
+        "null.size()",
+        "null.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "testpredicatedSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.set.PredicatedSet.predicatedSet(java.util.Set\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.set.PredicatedSet.\u003cinit\u003e(java.util.Set\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.SetUtils.predicatedSet(java.util.Set\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.SetUtilsTest)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.predicatedSet(java.util.Set\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "union()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "null.size()": 0,
+        "null.evaluate(E)": 6,
+        "org.apache.commons.collections4.SetUtils.union(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.IteratorUtils.unmodifiableIterator(java.util.Iterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.lockChain()": 2,
+        "org.apache.commons.collections4.SetUtils.difference(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 4,
+        "null.\u003cinit\u003e(java.util.Set)": 2,
+        "org.apache.commons.collections4.SetUtils.SetView.iterator()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 5,
+        "null.createIterator()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.updateCurrentIterator()": 2,
+        "org.apache.commons.collections4.SetUtils.SetView.size()": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "null.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.hasNext()": 0,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.SetUtils$SetView)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.iterators.IteratorChain.next()": 1,
+        "org.apache.commons.collections4.iterators.IteratorChain.checkLocked()": 4,
+        "org.apache.commons.collections4.SetUtils.emptySet()": 0,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.Predicate)": 2,
+        "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.iterators.IteratorChain.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.IteratorUtils.chainedIterator(java.util.Iterator\u003c? extends E\u003e, java.util.Iterator\u003c? extends E\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "null.size()",
+        "null.contains(java.lang.Object)",
+        "org.apache.commons.collections4.SetUtils.union(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "intersection()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 4,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "null.evaluate(E)": 5,
+        "null.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.IteratorUtils.unmodifiableIterator(java.util.Iterator\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.hasNext()": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 3,
+        "null.\u003cinit\u003e(java.util.Set)": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.iterator()": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.next()": 2,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 4,
+        "org.apache.commons.collections4.SetUtils.intersection(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.SetUtils.emptySet()": 0,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.Predicate)": 1,
+        "null.createIterator()": 2,
+        "org.apache.commons.collections4.SetUtils.SetView.size()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 3,
+        "org.apache.commons.collections4.SetUtils.SetView.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "null.contains(java.lang.Object)",
+        "org.apache.commons.collections4.SetUtils.emptySet()",
+        "org.apache.commons.collections4.SetUtils.SetView.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "testEmptyIfNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.SetUtils.emptyIfNull(java.util.Set\u003cT\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.emptyIfNull(java.util.Set\u003cT\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "testHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.SetUtils.hashCodeForSet(java.util.Collection\u003cT\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.emptyIfNull(java.util.Set\u003cT\u003e)",
+        "org.apache.commons.collections4.SetUtils.hashCodeForSet(java.util.Collection\u003cT\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "testEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.SetUtils.isEqualSet(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.hashCodeForSet(java.util.Collection\u003cT\u003e)",
+        "org.apache.commons.collections4.SetUtils.isEqualSet(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "difference()",
+      "hitSet": {
+        "org.apache.commons.collections4.IteratorUtils.size(java.util.Iterator\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 2,
+        "org.apache.commons.collections4.IteratorUtils.filteredIterator(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "null.evaluate(E)": 3,
+        "null.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.IteratorUtils.unmodifiableIterator(java.util.Iterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.hasNext()": 0,
+        "org.apache.commons.collections4.SetUtils.difference(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 1,
+        "null.\u003cinit\u003e(java.util.Set)": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.iterator()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.SetUtils.emptySet()": 0,
+        "null.\u003cinit\u003e(java.util.Set, java.util.Set, org.apache.commons.collections4.Predicate)": 1,
+        "null.createIterator()": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.size()": 0,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 1,
+        "org.apache.commons.collections4.SetUtils.SetView.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "null.contains(java.lang.Object)",
+        "org.apache.commons.collections4.SetUtils.difference(java.util.Set\u003c? extends E\u003e, java.util.Set\u003c? extends E\u003e)",
+        "org.apache.commons.collections4.SetUtils.SetView.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.SetUtilsTest",
+      "test": "testNewIdentityHashSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.SetUtils.newIdentityHashSet()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.SetUtils.newIdentityHashSet()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

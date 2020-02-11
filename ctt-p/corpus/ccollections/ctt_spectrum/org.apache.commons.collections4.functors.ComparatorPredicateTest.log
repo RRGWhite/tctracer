@@ -1,0 +1,87 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.ComparatorPredicateTest",
+      "test": "compareEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 1,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.Criterion.values()": 2,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.Criterion.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.\u003cinit\u003e(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.ComparatorPredicateTest",
+      "test": "compareLess()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.\u003cinit\u003e(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.ComparatorPredicateTest",
+      "test": "compareLessOrEqual()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.\u003cinit\u003e(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.ComparatorPredicateTest",
+      "test": "compareGreaterOrEqual()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.\u003cinit\u003e(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.ComparatorPredicateTest",
+      "test": "compareGreater()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.ComparatorPredicate.comparatorPredicate(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)": 0,
+        "org.apache.commons.collections4.functors.ComparatorPredicate.\u003cinit\u003e(T, java.util.Comparator\u003cT\u003e, org.apache.commons.collections4.functors.ComparatorPredicate$Criterion)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertTrue(org.apache.commons.collections4.Predicate\u003cT\u003e, T)",
+        "org.apache.commons.collections4.functors.AbstractPredicateTest.assertFalse(org.apache.commons.collections4.Predicate\u003cT\u003e, T)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

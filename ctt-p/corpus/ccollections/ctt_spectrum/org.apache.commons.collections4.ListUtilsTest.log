@@ -1,0 +1,374 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testDefaultIfNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.defaultIfNull(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.defaultIfNull(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testSubtractNullElement()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.bag.AbstractMapBag.remove(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ListUtils.subtract(java.util.List\u003cE\u003e, java.util.List\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.subtract(java.util.List\u003cE\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectEmptyWithEmptyList()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectListWithSelf()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testSubtract()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.bag.AbstractMapBag.remove(java.lang.Object, int)": 1,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.ListUtils.subtract(java.util.List\u003cE\u003e, java.util.List\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.bag.HashBag.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.subtract(java.util.List\u003cE\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testPartition()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.partition(java.util.List\u003cT\u003e, int)": 0,
+        "org.apache.commons.collections4.ListUtils.Partition.get(int)": 0,
+        "org.apache.commons.collections4.ListUtils.Partition.\u003cinit\u003e(java.util.List\u003cT\u003e, int)": 1,
+        "org.apache.commons.collections4.ListUtils.Partition.size()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.partition(java.util.List\u003cT\u003e, int)",
+        "org.apache.commons.collections4.ListUtils.Partition.get(int)",
+        "org.apache.commons.collections4.ListUtils.Partition.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testSelectRejected()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.ListUtils.selectRejected(java.util.Collection\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 1,
+        "org.apache.commons.collections4.CollectionUtils.isEqualCollection(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.selectRejected(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e, R)": 0,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "null.evaluate(java.lang.Number)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.CollectionUtils.isEqualCollection(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testRetainAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.retainAll(java.util.Collection\u003cE\u003e, java.util.Collection\u003c?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.retainAll(java.util.Collection\u003cE\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testLazyList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.LazyList.lazyList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Factory\u003c? extends E\u003e)": 1,
+        "null.create()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.LazyList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Factory\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.LazyList.get(int)": 0,
+        "org.apache.commons.collections4.ListUtils.lazyList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Factory\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.ListUtilsTest)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.LazyList.get(int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testEmptyIfNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectionOrderInsensitivity()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectNonEmptyWithEmptyList()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectListWithNoOverlapAndDifferentTypes()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIntersectNonEmptySubset()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.hashCodeForList(java.util.Collection\u003c?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.intersection(java.util.List\u003c? extends E\u003e, java.util.List\u003c? extends E\u003e)",
+        "org.apache.commons.collections4.ListUtils.hashCodeForList(java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testLongestCommonSubsequence()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 5,
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 4,
+        "org.apache.commons.collections4.sequence.InsertCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitInsertCommand(E)": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 4,
+        "org.apache.commons.collections4.sequence.EditScript.visit(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 4,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.functors.DefaultEquator.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.sequence.DeleteCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 4,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.getSubSequence()": 2,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 1,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitDeleteCommand(E)": 4,
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e, org.apache.commons.collections4.Equator\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 5,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.sequence.EditCommand.getObject()": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 6,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.sequence.KeepCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitKeepCommand(E)": 4,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 5
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.isEqualList(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e)",
+        "org.apache.commons.collections4.ListUtils.isEqualList(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testLongestCommonSubsequenceWithString()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.DefaultEquator.equate(T, T)": 6,
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getDiag()": 5,
+        "org.apache.commons.collections4.sequence.InsertCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.sequence.DeleteCommand.\u003cinit\u003e(T)": 6,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitInsertCommand(E)": 5,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getScript()": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.getMiddleSnake(int, int, int, int)": 5,
+        "org.apache.commons.collections4.sequence.EditScript.visit(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.lang.CharSequence, java.lang.CharSequence)": 0,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getEnd()": 5,
+        "org.apache.commons.collections4.sequence.EditCommand.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildScript(int, int, int, int, org.apache.commons.collections4.sequence.EditScript\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.sequence.DeleteCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.getStart()": 5,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.getSubSequence()": 3,
+        "org.apache.commons.collections4.ListUtils.CharSequenceAsList.size()": 3,
+        "org.apache.commons.collections4.ListUtils.CharSequenceAsList.\u003cinit\u003e(java.lang.CharSequence)": 1,
+        "org.apache.commons.collections4.sequence.InsertCommand.\u003cinit\u003e(T)": 6,
+        "org.apache.commons.collections4.functors.DefaultEquator.defaultEquator()": 2,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitDeleteCommand(E)": 5,
+        "org.apache.commons.collections4.ListUtils.CharSequenceAsList.get(int)": 5,
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.util.List\u003cE\u003e, java.util.List\u003cE\u003e, org.apache.commons.collections4.Equator\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.sequence.KeepCommand.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.sequence.SequencesComparator.\u003cinit\u003e(java.util.List\u003cT\u003e, java.util.List\u003cT\u003e, org.apache.commons.collections4.Equator\u003c? super T\u003e)": 3,
+        "org.apache.commons.collections4.sequence.SequencesComparator.buildSnake(int, int, int, int)": 6,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.KeepCommand\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.sequence.EditCommand.getObject()": 5,
+        "org.apache.commons.collections4.sequence.SequencesComparator.Snake.\u003cinit\u003e(int, int, int)": 7,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.DeleteCommand\u003cT\u003e)": 6,
+        "org.apache.commons.collections4.sequence.KeepCommand.accept(org.apache.commons.collections4.sequence.CommandVisitor\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.visitKeepCommand(E)": 5,
+        "org.apache.commons.collections4.ListUtils.LcsVisitor.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.sequence.EditScript.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.sequence.EditScript.append(org.apache.commons.collections4.sequence.InsertCommand\u003cT\u003e)": 6
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.longestCommonSubsequence(java.lang.CharSequence, java.lang.CharSequence)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testIndexOf()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 0,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 1,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.ListUtils.indexOf(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.indexOf(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testSelect()",
+      "hitSet": {
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.\u003cinit\u003e(java.lang.Iterable\u003c? extends O\u003e, java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.getCardinalityMap(java.lang.Iterable\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqA(java.lang.Object)": 1,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.freqB(java.lang.Object)": 1,
+        "org.apache.commons.collections4.CollectionUtils.isEqualCollection(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.CollectionUtils.CardinalityHelper.getFreq(java.lang.Object, java.util.Map\u003c?, java.lang.Integer\u003e)": 2,
+        "org.apache.commons.collections4.CollectionUtils.select(java.lang.Iterable\u003c? extends O\u003e, org.apache.commons.collections4.Predicate\u003c? super O\u003e, R)": 0,
+        "org.apache.commons.collections4.ListUtils.select(java.util.Collection\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 0,
+        "null.evaluate(java.lang.Number)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.CollectionUtils.isEqualCollection(java.util.Collection\u003c?\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testRemoveAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.ListUtils.removeAll(java.util.Collection\u003cE\u003e, java.util.Collection\u003c?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.removeAll(java.util.Collection\u003cE\u003e, java.util.Collection\u003c?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.ListUtilsTest",
+      "test": "testPredicatedList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.PredicatedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.list.PredicatedList.predicatedList(java.util.List\u003cT\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 1,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.ListUtilsTest)": 0,
+        "org.apache.commons.collections4.ListUtils.predicatedList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003cE\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ListUtils.predicatedList(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

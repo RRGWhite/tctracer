@@ -1,0 +1,72 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.set.UnmodifiableSortedSetTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.unmodifiableSortedSet(java.util.SortedSet\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.\u003cinit\u003e(java.util.SortedSet\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.unmodifiableSortedSet(java.util.SortedSet\u003cE\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.set.UnmodifiableSortedSetTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.decorated()": 1,
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.unmodifiableSortedSet(java.util.SortedSet\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.tailSet(E)": 0,
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.\u003cinit\u003e(java.util.SortedSet\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.remove(java.lang.Object)": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.retainAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.add(E)": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.headSet(E)": 0,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.clear()": 1,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.removeAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.decorated()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.subSet(E, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.set.UnmodifiableSortedSetTest",
+      "test": "testComparator()",
+      "hitSet": {
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.decorated()": 1,
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.unmodifiableSortedSet(java.util.SortedSet\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.decorated()": 2,
+        "org.apache.commons.collections4.set.AbstractSortedSetTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.set.UnmodifiableSortedSet.\u003cinit\u003e(java.util.SortedSet\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.comparator()": 0,
+        "org.apache.commons.collections4.set.AbstractSetDecorator.\u003cinit\u003e(java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.set.AbstractSortedSetDecorator.comparator()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

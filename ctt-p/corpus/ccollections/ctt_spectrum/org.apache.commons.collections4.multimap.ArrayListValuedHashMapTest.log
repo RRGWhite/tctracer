@@ -1,0 +1,193 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testListValuedMapRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.remove(int)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.get(K)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.add(V)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.remove(java.lang.Object)": 1,
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.getMapping()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()",
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.remove(int)",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testListValuedMapAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.get(K)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.add(V)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.getMapping()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()",
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.get(K)",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testEqualsHashCodeContract()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.hasNext()": 2,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.size()": 2,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 4,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 4,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.next()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.\u003cinit\u003e(K)": 3,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.asMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.\u003cinit\u003e(java.util.Map\u003cK, java.util.Collection\u003cV\u003e\u003e)": 2,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.hashCode()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.get(java.lang.Object)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 3,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.listIterator()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.hashCode()",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.put(K, V)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testListValuedMapAddViaListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.get(K)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.\u003cinit\u003e(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.add(V)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.listIterator()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.hasNext()",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testListValuedMapEqualsHashCodeContract()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.hasNext()": 2,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.size()": 2,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 4,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 4,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.next()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.\u003cinit\u003e(K)": 3,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.asMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.put(K, V)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.\u003cinit\u003e(java.util.Map\u003cK, java.util.Collection\u003cV\u003e\u003e)": 2,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 3,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.hashCode()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.AsMap.get(java.lang.Object)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 3,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.listIterator()": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.hashCode()",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.put(K, V)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multimap.ArrayListValuedHashMapTest",
+      "test": "testListValuedMapRemoveViaListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.hasNext()": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.\u003cinit\u003e(K)": 2,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.next()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.List\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.get(K)": 0,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.createCollection()": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.\u003cinit\u003e(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.add(V)": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.ValuesListIterator.remove()": 0,
+        "org.apache.commons.collections4.multimap.ArrayListValuedHashMap.\u003cinit\u003e(int, int)": 1,
+        "org.apache.commons.collections4.ListUtils.emptyIfNull(java.util.List\u003cT\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.wrappedCollection(K)": 1,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.listIterator()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.getMap()": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.\u003cinit\u003e(java.util.Map\u003cK, ? extends java.util.Collection\u003cV\u003e\u003e)": 1,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.getMap()": 2,
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.size()": 0,
+        "org.apache.commons.collections4.multimap.AbstractListValuedMap.WrappedList.getMapping()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.size()",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.multimap.AbstractMultiValuedMap.WrappedCollection.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

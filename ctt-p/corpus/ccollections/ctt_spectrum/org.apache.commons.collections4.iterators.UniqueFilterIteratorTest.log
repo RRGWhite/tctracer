@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.UniqueFilterIteratorTest",
+      "test": "testIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.UniquePredicate.evaluate(T)": 2,
+        "org.apache.commons.collections4.functors.UniquePredicate.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.iterators.FilterIterator.setNextObject()": 1,
+        "org.apache.commons.collections4.functors.UniquePredicate.uniquePredicate()": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.UniqueFilterIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.FilterIterator.next()",
+        "org.apache.commons.collections4.iterators.FilterIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

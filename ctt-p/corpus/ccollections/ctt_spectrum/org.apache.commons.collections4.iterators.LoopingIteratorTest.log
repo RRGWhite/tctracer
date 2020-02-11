@@ -1,0 +1,118 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testLooping0()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testLooping1()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testLooping2()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testLooping3()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testReset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.size()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testConstructorEx()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.LoopingIteratorTest",
+      "test": "testRemoving1()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.LoopingIterator.remove()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.LoopingIterator.hasNext()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.reset()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.next()",
+        "org.apache.commons.collections4.iterators.LoopingIterator.remove()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

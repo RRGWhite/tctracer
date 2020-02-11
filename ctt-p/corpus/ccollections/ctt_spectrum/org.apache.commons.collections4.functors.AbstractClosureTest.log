@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.AbstractClosureTest",
+      "test": "closureSanityTests()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosureTest.generateClosure()": 0,
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosure.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosureTest.generateNoExceptionClosure()": 1,
+        "null.\u003cinit\u003e()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosureTest.generateClosure()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

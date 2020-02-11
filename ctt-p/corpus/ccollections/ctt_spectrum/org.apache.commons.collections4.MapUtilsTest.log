@@ -1,0 +1,653 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullLabelAndMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.unmodifiableSortedMap(java.util.SortedMap\u003cK, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.UnmodifiableSortedMap.\u003cinit\u003e(java.util.SortedMap\u003cK, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractSortedMapDecorator.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsEmptyWithNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrint()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.EmptyListIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.FluentIterable.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.iterators.EmptyIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.iterators.EmptyMapIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.iterators.AbstractEmptyIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.iterators.EmptyOrderedIterator.\u003cinit\u003e()": 3,
+        "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator.\u003cinit\u003e()": 3,
+        "null.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testLazyMapFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.LazyMap.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazyMap.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.functors.FactoryTransformer.factoryTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 1,
+        "org.apache.commons.collections4.functors.ConstantFactory.\u003cinit\u003e(T)": 1,
+        "org.apache.commons.collections4.TransformerUtils.asTransformer(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 0,
+        "org.apache.commons.collections4.functors.ConstantFactory.constantFactory(T)": 1,
+        "org.apache.commons.collections4.MapUtils.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)": 2,
+        "org.apache.commons.collections4.FactoryUtils.constantFactory(T)": 0,
+        "org.apache.commons.collections4.functors.FactoryTransformer.\u003cinit\u003e(org.apache.commons.collections4.Factory\u003c? extends O\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)",
+        "org.apache.commons.collections4.MapUtils.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Factory\u003c? extends V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testLazyMapTransformer()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.LazyMap.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 1,
+        "org.apache.commons.collections4.map.LazyMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 2,
+        "null.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.MapUtils.lazyMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Transformer\u003c? super K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.LazyMap.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.MapUtilsTest)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()",
+        "org.apache.commons.collections4.map.LazyMap.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsEmptyWithNonEmptyMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testInvertMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.invertMap(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.invertMap(java.util.Map\u003cK, V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugAndVerbosePrintCasting()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsNotEmptyWithNonEmptyMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 1,
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsNotEmptyWithEmptyMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 1,
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsNotEmptyWithNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 1,
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isNotEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIterableSortedMap()",
+      "hitSet": {
+        "null.\u003cinit\u003e(java.util.SortedMap)": 1,
+        "org.apache.commons.collections4.MapUtils.iterableSortedMap(java.util.SortedMap\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 2,
+        "org.apache.commons.collections4.map.AbstractSortedMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.MapUtils.iterableMap(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractSortedMapDecorator.\u003cinit\u003e(java.util.SortedMap\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.iterableSortedMap(java.util.SortedMap\u003cK, V\u003e)",
+        "org.apache.commons.collections4.MapUtils.iterableMap(java.util.Map\u003cK, V\u003e)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testPutAll_Map_array()",
+      "hitSet": {
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getKey()": 1,
+        "org.apache.commons.collections4.keyvalue.DefaultMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractMapEntry.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.getValue()": 1,
+        "org.apache.commons.collections4.keyvalue.DefaultKeyValue.\u003cinit\u003e(K, V)": 0,
+        "org.apache.commons.collections4.MapUtils.putAll(java.util.Map\u003cK, V\u003e, java.lang.Object[])": 0,
+        "org.apache.commons.collections4.keyvalue.AbstractKeyValue.\u003cinit\u003e(K, V)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.putAll(java.util.Map\u003cK, V\u003e, java.lang.Object[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintSelfReference()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullLabel()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 4,
+        "org.apache.commons.collections4.functors.NullPredicate.\u003cinit\u003e()": 4,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.functors.NullPredicate.evaluate(T)": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testConvertResourceBundle()",
+      "hitSet": {
+        "null.getContents()": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.MapUtilsTest, java.util.Map)": 0,
+        "org.apache.commons.collections4.MapUtils.toMap(java.util.ResourceBundle)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.toMap(java.util.ResourceBundle)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullLabelAndMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testEmptyIfNull()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.emptyIfNull(java.util.Map\u003cK, V\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.emptyIfNull(java.util.Map\u003cK, V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintSelfReference()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIterableMap()",
+      "hitSet": {
+        "null.\u003cinit\u003e(java.util.Map)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap._putAll(java.util.Map\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.checkCapacity()": 3,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.size()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.ensureCapacity(int)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.HashEntry.\u003cinit\u003e(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, java.lang.Object, V)": 4,
+        "org.apache.commons.collections4.MapUtils.iterableMap(java.util.Map\u003cK, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.convertKey(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hash(java.lang.Object)": 2,
+        "org.apache.commons.collections4.map.HashedMap.\u003cinit\u003e(java.util.Map\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.createEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int, K, V)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addEntry(org.apache.commons.collections4.map.AbstractHashedMap.org.apache.commons.collections4.map.AbstractHashedMap$HashEntry\u003cK, V\u003e, int)": 3,
+        "org.apache.commons.collections4.map.AbstractHashedMap.put(K, V)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateNewCapacity(int)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(java.util.Map\u003c? extends K, ? extends V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.hashIndex(int, int)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.\u003cinit\u003e(int, float)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)": 0,
+        "org.apache.commons.collections4.map.AbstractHashedMap.init()": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 1,
+        "org.apache.commons.collections4.map.AbstractHashedMap.addMapping(int, int, K, V)": 2,
+        "org.apache.commons.collections4.map.AbstractHashedMap.calculateThreshold(int, float)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.iterableMap(java.util.Map\u003cK, V\u003e)",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.get(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugAndVerbosePrintNullMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)",
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullLabel()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NullPredicate.nullPredicate()": 4,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.functors.NullPredicate.evaluate(T)": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullKey()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testPredicatedMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.AbstractInputCheckedMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.predicatedMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.PredicatedMap.predicatedMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 1,
+        "org.apache.commons.collections4.map.PredicatedMap.\u003cinit\u003e(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.MapUtilsTest)": 1,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.predicatedMap(java.util.Map\u003cK, V\u003e, org.apache.commons.collections4.Predicate\u003c? super K\u003e, org.apache.commons.collections4.Predicate\u003c? super V\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullKeyToMap1()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullKeyToMap2()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 4,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 5,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testPopulateMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.NOPTransformer.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.TransformedCollectionTest.StringToInteger.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.MapUtils.populateMap(java.util.Map\u003cK, V\u003e, java.lang.Iterable\u003c? extends E\u003e, org.apache.commons.collections4.Transformer\u003cE, K\u003e, org.apache.commons.collections4.Transformer\u003cE, V\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.MapUtils.populateMap(java.util.Map\u003cK, V\u003e, java.lang.Iterable\u003c? extends V\u003e, org.apache.commons.collections4.Transformer\u003cV, K\u003e)": 0,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 2,
+        "org.apache.commons.collections4.collection.TransformedCollectionTest.StringToInteger.transform(java.lang.Object)": 1,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.populateMap(java.util.Map\u003cK, V\u003e, java.lang.Iterable\u003c? extends E\u003e, org.apache.commons.collections4.Transformer\u003cE, K\u003e, org.apache.commons.collections4.Transformer\u003cE, V\u003e)",
+        "org.apache.commons.collections4.MapUtils.populateMap(java.util.Map\u003cK, V\u003e, java.lang.Iterable\u003c? extends V\u003e, org.apache.commons.collections4.Transformer\u003cV, K\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testPopulateMultiMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.map.MultiValueMap.totalSize()": 0,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.\u003cinit\u003e(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.\u003cinit\u003e(java.util.Map\u003cK, ? super C\u003e, org.apache.commons.collections4.Factory\u003cC\u003e)": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)": 0,
+        "org.apache.commons.collections4.CollectionUtils.size(java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.AbstractIterableMap.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.decorated()": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.nopTransformer()": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super C\u003e, java.lang.Class\u003cC\u003e)": 1,
+        "org.apache.commons.collections4.functors.NOPTransformer.transform(T)": 1,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.MapUtilsTest)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.createCollection(int)": 2,
+        "org.apache.commons.collections4.map.MultiValueMap.put(K, java.lang.Object)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.\u003cinit\u003e(java.lang.Class\u003cT\u003e)": 2,
+        "null.transform(org.apache.commons.collections4.MapUtilsTest$X)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.ReflectionFactory.create()": 3,
+        "org.apache.commons.collections4.map.MultiValueMap.multiValueMap(java.util.Map\u003cK, ? super java.util.Collection\u003cV\u003e\u003e)": 0,
+        "org.apache.commons.collections4.map.MultiValueMap.getCollection(java.lang.Object)": 2,
+        "org.apache.commons.collections4.collection.UnmodifiableCollection.unmodifiableCollection(java.util.Collection\u003c? extends T\u003e)": 1,
+        "org.apache.commons.collections4.map.MultiValueMap.containsValue(java.lang.Object)": 0,
+        "org.apache.commons.collections4.MapUtils.populateMap(org.apache.commons.collections4.MultiMap\u003cK, V\u003e, java.lang.Iterable\u003c? extends E\u003e, org.apache.commons.collections4.Transformer\u003cE, K\u003e, org.apache.commons.collections4.Transformer\u003cE, V\u003e)": 0,
+        "org.apache.commons.collections4.map.AbstractMapDecorator.\u003cinit\u003e(java.util.Map\u003cK, V\u003e)": 2,
+        "org.apache.commons.collections4.TransformerUtils.nopTransformer()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.map.MultiValueMap.totalSize()",
+        "org.apache.commons.collections4.map.AbstractMapDecorator.containsKey(java.lang.Object)",
+        "org.apache.commons.collections4.map.MultiValueMap.containsValue(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullStream()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testIsEmptyWithEmptyMap()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.isEmpty(java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullKey()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullKeyToMap1()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrintNullKeyToMap2()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 5,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 4,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 5,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 5,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 4
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testDebugPrint()",
+      "hitSet": {
+        "org.apache.commons.collections4.IterableUtils.indexOf(java.lang.Iterable\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 2,
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T, org.apache.commons.collections4.Equator\u003cT\u003e)": 4,
+        "org.apache.commons.collections4.functors.EqualPredicate.equalPredicate(T)": 3,
+        "org.apache.commons.collections4.PredicateUtils.equalPredicate(T)": 2,
+        "org.apache.commons.collections4.functors.EqualPredicate.evaluate(T)": 4,
+        "org.apache.commons.collections4.IteratorUtils.indexOf(java.util.Iterator\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.functors.EqualPredicate.\u003cinit\u003e(T)": 4,
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1,
+        "org.apache.commons.collections4.IterableUtils.emptyIteratorIfNull(java.lang.Iterable\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.MapUtils.debugPrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.MapUtilsTest",
+      "test": "testVerbosePrintNullStream()",
+      "hitSet": {
+        "org.apache.commons.collections4.MapUtils.printIndent(java.io.PrintStream, int)": 2,
+        "org.apache.commons.collections4.MapUtils.verbosePrint(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e)": 0,
+        "org.apache.commons.collections4.MapUtils.verbosePrintInternal(java.io.PrintStream, java.lang.Object, java.util.Map\u003c?, ?\u003e, java.util.Deque\u003cjava.util.Map\u003c?, ?\u003e\u003e, boolean)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

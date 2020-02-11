@@ -1,0 +1,67 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.PushbackIteratorTest",
+      "test": "testMultiplePushback()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PushbackIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushback(E)": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushbackIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PushbackIterator.hasNext()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()",
+        "org.apache.commons.collections4.iterators.PushbackIteratorTest.validate(java.util.Iterator\u003cE\u003e, java.lang.Object[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PushbackIteratorTest",
+      "test": "testDelayedPushback()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PushbackIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushback(E)": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushbackIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PushbackIterator.hasNext()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()",
+        "org.apache.commons.collections4.iterators.PushbackIteratorTest.validate(java.util.Iterator\u003cE\u003e, java.lang.Object[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PushbackIteratorTest",
+      "test": "testImmediatePushback()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PushbackIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushback(E)": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushbackIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PushbackIterator.hasNext()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()",
+        "org.apache.commons.collections4.iterators.PushbackIteratorTest.validate(java.util.Iterator\u003cE\u003e, java.lang.Object[])"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.PushbackIteratorTest",
+      "test": "testNormalIteration()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.PushbackIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.PushbackIterator.pushbackIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.PushbackIterator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.PushbackIterator.next()",
+        "org.apache.commons.collections4.iterators.PushbackIterator.hasNext()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

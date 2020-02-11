@@ -1,0 +1,257 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetContainsAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetEqualsSelf()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.HashMultiSet.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.multiset.AbstractMapMultiSet$MutableInteger\u003e)": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSet.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.unmodifiableMultiSet(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.makeObject()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetIteratorFail()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetToArray()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetIteratorFailNoMore()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isRemoveSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetRemoveAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isRemoveSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetContains()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetRetainAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetToArrayPopulate()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testFullMultiSetCompatibility()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.AbstractMultiSet.add(E)": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.getCanonicalFullCollectionName(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.MutableInteger.\u003cinit\u003e(int)": 3,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromStream(java.io.InputStream)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.size()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.skipSerializedCanonicalTests()": 0,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.unmodifiableMultiSet(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.setCollection(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2,
+        "org.apache.commons.collections4.multiset.HashMultiSet.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromDisk(java.lang.String)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.multiset.AbstractMapMultiSet$MutableInteger\u003e)": 1,
+        "org.apache.commons.collections4.multiset.HashMultiSet.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.getCount(java.lang.Object)": 2,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.makeFullCollection()": 0,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.getCompatibilityVersion()": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.isTestSerialization()": 0,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.decorated()": 1,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.setMap(java.util.Map\u003cE, org.apache.commons.collections4.multiset.AbstractMapMultiSet$MutableInteger\u003e)": 3,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.doReadObject(java.io.ObjectInputStream)": 3,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.add(E, int)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.getCount(java.lang.Object)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSet.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetEqualsHashMultiSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testEmptyMultiSetCompatibility()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromStream(java.io.InputStream)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.size()": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.skipSerializedCanonicalTests()": 0,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.unmodifiableMultiSet(org.apache.commons.collections4.MultiSet\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.makeObject()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.setCollection(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2,
+        "org.apache.commons.collections4.multiset.HashMultiSet.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromDisk(java.lang.String)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.multiset.AbstractMapMultiSet$MutableInteger\u003e)": 1,
+        "org.apache.commons.collections4.multiset.HashMultiSet.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.getCompatibilityVersion()": 1,
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSet.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.\u003cinit\u003e(org.apache.commons.collections4.MultiSet\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.isTestSerialization()": 0,
+        "org.apache.commons.collections4.AbstractObjectTest.getCanonicalEmptyCollectionName(java.lang.Object)": 0,
+        "org.apache.commons.collections4.multiset.AbstractMultiSetDecorator.decorated()": 1,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.setMap(java.util.Map\u003cE, org.apache.commons.collections4.multiset.AbstractMapMultiSet$MutableInteger\u003e)": 3,
+        "org.apache.commons.collections4.multiset.AbstractMapMultiSet.doReadObject(java.io.ObjectInputStream)": 3,
+        "org.apache.commons.collections4.multiset.AbstractMultiSet.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetIteratorFailDoubleRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.multiset.AbstractMultiSetTest",
+      "test": "testMultiSetIteratorRemoveProtectsInvariants()",
+      "hitSet": {
+        "org.apache.commons.collections4.multiset.UnmodifiableMultiSetTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

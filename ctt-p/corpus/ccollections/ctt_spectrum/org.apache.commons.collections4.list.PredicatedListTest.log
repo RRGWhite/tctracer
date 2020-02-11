@@ -1,0 +1,80 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.PredicatedListTest",
+      "test": "testLegalAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.PredicatedCollection.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.collection.PredicatedCollection.validate(E)": 1,
+        "null.evaluate(E)": 2,
+        "org.apache.commons.collections4.list.PredicatedList.predicatedList(java.util.List\u003cT\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.list.PredicatedList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.PredicatedListTest",
+      "test": "testIllegalAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.PredicatedCollection.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.collection.PredicatedCollection.validate(E)": 1,
+        "null.evaluate(E)": 2,
+        "org.apache.commons.collections4.list.PredicatedList.predicatedList(java.util.List\u003cT\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.list.PredicatedList.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.PredicatedListTest",
+      "test": "testIllegalSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.PredicatedList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.collection.PredicatedCollection.validate(E)": 1,
+        "null.evaluate(E)": 2,
+        "org.apache.commons.collections4.list.PredicatedList.predicatedList(java.util.List\u003cT\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.PredicatedListTest",
+      "test": "testIllegalAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.\u003cinit\u003e(java.util.List\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.collection.PredicatedCollection.validate(E)": 1,
+        "null.evaluate(E)": 2,
+        "org.apache.commons.collections4.list.PredicatedList.predicatedList(java.util.List\u003cT\u003e, org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.collection.PredicatedCollection.\u003cinit\u003e(java.util.Collection\u003cE\u003e, org.apache.commons.collections4.Predicate\u003c? super E\u003e)": 3,
+        "org.apache.commons.collections4.list.PredicatedList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.PredicatedList.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

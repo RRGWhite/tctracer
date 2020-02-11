@@ -1,0 +1,69 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.UnmodifiableListTest",
+      "test": "testDecorateFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.UnmodifiableList.\u003cinit\u003e(java.util.List\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.unmodifiableList(java.util.List\u003c? extends E\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.UnmodifiableList.unmodifiableList(java.util.List\u003c? extends E\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.UnmodifiableListTest",
+      "test": "testUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.UnmodifiableList.\u003cinit\u003e(java.util.List\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.remove(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.list.UnmodifiableList.clear()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.remove(int)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.list.UnmodifiableList.retainAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.subList(int, int)": 0,
+        "org.apache.commons.collections4.list.UnmodifiableList.removeAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.list.UnmodifiableList.add(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.UnmodifiableListTest",
+      "test": "testUnmodifiableIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.UnmodifiableList.\u003cinit\u003e(java.util.List\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.unmodifiableIterator(java.util.Iterator\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.remove()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 3,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.UnmodifiableIterator.\u003cinit\u003e(java.util.Iterator\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.list.UnmodifiableList.iterator()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

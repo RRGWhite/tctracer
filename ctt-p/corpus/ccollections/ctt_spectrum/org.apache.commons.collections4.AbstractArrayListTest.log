@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.AbstractArrayListTest",
+      "test": "testNewArrayList()",
+      "hitSet": {
+        "org.apache.commons.collections4.ArrayStackTest.makeObject()": 0,
+        "org.apache.commons.collections4.ArrayStack.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.ArrayStackTest.makeObject()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

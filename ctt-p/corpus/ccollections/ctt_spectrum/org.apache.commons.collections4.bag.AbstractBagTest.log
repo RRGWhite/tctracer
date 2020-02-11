@@ -1,0 +1,262 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testEmptyBagCompatibility()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.TreeBag.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.size()": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromStream(java.io.InputStream)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.skipSerializedCanonicalTests()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.setCollection(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromDisk(java.lang.String)": 0,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.decorated()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.isTestSerialization()": 0,
+        "org.apache.commons.collections4.AbstractObjectTest.getCanonicalEmptyCollectionName(java.lang.Object)": 0,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.decorated()": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.getCompatibilityVersion()": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.makeObject()": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.doReadObject(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e, java.io.ObjectInputStream)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagEqualsHashBag()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagToArrayPopulate()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagContainsAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagIteratorFailNoMore()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagIteratorFail()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagEqualsSelf()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.makeObject()": 0,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.equals(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagIteratorFailDoubleRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagToArray()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagHashCode()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagRetainAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagEquals()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isRemoveSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagRemoveAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isRemoveSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagContains()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testBagIteratorRemoveProtectsInvariants()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isAddSupported()": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.bag.AbstractBagTest",
+      "test": "testFullBagCompatibility()",
+      "hitSet": {
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E, int)": 4,
+        "org.apache.commons.collections4.bag.TreeBag.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.getCanonicalFullCollectionName(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.bag.AbstractMapBag.size()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.add(E)": 3,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromStream(java.io.InputStream)": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.MutableInteger.\u003cinit\u003e(int)": 4,
+        "org.apache.commons.collections4.AbstractObjectTest.skipSerializedCanonicalTests()": 0,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.getCount(java.lang.Object)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.makeFullCollection()": 0,
+        "org.apache.commons.collections4.bag.AbstractSortedBagTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.setCollection(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.bag.TreeBag.add(E)": 2,
+        "org.apache.commons.collections4.bag.TreeBag.getMap()": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.\u003cinit\u003e(org.apache.commons.collections4.Bag\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.AbstractObjectTest.readExternalFormFromDisk(java.lang.String)": 0,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.equals(java.lang.Object)": 0,
+        "org.apache.commons.collections4.bag.TreeBag.comparator()": 3,
+        "org.apache.commons.collections4.bag.TreeBag.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.bag.AbstractBagDecorator.decorated()": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.unmodifiableSortedBag(org.apache.commons.collections4.SortedBag\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.AbstractObjectTest.isTestSerialization()": 0,
+        "org.apache.commons.collections4.bag.AbstractSortedBagDecorator.decorated()": 1,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBagTest.getCompatibilityVersion()": 1,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getCount(java.lang.Object)": 2,
+        "org.apache.commons.collections4.bag.UnmodifiableSortedBag.readObject(java.io.ObjectInputStream)": 2,
+        "org.apache.commons.collections4.bag.AbstractMapBag.getMap()": 5,
+        "org.apache.commons.collections4.bag.AbstractMapBag.doReadObject(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e, java.io.ObjectInputStream)": 3,
+        "org.apache.commons.collections4.bag.AbstractMapBag.\u003cinit\u003e(java.util.Map\u003cE, org.apache.commons.collections4.bag.AbstractMapBag$MutableInteger\u003e)": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

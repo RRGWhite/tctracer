@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.AbstractAnyAllOnePredicateTest",
+      "test": "singletonCollectionToGetInstance()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 1,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(java.util.Collection\u003c? extends org.apache.commons.collections4.Predicate\u003c? super T\u003e\u003e)": 2,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.coerce(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.AllPredicateTest.getPredicateInstance(java.util.Collection\u003corg.apache.commons.collections4.Predicate\u003cjava.lang.Integer\u003e\u003e)": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AllPredicateTest.getPredicateInstance(java.util.Collection\u003corg.apache.commons.collections4.Predicate\u003cjava.lang.Integer\u003e\u003e)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.functors.AbstractAnyAllOnePredicateTest",
+      "test": "singleElementArrayToGetInstance()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.AllPredicateTest.getPredicateInstance(org.apache.commons.collections4.Predicate\u003c? super java.lang.Integer\u003e[])": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.validate(org.apache.commons.collections4.Predicate\u003c?\u003e[])": 2,
+        "org.apache.commons.collections4.functors.AbstractMockPredicateTest.createMockPredicate(java.lang.Boolean)": 0,
+        "org.apache.commons.collections4.functors.FunctorUtils.coerce(org.apache.commons.collections4.Predicate\u003c? super T\u003e)": 2,
+        "org.apache.commons.collections4.functors.AllPredicate.allPredicate(org.apache.commons.collections4.Predicate\u003c? super T\u003e[])": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.AllPredicateTest.getPredicateInstance(org.apache.commons.collections4.Predicate\u003c? super java.lang.Integer\u003e[])"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testSameAsDecorated()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testSkipping()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testOffsetGreaterThanSize()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveFirst()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveUnsupported()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "null.remove()": 2,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "null.\u003cinit\u003e(org.apache.commons.collections4.iterators.SkippingIteratorTest, java.util.Iterator)": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveMiddle()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveCalledTwice()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveLast()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 2,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.remove()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 0
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()",
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()",
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testNegativeOffset()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.iterators.SkippingIteratorTest",
+      "test": "testRemoveWithoutCallingNext()",
+      "hitSet": {
+        "org.apache.commons.collections4.iterators.SkippingIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, long)": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 3,
+        "org.apache.commons.collections4.iterators.SkippingIterator.init()": 0,
+        "org.apache.commons.collections4.iterators.SkippingIterator.next()": 1,
+        "org.apache.commons.collections4.iterators.SkippingIterator.remove()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    }
+  ]
+}

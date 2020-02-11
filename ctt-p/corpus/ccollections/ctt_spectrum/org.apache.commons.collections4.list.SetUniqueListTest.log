@@ -1,0 +1,640 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testUniqueListReInsert()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSetDownwardsInList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)",
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testFactory()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.clear()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.clear()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testRetainAllWithInitialList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.retainAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.retainAll(java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.SetUniqueList.retainAll(java.util.Collection\u003c?\u003e)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testListIterator()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.listIterator()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.listIterator()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.next()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.hasNext()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testCollections304()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testCollections307()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.UnmodifiableList.\u003cinit\u003e(java.util.List\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.ListUtils.unmodifiableList(java.util.List\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.subList(int, int)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.UnmodifiableList.unmodifiableList(java.util.List\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.createSetBasedOnList(java.util.Set\u003cE\u003e, java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.subList(int, int)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.contains(java.lang.Object)",
+        "org.apache.commons.collections4.list.SetUniqueList.subList(int, int)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testRetainAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.retainAll(java.util.Collection\u003c?\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.retainAll(java.util.Collection\u003c?\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.SetUniqueList.retainAll(java.util.Collection\u003c?\u003e)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testCollectionIteratorRemove()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getConfirmed()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.listIterator()": 0,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 1,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.iterator()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.verify()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.listIterator()": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.add(E)": 1,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.hasNext()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.iterator()": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 4,
+        "org.apache.commons.collections4.list.AbstractListTest.verify()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.isEmpty()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListIterator.next()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.next()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.hashCode()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetEmpty()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.toArray()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.equals(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedFullCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.add(E)": 0,
+        "\u003e\u003e\u003e TEST START \u003c\u003c\u003c |": -1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListTest.verify()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testListIteratorSet()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.listIterator()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.next()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.next()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.set(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.listIterator()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testUniqueListDoubleInsert()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.setUniqueList(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testListSetByIndex()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSetUpwardsInList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)",
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSubListIsUnmodifiable()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.UnmodifiableList.\u003cinit\u003e(java.util.List\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.ListUtils.unmodifiableList(java.util.List\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.UnmodifiableList.remove(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.subList(int, int)": 0,
+        "org.apache.commons.collections4.list.UnmodifiableList.unmodifiableList(java.util.List\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.createSetBasedOnList(java.util.Set\u003cE\u003e, java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 4,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.subList(int, int)": 1
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testCollectionAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.list.AbstractListTest.getConfirmed()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.listIterator()": 2,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.hasNext()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 2,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.next()": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.iterator()": 2,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.\u003cinit\u003e(java.util.ListIterator\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.verify()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.next()": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.listIterator()": 3,
+        "org.apache.commons.collections4.iterators.AbstractIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.\u003cinit\u003e(java.util.Iterator\u003cI\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getConfirmed()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.getCollection()": 0,
+        "org.apache.commons.collections4.iterators.AbstractListIteratorDecorator.hasNext()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.iterator()": 3,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.verify()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.isEmpty()": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.remove(int)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListIterator.next()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListListIterator.next()": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.hashCode()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.SetListIterator.\u003cinit\u003e(java.util.Iterator\u003cE\u003e, java.util.Set\u003cE\u003e)": 3,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetEmpty()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setCollection(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListTest.makeFullCollection()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.toArray()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.resetFull()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.setConfirmed(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator.getIterator()": 4,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 3,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.equals(java.lang.Object)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListTest.makeConfirmedFullCollection()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getCollection()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)",
+        "org.apache.commons.collections4.list.SetUniqueListTest.verify()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testIntCollectionAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSetInBiggerList()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.remove(int)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 3
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)",
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testSetCollections444()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.indexOf(java.lang.Object)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.add(int, E)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.add(int, E)": 2,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.set(int, E)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()",
+        "org.apache.commons.collections4.list.SetUniqueList.contains(java.lang.Object)"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.SetUniqueListTest",
+      "test": "testAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.list.SetUniqueList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 1,
+        "org.apache.commons.collections4.list.SetUniqueList.\u003cinit\u003e(java.util.List\u003cE\u003e, java.util.Set\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.addAll(int, java.util.Collection\u003c? extends E\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

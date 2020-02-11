@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.functors.CatchAndRethrowClosureTest",
+      "test": "testThrowingClosure()",
+      "hitSet": {
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosure.\u003cinit\u003e()": 1,
+        "null.executeAndThrow(T)": 1,
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosure.execute(E)": 0,
+        "org.apache.commons.collections4.FunctorException.\u003cinit\u003e(java.lang.Throwable)": 1,
+        "null.\u003cinit\u003e()": 1
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.functors.CatchAndRethrowClosure.execute(E)"
+      ],
+      "groundTruth": []
+    }
+  ]
+}

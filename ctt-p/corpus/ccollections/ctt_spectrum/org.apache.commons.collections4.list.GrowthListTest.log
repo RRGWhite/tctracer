@@ -1,0 +1,160 @@
+{
+  "tests": [
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testGrowthSet1()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.GrowthList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testGrowthSet2()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.GrowthList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testListSetByIndexBoundsChecking()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.GrowthList.set(int, E)": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testGrowthAdd()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.list.GrowthList.add(int, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testListAddByIndexBoundsChecking()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 1,
+        "org.apache.commons.collections4.list.GrowthList.add(int, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testListSetByIndexBoundsChecking2()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.GrowthList.growthList(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.GrowthList.set(int, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testListAddByIndexBoundsChecking2()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.GrowthList.growthList(java.util.List\u003cE\u003e)": 1,
+        "org.apache.commons.collections4.list.GrowthList.add(int, E)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherElements()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.isNullSupported()": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullNonNullElements()": 2,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getOtherNonNullElements()": 1,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 2,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionTest.getFullElements()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [],
+      "groundTruth": []
+    },
+    {
+      "cls": "org.apache.commons.collections4.list.GrowthListTest",
+      "test": "testGrowthAddAll()",
+      "hitSet": {
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)": 0,
+        "org.apache.commons.collections4.list.GrowthList.\u003cinit\u003e()": 0,
+        "org.apache.commons.collections4.list.GrowthList.addAll(int, java.util.Collection\u003c? extends E\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractSerializableListDecorator.\u003cinit\u003e(java.util.List\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.list.AbstractListDecorator.decorated()": 1,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.\u003cinit\u003e(java.util.Collection\u003cE\u003e)": 0,
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.decorated()": 2
+      },
+      "callsBeforeAssert": [
+        "org.apache.commons.collections4.list.AbstractListDecorator.get(int)",
+        "org.apache.commons.collections4.collection.AbstractCollectionDecorator.size()"
+      ],
+      "groundTruth": []
+    }
+  ]
+}
