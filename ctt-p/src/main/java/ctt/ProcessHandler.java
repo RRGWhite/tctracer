@@ -2,6 +2,7 @@ package ctt;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +11,9 @@ public abstract class ProcessHandler {
 
   private static boolean printProcessHandlerOutput = false;
 
-  public static ArrayList<String> executeCommand(String commandString, File workingDirectory) {
-    /*System.out.println("ProcessHandler executing command:\n" + commandString + "\nin "
-        + "directory: " + workingDirectory.getAbsolutePath());*/
+  /*public static ArrayList<String> executeCommand(String commandString, File workingDirectory) {
+    System.out.println("ProcessHandler executing command:\n" + commandString + "\nin "
+        + "directory: " + workingDirectory.getAbsolutePath());
 
     String[] splitCommandString = commandString.split(" ");
     List<String> cmdAndArgs = new ArrayList<>();
@@ -42,10 +43,6 @@ public abstract class ProcessHandler {
 
         stdErrLines.add(errorLine);
         allOutLines.add(errorLine);
-
-        if (errorLine.contains("method toClass in class ClassUtils cannot")) {
-          System.out.println("DEBUGGING NON-COMPILING TEST IN SUITE");
-        }
       }
 
       String line;
@@ -56,19 +53,53 @@ public abstract class ProcessHandler {
 
         stdOutLines.add(line);
         allOutLines.add(line);
-
-        if (line.contains("method toClass in class ClassUtils cannot")) {
-          System.out.println("DEBUGGING NON-COMPILING TEST IN SUITE");
-        }
       }
     } catch (Exception e) {
       Utilities.handleCaughtThrowable(e, false);
     }
 
-    /*if (commandString.contains("compile")) {
-      System.out.println("DEBUGGING COMPILE OUTPUT FROM PROCESSHANDLER");
-    }*/
+    return allOutLines;
+  }*/
 
+  public static ArrayList<String> executeCommand(String commandString, File workingDirectory,
+                                                 File outputFile) {
+    /*System.out.println("ProcessHandler executing command:\n" + commandString + "\nin "
+        + "directory: " + workingDirectory.getAbsolutePath());*/
+
+    if (!outputFile.exists()) {
+      FileSystemHandler.createDirStructureForFile(outputFile.getPath());
+      try {
+        outputFile.createNewFile();
+      } catch (IOException e) {
+        ExceptionHandler.handleCaughtThrowable(e, false);
+      }
+    }
+
+    FileSystemHandler.writeToFile(outputFile.getPath(), "", false);
+
+    String[] splitCommandString = commandString.split(" ");
+    List<String> cmdAndArgs = new ArrayList<>();
+    for (int i = 0; i < splitCommandString.length; ++i) {
+      cmdAndArgs.add(splitCommandString[i]);
+    }
+
+    ProcessBuilder processBuilder = new ProcessBuilder(cmdAndArgs);
+    processBuilder.directory(workingDirectory);
+
+    try {
+      processBuilder.redirectOutput(outputFile);
+      processBuilder.redirectError(outputFile);
+      processBuilder.redirectInput(outputFile);
+      processBuilder.start().waitFor();
+    } catch (Exception e) {
+      ExceptionHandler.handleCaughtThrowable(e, false);
+    }
+
+    if (printProcessHandlerOutput) {
+      Logger.get().logAndPrintLn(FileSystemHandler.readContentFromFile(outputFile.getPath()));
+    }
+
+    ArrayList<String> allOutLines = FileSystemHandler.readLinesFromFile(outputFile.getPath());
     return allOutLines;
   }
 }

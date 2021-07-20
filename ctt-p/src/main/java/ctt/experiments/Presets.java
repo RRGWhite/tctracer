@@ -11,30 +11,30 @@ import java.util.List;
  */
 public class Presets {
 
-  public static final Technique[] TECHNIQUES_NAME_SIMILARITY = {
-      Technique.NS_CONTAINS,
-      Technique.NS_COMMON_SUBSEQ_FUZ,
-      Technique.NS_COMMON_SUBSEQ,
+  /*public static final Technique[] TECHNIQUES_NAME_SIMILARITY = {
+      Technique.NCC,
+      Technique.LCS_B_N,
+      Technique.LCS_U_N,
       Technique.NS_LEVENSHTEIN,
-      Technique.NS_LEVENSHTEIN_N,
+      Technique.LEVENSHTEIN_N,
   };
 
   public static final Technique[] TECHNIQUES_OTHER = {
-      Technique.LAST_CALL_BEFORE_ASSERT,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.IR_TFIDF_32,
+      Technique.LCBA,
+      Technique.TARANTULA,
+      Technique.TFIDF,
   };
 
   public static final Technique[] TECHNIQUES_ALL = {
-      Technique.NS_CONTAINS,
+      Technique.NCC,
       Technique.NS_COMMON_SUBSEQ_FUZ,
       Technique.NS_COMMON_SUBSEQ,
       Technique.NS_LEVENSHTEIN,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.LAST_CALL_BEFORE_ASSERT,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.IR_TFIDF_32,
-  };
+      Technique.LEVENSHTEIN_N,
+      Technique.LCBA,
+      Technique.TARANTULA,
+      Technique.TFIDF,
+  };*/
 
   public static List<Configuration> getConfigurations() {
     List<Configuration> configs = new ArrayList<>();

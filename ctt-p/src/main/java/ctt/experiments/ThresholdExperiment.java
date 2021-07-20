@@ -10,8 +10,12 @@ import ctt.SpectraParser.Metric;
 import ctt.Utilities;
 import ctt.coverage.CoverageAnalyser.CounterType;
 import ctt.coverage.CoverageAnalyser.CoverageStat;
+import ctt.metrics.ClassLevelMetricsProvider;
+import ctt.metrics.FunctionLevelMetricsProvider;
 import ctt.metrics.TechniqueMetricsProvider;
 import ctt.types.CollectedComputedMetrics;
+import ctt.types.EvaluationMetrics;
+import ctt.types.Method;
 import ctt.types.PrecisionRecallPair;
 import ctt.types.Technique;
 import ctt.types.TestCollection;
@@ -19,26 +23,29 @@ import ctt.types.scores.PrecisionRecallCurve;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.swing.plaf.multi.MultiListUI;
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class ThresholdExperiment implements IExperiment {
 
   private static final Logger logger = LogManager.getLogger(ThresholdExperiment.class.getName());
+  private static Configuration.Level levelToTest = Configuration.Level.CLASS;
 
   private static Metric[] metricsToRecord = {
       Metric.PRECISION,
       Metric.RECALL,
       Metric.F_SCORE,
       Metric.MAP,
-      Metric.BPREF
+      //Metric.BPREF
+      SpectraParser.Metric.TRUE_POSITIVES,
+      SpectraParser.Metric.FALSE_POSITIVES,
+      SpectraParser.Metric.FALSE_NEGATIVES
   };
 
   private static final double MAX_VALUE = 0.999;
@@ -61,6 +68,9 @@ public class ThresholdExperiment implements IExperiment {
     results = HashBasedTable.create();
     resultsCSV = HashBasedTable.create();
 
+    ArrayList<CollectedComputedMetrics> collectedComputedMetrics =
+        SpectraParser.parseTestCollections(config, testCollections, coverageData, false);
+
     HashMap<Technique, PrecisionRecallCurve> precisionRecallCurves = new HashMap<>();
     //ArrayList<PrecisionRecallCurve> precisionRecallCurves = new ArrayList<>();
     for (double threshold = MAX_VALUE; threshold >= MIN_VALUE; threshold -= STEP_VALUE) {
@@ -70,24 +80,45 @@ public class ThresholdExperiment implements IExperiment {
 
       logger.info("Starting experiment for threshold value {}.",
           config.getCommonThresholdValue());
-      ArrayList<CollectedComputedMetrics> collectedComputedMetrics =
-          SpectraParser.parseTestCollections(config, testCollections, coverageData, false);
 
       Table<Technique, Metric, Double> techniqueMetrics = HashBasedTable.create();
       for (CollectedComputedMetrics computedMetrics : collectedComputedMetrics) {
+        if (levelToTest.equals(Configuration.Level.METHOD)) {
+          if (Utilities.allProjectsHaveFunctionLevelEvaluation(config)) {
+            Table<Technique, SpectraParser.Metric, Double> pureMetrics =
+                TechniqueMetricsProvider.computeTechniqueMetrics(
+                    FunctionLevelMetricsProvider.computeEvaluationMetrics(config,
+                        FunctionLevelMetricsProvider.buildCandidateSetTable(config,
+                            computedMetrics.getFunctionLevelMetrics().getAggregatedResults()),
+                        Main.ScoreType.PURE));
+            techniqueMetrics.putAll(pureMetrics);
 
-        /*if (Utilities.allProjectsHaveFunctionLevelEvaluation(config)) {
-          techniqueMetrics.putAll(TechniqueMetricsProvider.computeTechniqueMetrics(
-              computedMetrics.getFunctionLevelMetrics().getMetricTable()));
-          techniqueMetrics.putAll(TechniqueMetricsProvider.computeTechniqueMetrics(
-              computedMetrics.getAugmentedFunctionLevelMetrics().getMetricTable()));
-        }*/
+            Table<Technique, SpectraParser.Metric, Double> augMetrics =
+                TechniqueMetricsProvider.computeTechniqueMetrics(
+                    FunctionLevelMetricsProvider.computeEvaluationMetrics(config,
+                        FunctionLevelMetricsProvider.buildCandidateSetTable(config,
+                            computedMetrics.getAugmentedFunctionLevelMetrics().getAggregatedResults()),
+                        Main.ScoreType.AUGMENTED));
+            techniqueMetrics.putAll(augMetrics);
+          }
+        } else if (levelToTest.equals(Configuration.Level.CLASS)) {
+          if (Utilities.allProjectsHaveClassLevelEvaluation(config)) {
+            Table<Technique, SpectraParser.Metric, Double> pureMetrics =
+                TechniqueMetricsProvider.computeTechniqueMetrics(
+                    ClassLevelMetricsProvider.computeEvaluationMetrics(config,
+                        ClassLevelMetricsProvider.computeTraceabilityPredictions(config,
+                            computedMetrics.getClassLevelMetrics().getClassScoresTensor(),
+                            Main.ScoreType.PURE)));
+            techniqueMetrics.putAll(pureMetrics);
 
-        if (Utilities.allProjectsHaveClassLevelEvaluation(config)) {
-          techniqueMetrics.putAll(TechniqueMetricsProvider.computeTechniqueMetrics(
-              computedMetrics.getClassLevelMetrics().getMetricTable()));
-          techniqueMetrics.putAll(TechniqueMetricsProvider.computeTechniqueMetrics(
-              computedMetrics.getAugmentedClassLevelMetrics().getMetricTable()));
+            Table<Technique, SpectraParser.Metric, Double> augMetrics =
+                TechniqueMetricsProvider.computeTechniqueMetrics(
+                    ClassLevelMetricsProvider.computeEvaluationMetrics(config,
+                        ClassLevelMetricsProvider.computeTraceabilityPredictions(config,
+                            computedMetrics.getAugmentedClassLevelMetrics().getClassScoresTensor(),
+                            Main.ScoreType.AUGMENTED)));
+            techniqueMetrics.putAll(augMetrics);
+          }
         }
 
         Map<Technique, Double> precisionForTechnique = techniqueMetrics.column(Metric.PRECISION);
@@ -95,22 +126,109 @@ public class ThresholdExperiment implements IExperiment {
 
         for (Map.Entry<Technique, Double> entry : precisionForTechnique.entrySet()) {
           Technique technique = entry.getKey();
-          if (technique.equals(Technique.LAST_CALL_BEFORE_ASSERT)
-              || technique.equals(Technique.LAST_CALL_BEFORE_ASSERT_CLASS)
-              || technique.equals(Technique.LAST_CALL_BEFORE_ASSERT_MULTI)
-              || technique.equals(Technique.NS_CONTAINS)
-              || technique.equals(Technique.NS_CONTAINS_CLASS)
-              || technique.equals(Technique.NS_CONTAINS_MULTI)) {
+          if (technique.equals(Technique.LCBA)
+              || technique.equals(Technique.LCBA_CLASS)
+              || technique.equals(Technique.LCBA_MULTI)
+              || technique.equals(Technique.NC)
+              || technique.equals(Technique.NC_CLASS)
+              || technique.equals(Technique.NC_MULTI)
+              || technique.equals(Technique.NCC)
+              || technique.equals(Technique.NCC_CLASS)
+              || technique.equals(Technique.NCC_MULTI)
+              || technique.equals(Technique.STATIC_LCBA)
+              || technique.equals(Technique.STATIC_LCBA_CLASS)
+              || technique.equals(Technique.STATIC_LCBA_MULTI)
+              || technique.equals(Technique.STATIC_NC)
+              || technique.equals(Technique.STATIC_NC_CLASS)
+              || technique.equals(Technique.STATIC_NC_MULTI)
+              || technique.equals(Technique.STATIC_NCC)
+              || technique.equals(Technique.STATIC_NCC_CLASS)
+              || technique.equals(Technique.STATIC_NCC_MULTI)) {
             continue;
           }
 
           double precision = entry.getValue();
           double recall = recallForTechnique.get(technique);
 
+          int apacheAntTotalTruePositives;
+          int apacheAntTotalTrueNegatives;
+
+          int commonsIoTotalTruePositives;
+          int commonsIoTotalTrueNegatives;
+
+          int commonsLangTotalTruePositives;
+          int commonsLangTotalTrueNegatives;
+
+          int jfreechartTotalTruePositives;
+          int jfreechartTotalTrueNegatives;
+
+          int gsonTotalTruePositives;
+          int gsonTotalTrueNegatives;
+
+          if (levelToTest.equals(Configuration.Level.CLASS)) {
+            apacheAntTotalTruePositives = 79;
+            apacheAntTotalTrueNegatives = 79000;
+
+            commonsIoTotalTruePositives = 56;
+            commonsIoTotalTrueNegatives = 56000;
+
+            commonsLangTotalTruePositives = 85;
+            commonsLangTotalTrueNegatives = 85000;
+
+            jfreechartTotalTruePositives = 388;
+            jfreechartTotalTrueNegatives = 388000;
+
+            gsonTotalTruePositives = 0;
+            gsonTotalTrueNegatives = 0;
+          } else {
+            apacheAntTotalTruePositives = 0;
+            apacheAntTotalTrueNegatives = 0;
+
+            commonsIoTotalTruePositives = 42;
+            commonsIoTotalTrueNegatives = 42000;
+
+            commonsLangTotalTruePositives = 78;
+            commonsLangTotalTrueNegatives = 78000;
+
+            jfreechartTotalTruePositives = 37;
+            jfreechartTotalTrueNegatives = 37000;
+
+            gsonTotalTruePositives = 55;
+            gsonTotalTrueNegatives = 55000;
+          }
+
+          int totalTruePositives;
+          int totalTrueNegatives;
+
+          switch (config.getProjects().get(0)) {
+            case "apache-ant":
+              totalTruePositives = apacheAntTotalTruePositives;
+              totalTrueNegatives = apacheAntTotalTrueNegatives;
+              break;
+            case "commons-io":
+              totalTruePositives = commonsIoTotalTruePositives;
+              totalTrueNegatives = commonsIoTotalTrueNegatives;
+              break;
+            case "commons-lang":
+              totalTruePositives = commonsLangTotalTruePositives;
+              totalTrueNegatives = commonsLangTotalTrueNegatives;
+              break;
+            case "jfreechart":
+              totalTruePositives = jfreechartTotalTruePositives;
+              totalTrueNegatives = jfreechartTotalTrueNegatives;
+              break;
+            case "gson":
+              totalTruePositives = gsonTotalTruePositives;
+              totalTrueNegatives = gsonTotalTrueNegatives;
+              break;
+            default:
+              throw new IllegalStateException("project TP/FP not registered");
+          }
+
           PrecisionRecallCurve precisionRecallCurve = precisionRecallCurves.get(technique);
           if (precisionRecallCurve == null) {
             precisionRecallCurve = new PrecisionRecallCurve(technique, new ArrayList<>(),
-                37, 37000);
+                totalTruePositives, totalTrueNegatives);
           }
 
           precisionRecallCurve.getPrPoints().add(new PrecisionRecallPair(precision, recall));
@@ -159,7 +277,8 @@ public class ThresholdExperiment implements IExperiment {
               precisionRecallCurve.getTotalTruePositives() + " " +
               precisionRecallCurve.getTotalTrueNegatives();
 
-      ArrayList<String> toolOutput = ProcessHandler.executeCommand(cmdString, new File("./"));
+      ArrayList<String> toolOutput = ProcessHandler.executeCommand(cmdString,
+          new File("./"), new File("cli-output/process-output.txt"));
       String aucStr = null;
       for (String line : toolOutput) {
         if (line.contains("Area Under the Curve for Precision - Recall")) {
@@ -170,6 +289,8 @@ public class ThresholdExperiment implements IExperiment {
       double auc = -1;
       if (aucStr != null) {
         auc = Double.parseDouble(aucStr);
+      } else {
+        System.out.println("Debugging AUC");
       }
 
       /*if (technique.equals(Technique.COMBINED)) {
@@ -199,12 +320,24 @@ public class ThresholdExperiment implements IExperiment {
 
   private void printSummaryCSV() {
     for (Technique technique : resultsCSV.rowKeySet()) {
-      if (technique.equals(Technique.LAST_CALL_BEFORE_ASSERT)
-          || technique.equals(Technique.LAST_CALL_BEFORE_ASSERT_CLASS)
-          || technique.equals(Technique.LAST_CALL_BEFORE_ASSERT_MULTI)
-          || technique.equals(Technique.NS_CONTAINS)
-          || technique.equals(Technique.NS_CONTAINS_CLASS)
-          || technique.equals(Technique.NS_CONTAINS_MULTI)) {
+      if (technique.equals(Technique.LCBA)
+          || technique.equals(Technique.LCBA_CLASS)
+          || technique.equals(Technique.LCBA_MULTI)
+          || technique.equals(Technique.NC)
+          || technique.equals(Technique.NC_CLASS)
+          || technique.equals(Technique.NC_MULTI)
+          || technique.equals(Technique.NCC)
+          || technique.equals(Technique.NCC_CLASS)
+          || technique.equals(Technique.NCC_MULTI)
+          || technique.equals(Technique.STATIC_LCBA)
+          || technique.equals(Technique.STATIC_LCBA_CLASS)
+          || technique.equals(Technique.STATIC_LCBA_MULTI)
+          || technique.equals(Technique.STATIC_NC)
+          || technique.equals(Technique.STATIC_NC_CLASS)
+          || technique.equals(Technique.STATIC_NC_MULTI)
+          || technique.equals(Technique.STATIC_NCC)
+          || technique.equals(Technique.STATIC_NCC_CLASS)
+          || technique.equals(Technique.STATIC_NCC_MULTI)) {
         continue;
       }
 

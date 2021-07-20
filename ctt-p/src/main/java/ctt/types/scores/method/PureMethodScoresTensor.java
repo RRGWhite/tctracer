@@ -111,7 +111,7 @@ public class PureMethodScoresTensor extends MethodScoresTensor {
 
     INDArray scoresToCombine = scoresTensor_S.dup();
 
-    if (config.isUseWeightedCombination()) {
+    if (config.isUseTechniqueWeightingForCombinedScore()) {
       INDArray weightVector = Nd4j.zeros(1, 1, techniques.size());
       for (Technique technique : techniques) {
         weightVector.putScalar(techniques.indexOf(technique),
@@ -167,12 +167,13 @@ public class PureMethodScoresTensor extends MethodScoresTensor {
         indices[1] = NDArrayIndex.point(j);
         indices[2] = NDArrayIndex.all();
         INDArray unweightedScoresVector = scoresToCombine.get(indices);
-        INDArray zeroReplacementsvector =
+       /*INDArray zeroReplacementsvector =
             Nd4j.zeros(unweightedScoresVector.shape()).addi(config.getWeightingZeroPenalty());
         INDArray preparedUnweightedScoresVector =
             unweightedScoresVector.replaceWhere(zeroReplacementsvector,
                 new LessThanOrEqual(0));
-        INDArray weightedScoresVector = preparedUnweightedScoresVector.mul(weightVector);
+        INDArray weightedScoresVector = preparedUnweightedScoresVector.mul(weightVector);*/
+        INDArray weightedScoresVector = unweightedScoresVector.mul(weightVector);
         scoresToCombine.put(indices, weightedScoresVector);
       }
     }

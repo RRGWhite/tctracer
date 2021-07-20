@@ -3,11 +3,13 @@ package ctt.metrics;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import ctt.Configuration;
+import ctt.Logger;
 import ctt.Main;
 import ctt.ResultsWriter;
 import ctt.SpectraParser;
 import ctt.Utilities;
 import ctt.coverage.CoverageAnalyser;
+import ctt.ml.MLConnector;
 import ctt.types.ClassLevelMetrics;
 import ctt.types.EvaluationMetrics;
 import ctt.types.FunctionLevelMetrics;
@@ -21,14 +23,18 @@ import ctt.types.TestCollection;
 import ctt.types.scores.method.PureMethodScoresTensor;
 import de.vandermeer.asciitable.AsciiTable;
 import de.vandermeer.skb.interfaces.transformers.textformat.TextAlignment;
+import net.ericaro.neoitertools.generators.primitives.IntegerGenerator;
 import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.apache.commons.text.similarity.LongestCommonSubsequence;
 import org.apache.commons.text.similarity.SimilarityScore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -75,12 +81,13 @@ public class FunctionLevelMetricsProvider {
         if (testHitSpectrum.cls == null || testHitSpectrum.cls.equals("null")
             || testHitSpectrum.test == null || testHitSpectrum.test.equals("null")
             || hitSetEntry.getKey() == null || hitSetEntry.getKey().equals("null")
-            || hitSetEntry.getValue() == null || hitSetEntry.getValue().equals("null")) {
-          Utilities.logger.debug("DEUGGING NULL METHODS");
+            || hitSetEntry.getValue() == null || hitSetEntry.getValue().equals("null")
+            || hitSetEntry.getKey().equals(">>> TEST START <<< |")) {
+          Utilities.logger.debug("DEUGGING NULL METHODS:\n" + hitSetEntry.getKey() + ":" + hitSetEntry.getValue());
           continue;
         }
 
-        String invokedMethodFqn = hitSetEntry.getKey();
+        String invokedMethodFqn = Utilities.removePackagesFromFqnParamTypes(hitSetEntry.getKey());
         if (Utilities.getClassNameFromFqn(
             Utilities.getClassFqnFromMethodFqn(invokedMethodFqn)).toLowerCase().endsWith("test")) {
           //Utilities.logger.debug("skipping function as its from a test class");
@@ -115,6 +122,10 @@ public class FunctionLevelMetricsProvider {
       System.out.println("Suspiciousness calculated");
     }
 
+    if (config.isRunCombinedScoreOptimisationExperiment()) {
+      runCombinedScoreOptimisationExperiment(relevanceTable, true);
+    }
+
     MethodScoresTensor methodScoresTensor = new PureMethodScoresTensor(config, relevanceTable,
         true);
 
@@ -133,25 +144,37 @@ public class FunctionLevelMetricsProvider {
           Main.ScoreType.PURE), aggregatedResults, null);
     }
 
+    //@TODO: Use aggregatedResults to calculate Borda Count here
+    Map<String, String> bordaCountWinnersTable = computeBordaCountWinners(
+        config, aggregatedResults);
+
     // Build candidate set
     // Keys: Test, Technique, Candidate set of methods
     Table<String, Technique, SortedSet<MethodValuePair>> candidateTable = buildCandidateSetTable(
         config, aggregatedResults);
 
+    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable,
+        Main.ScoreType.PURE);
+    ResultsWriter.writeOutCombinedFalsePositives(config, methodScoresTensor, Main.ScoreType.PURE,
+        candidateTable);
+
     if (verbose) {
       System.out.println("Candidate set computed");
     }
 
-    //ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable);
-
-    Map<String, SortedSet<MethodValuePair>> groundTruthMap =
-        candidateTable.column(Technique.GROUND_TRUTH);
+    Map<String, SortedSet<MethodValuePair>> groundTruthMap = candidateTable.column(
+        Technique.GROUND_TRUTH);
     ResultsWriter.writeOutMethodLevelGroundTruth(config, groundTruthMap);
+    ResultsWriter.writeOutMethodLevelGroundTruthScores(config, methodScoresTensor,
+        Main.ScoreType.PURE, groundTruthMap);
 
     // Compute evaluation metrics for each test
     // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
     Table<Technique, String, EvaluationMetrics> metricTable = computeEvaluationMetrics(config,
         candidateTable, Main.ScoreType.PURE);
+
+    EvaluationMetrics bordaCountEvaluationMetrics = computeBordaCountEvaluationMetrics(config,
+        candidateTable, bordaCountWinnersTable, Main.ScoreType.PURE);
 
     if (verbose) {
       System.out.println("Evaluation metrics computed");
@@ -173,18 +196,15 @@ public class FunctionLevelMetricsProvider {
           Main.ScoreType.PURE), techniqueMetrics);
     }
 
-    ResultsWriter.writeOutMethodLevelTraceabilityPredictions(config, candidateTable,
-        Main.ScoreType.PURE);
-
     return new FunctionLevelMetrics(methodScoresTensor, relevanceTable, aggregatedResults,
         candidateTable,
         metricTable);
   }
 
   // Returns metrics table
-  public FunctionLevelMetrics augmentFunctionLevelMetrics(
-      FunctionLevelMetrics functionLevelMetrics, ClassLevelMetrics classLevelMetrics,
-      boolean verbose) {
+  public FunctionLevelMetrics augmentFunctionLevelMetrics(FunctionLevelMetrics functionLevelMetrics,
+                                                          ClassLevelMetrics classLevelMetrics,
+                                                          boolean verbose) {
 
     MethodScoresTensor augmentedMethodScoresTensor = new AugmentedMethodScoresTensor(config,
         functionLevelMetrics.getRelevanceTable(), functionLevelMetrics.getMethodScoresTensor(),
@@ -257,6 +277,10 @@ public class FunctionLevelMetricsProvider {
     // For each method, calculate suspiciousness value of that method for every test.
     for (Map.Entry<String, Set<MethodDepthPair>> entry : methodMap.entrySet()) {
       String method = entry.getKey();
+      if (method.contains("<init>")) {
+        method = Utilities.replaceInitWithConstructorName(method);
+      }
+
       Set<MethodDepthPair> testsExecutingMethod = entry.getValue();
 
       // Suspiciousness values
@@ -267,12 +291,15 @@ public class FunctionLevelMetricsProvider {
       // For each test that executes the method
       for (MethodDepthPair testDepthPair : testsExecutingMethod) {
         String test = testDepthPair.getMethodName();
-        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, test, method,
+
+        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable,
+            Utilities.removePackagesFromFqnParamTypes(test),
+            Utilities.removePackagesFromFqnParamTypes(method),
             HashMap::new);
 
         // Tarantula
         double suspiciousness = 1.0 / (1.0 + passed / totalPassed);
-        valueMap.put(Technique.FAULT_LOC_TARANTULA,
+        valueMap.put(Technique.TARANTULA,
             computeDiscountedScore(suspiciousness, test, method, testDepthPair.getCallDepth()));
         //System.out.println("Suspiciousness for method " + method + " , test: " + test + " = " + suspiciousness);
 
@@ -285,26 +312,10 @@ public class FunctionLevelMetricsProvider {
 
         double idf1 = (double) testsExecutingMethod.size() / testCollection.tests.size();
         double idf2 = Math.log((double) testCollection.tests.size() / testsExecutingMethod.size());
+        double tfidf = tf3 * idf2;
 
-        double tfidf_11 = tf1 * idf1;
-        double tfidf_12 = tf1 * idf2;
-        double tfidf_21 = tf2 * idf1;
-        double tfidf_22 = tf2 * idf2;
-        double tfidf_31 = tf3 * idf1;
-        double tfidf_32 = tf3 * idf2;
-
-        valueMap.put(Technique.IR_TFIDF_11,
-            computeDiscountedScore(tfidf_11, test, method, testDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_12,
-            computeDiscountedScore(tfidf_12, test, method, testDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_21,
-            computeDiscountedScore(tfidf_21, test, method, testDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_22,
-            computeDiscountedScore(tfidf_22, test, method, testDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_31,
-            computeDiscountedScore(tfidf_31, test, method, testDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_32,
-            computeDiscountedScore(tfidf_32, test, method, testDepthPair.getCallDepth()));
+        valueMap.put(Technique.TFIDF,
+            computeDiscountedScore(tfidf, test, method, testDepthPair.getCallDepth()));
       }
     }
 
@@ -324,13 +335,23 @@ public class FunctionLevelMetricsProvider {
 
       // Remove 'test' from the test name
       if (testName.contains("test")) {
-        testName = testName.replace("test", "");
+        testName = testName
+            .replace("testcase", "")
+            .replace("test", "");
       }
 
       Set<MethodDepthPair> methodsExecutedByTest = entry.getValue();
 
       for (MethodDepthPair methodDepthPair : methodsExecutedByTest) {
         String method = methodDepthPair.getMethodName();
+        if (method.contains("<init>")) {
+          method = Utilities.replaceInitWithConstructorName(method);
+        }
+
+        /*if (method.contains("SegmentedTimeline") && test.contains("testMs2SegmentedTimeline")) {
+          System.out.println("DEBUGGING NEW CONSTRUCTOR NAME COMPARISON");
+        }*/
+
         int idx_method_openParen = method.lastIndexOf('(');
         if (idx_method_openParen == -1) {
           //throw new Error("Invalid method name: " + method);
@@ -363,108 +384,72 @@ public class FunctionLevelMetricsProvider {
         // Test contains method name
         boolean contains = testName.contains(methodName);
 
-        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, test, method,
+        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable,
+            Utilities.removePackagesFromFqnParamTypes(test),
+            Utilities.removePackagesFromFqnParamTypes(method),
             HashMap::new);
         valueMap.put(Technique.NC,
             computeDiscountedScore(testName.equals(methodName) ? 1.0 : 0.0, test, method,
                 methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ,
+        valueMap.put(Technique.LCS_B_N,
             computeDiscountedScore(score_longestCommonSubsequence, test, method,
                 methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_N,
-            computeDiscountedScore(score_longestCommonSubsequence, test, method,
-                methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_FUZ,
+        valueMap.put(Technique.LCS_U_N,
             computeDiscountedScore(score_longestCommonSubsequenceFuzzy, test, method,
                 methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_FUZ_N,
-            computeDiscountedScore(score_longestCommonSubsequenceFuzzy, test, method,
-                methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_LEVENSHTEIN,
+        valueMap.put(Technique.LEVENSHTEIN_N,
             computeDiscountedScore(score_levenshtein, test, method, methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_LEVENSHTEIN_N,
-            computeDiscountedScore(score_levenshtein, test, method, methodDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_CONTAINS,
+        valueMap.put(Technique.NCC,
             computeDiscountedScore(contains ? 1.0 : 0.0, test, method, methodDepthPair.getCallDepth()));
-
-        // Coverage
-        if (coverageData != null) {
-          double coverageScore = CoverageAnalyser.getCoverageScore(coverageData, test, method);
-          valueMap.put(Technique.COVERAGE,
-              computeDiscountedScore(coverageScore, test, method, methodDepthPair.getCallDepth()));
-        }
       }
     }
 
     for (HitSpectrum testHitSpectrum : testCollection.tests) {
-      String testName = testHitSpectrum.cls + "." + testHitSpectrum.test;
+      String testNameFqn = testHitSpectrum.cls + "." + testHitSpectrum.test;
 
       // Ground Truth
-      for (String method : testHitSpectrum.groundTruth) {
-        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, testName, method,
-            HashMap::new);
+      for (String methodFqn : testHitSpectrum.groundTruth) {
+        if (methodFqn.contains("<init>")) {
+          methodFqn = Utilities.replaceInitWithConstructorName(methodFqn);
+        }
+
+        String normalisedMethodFqn = Utilities.removePackagesFromFqnParamTypes(methodFqn);
+
+        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, testNameFqn,
+            normalisedMethodFqn, HashMap::new);
         valueMap.put(Technique.GROUND_TRUTH, 1.0);
       }
 
       // LCBA
-      //int numCallsBeforeAssert = testHitSpectrum.callsBeforeAssert.size();
-      for (String method : testHitSpectrum.callsBeforeAssert) {
-        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, testName, method,
-            HashMap::new);
+      for (String methodFqn : testHitSpectrum.callsBeforeAssert) {
+        if (methodFqn.contains("<init>")) {
+          methodFqn = Utilities.replaceInitWithConstructorName(methodFqn);
+        }
 
-        // Each method in callsBeforeAssert has 1.0 relevance
-        valueMap.put(Technique.LAST_CALL_BEFORE_ASSERT, 1.0);
+        String normalisedMethodFqn = Utilities.removePackagesFromFqnParamTypes(methodFqn);
+
+        Map<Technique, Double> valueMap = createIfAbsent(relevanceTable, testNameFqn,
+            normalisedMethodFqn, HashMap::new);
+
+        // Each methodFqn in callsBeforeAssert has 1.0 relevance
+        valueMap.put(Technique.LCBA, 1.0);
       }
     }
 
-    // COMBINED
-    /*for (Table.Cell<String, String, Map<Technique, Double>> relevanceTableCell :
-        relevanceTable.cellSet()) {
-      double combinedScore =
-          (config.getScoreCombinationMethod().equals(Configuration.ScoreCombinationMethod.PRODUCT))
-              ? 1.0 : 0.0;
-      Map<Technique, Double> techniqueScores = relevanceTableCell.getValue();
-      for (Technique technique : config.getMethodLevelTechniqueList()) {
-        if (technique.equals(Technique.COMBINED)) {
-          continue;
-        }
+    StaticTechniquesProvider staticTechniquesProvider = new StaticTechniquesProvider(config, true);
+    relevanceTable =
+        staticTechniquesProvider.computeMethodLevelScores(relevanceTable);
 
-        double techniqueScore = techniqueScores.get(technique) == null ? 0 : techniqueScores.get(technique);
-
-        switch (config.getScoreCombinationMethod()) {
-          case AVERAGE:
-          case SUM:
-            if (config.isUseWeightedCombination()) {
-              combinedScore +=
-                  (techniqueScore * config.getMethodLevelTechniqueWeights().get(technique));
-            } else {
-              combinedScore += techniqueScore;
-            }
-            break;
-          case PRODUCT:
-            if (config.isUseWeightedCombination()) {
-              if (techniqueScore == 0) {
-                combinedScore *= config.getWeightingZeroPenalty();
-                continue;
-              }
-
-              combinedScore *=
-                  (techniqueScore * config.getMethodLevelTechniqueWeights().get(technique));
-            } else {
-              combinedScore *= techniqueScore;
-            }
-            break;
-        }
+    if (Arrays.asList(config.getMethodLevelTechniqueList()).contains(Technique.COMBINED_FFN)) {
+      MLConnector mlConnector = new MLConnector(config, relevanceTable, Configuration.Level.METHOD);
+      if (!mlConnector.isMethodLevelModelTrained()) {
+        mlConnector.train();
       }
 
-      double score = combinedScore;
-      if (config.getScoreCombinationMethod().equals(Configuration.ScoreCombinationMethod.AVERAGE)) {
-          score = config.getMethodLevelTechniqueList().length == 0 ? 0.0 :
-              combinedScore / (double) config.getMethodLevelTechniqueList().length;
+      if (mlConnector.isMethodLevelModelTrained()) {
+        relevanceTable = mlConnector.addFFNScores();
       }
-
-      relevanceTableCell.getValue().put(Technique.COMBINED, score);
-    }*/
+    }
 
     Utilities.logger.info("Method level relevance table constructed");
     return relevanceTable;
@@ -501,7 +486,8 @@ public class FunctionLevelMetricsProvider {
         if (groundTruth != null) {
           SortedSet<MethodValuePair> methodSet = createIfAbsent(
             aggregatedResults, testFqn, Technique.GROUND_TRUTH, TreeSet::new);
-          methodSet.add(new MethodValuePair(functionFqn, groundTruth));
+          methodSet.add(new MethodValuePair(Utilities.removePackagesFromFqnParamTypes(functionFqn),
+              groundTruth));
         }
       }
     }
@@ -526,7 +512,72 @@ public class FunctionLevelMetricsProvider {
     return aggregatedResults;
   }
 
-  private static Table<String, Technique, SortedSet<MethodValuePair>> buildCandidateSetTable(
+  public static Map<String, String> computeBordaCountWinners(
+      Configuration config,
+      Table<String, Technique, SortedSet<MethodValuePair>> aggregatedResults) {
+    Utilities.logger.info("Computing borda count winners");
+    // Keys: Test, Technique, Candidate set of methods
+    Map<String, String> winnersMap = new HashMap<>();
+
+    /*Set<Table.Cell<String, Technique, SortedSet<MethodValuePair>>> aggregatedCells =
+        aggregatedResults.cellSet();*/
+
+    for (Map.Entry<String, Map<Technique, SortedSet<MethodValuePair>>> entry :
+        aggregatedResults.rowMap().entrySet()) {
+      String test = entry.getKey();
+      Map<String, Integer> methodScores = new LinkedHashMap<>();
+      for (Map.Entry<Technique, SortedSet<MethodValuePair>> techniqueEntry :
+          entry.getValue().entrySet()) {
+        Technique technique = techniqueEntry.getKey();
+
+        //Skip binary scored techniques
+        if (technique.equals(Technique.LCBA) ||
+            technique.equals(Technique.NC) ||
+            technique.equals(Technique.NCC) ||
+            technique.equals(Technique.STATIC_LCBA) ||
+            technique.equals(Technique.STATIC_NC) ||
+            technique.equals(Technique.STATIC_NCC)) {
+          continue;
+        }
+
+        List<MethodValuePair> rankedMethodValuePairs =
+            new ArrayList<MethodValuePair>( techniqueEntry.getValue() );
+        Collections.sort(rankedMethodValuePairs, new Comparator<MethodValuePair>(){
+          public int compare(MethodValuePair i1, MethodValuePair i2) {
+            Double d1 = i1.getValue();
+            Double d2 = i2.getValue();
+            return d1.compareTo(d2);
+          }
+        });
+
+        Collections.reverse(rankedMethodValuePairs);
+
+        int position = 1;
+        for (MethodValuePair methodValuePair : rankedMethodValuePairs) {
+          int methodScore = techniqueEntry.getValue().size() - position;
+          methodScores.putIfAbsent(methodValuePair.getMethod(), 0);
+          methodScores.put(methodValuePair.getMethod(),
+              methodScores.get(methodValuePair.getMethod()) + methodScore);
+          position++;
+        }
+      }
+
+      List<Map.Entry<String, Integer>> entries = new ArrayList<>( methodScores.entrySet() );
+      Collections.sort(entries, new Comparator<Map.Entry<String,Integer>>(){
+        public int compare(Map.Entry<String,Integer> i1, Map.Entry<String,Integer> i2) {
+          return i2.getValue().compareTo(i1.getValue());
+        }
+      });
+
+      String winningFunction = entries.get(0).getKey();
+      winnersMap.put(test, winningFunction);
+    }
+
+    Utilities.logger.info("Computed borda count winners: " + winnersMap);
+    return winnersMap;
+  }
+
+  public static Table<String, Technique, SortedSet<MethodValuePair>> buildCandidateSetTable(
       Configuration config,
       Table<String, Technique, SortedSet<MethodValuePair>> aggregatedResults) {
     Utilities.logger.info("Constructing method traceability predictions");
@@ -535,6 +586,8 @@ public class FunctionLevelMetricsProvider {
 
     Set<Table.Cell<String, Technique, SortedSet<MethodValuePair>>> aggregatedCells = aggregatedResults
         .cellSet();
+
+    HashMap<Integer, Integer> predictedDepths = new HashMap<>();
     for (Table.Cell<String, Technique, SortedSet<MethodValuePair>> cell : aggregatedCells) {
       String test = cell.getRowKey();
       Technique technique = cell.getColumnKey();
@@ -549,32 +602,43 @@ public class FunctionLevelMetricsProvider {
           if (methodValuePair.getValue() >= config.getThresholdData().getOrDefault(technique,
               0.0)) {
             candidateSet.add(methodValuePair);
+            int depth = Utilities.getfunctionDepth(test, methodValuePair.getMethod());
+            if (technique.equals(Technique.COMBINED)) {
+              predictedDepths.putIfAbsent(depth, 0);
+              predictedDepths.put(depth, predictedDepths.get(depth) + 1);
+            }
           }
         }
-
-        /*if (technique.equals(Technique.FAULT_LOC_TARANTULA)) {
-          Utilities.logger.debug("DEBUGGING TARANTULA MAP");
-        }*/
       }
     }
+
+    Utilities.logger.info("Predicted depths for " + config.getProjects().get(0) + ":");
+    Utilities.logger.info(predictedDepths.toString());
 
     Utilities.logger.info("Method traceability predictions constructed");
     return candidateTable;
   }
 
   // NOTE: This drops entries without ground truth data unless configured to use naming conventions as ground truth.
-  private static Table<Technique, String, EvaluationMetrics> computeEvaluationMetrics(
+  public static EvaluationMetrics computeBordaCountEvaluationMetrics(
       Configuration config, Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
-      Main.ScoreType scoreType) {
-    // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
-    Table<Technique, String, EvaluationMetrics> metricTable = HashBasedTable.create();
-
-    //HashMap<String, SortedSet<MethodValuePair>> groundTruthMap = new HashMap<>();
-
+      Map<String, String> winnersMap, Main.ScoreType scoreType) {
     // For each test, get the ground truth answer, then measure the other techniques against the ground truth answer.
+
+    double bpref = 0.0;
+    int truePositives = 0;
+    int falsePositives = 0;
+    int falseNegatives = 0;
+    double avgPrecisionDenominator = 0.0;
+    double avgPrecisionNumerator = 0.0;
+
     for (Map.Entry<String, Map<Technique, SortedSet<MethodValuePair>>> testEntry : candidateTable
         .rowMap().entrySet()) {
       String test = testEntry.getKey();
+
+      if (test.contains("ScatterPlotTest.testReplaceDataset")) {
+        System.out.println("Debugging new ground truth format");
+      }
 
       // Obtain ground truth data
       Map<Technique, SortedSet<MethodValuePair>> techniqueMap = testEntry.getValue();
@@ -583,7 +647,84 @@ public class FunctionLevelMetricsProvider {
 
       if (groundTruthPairSet == null && CONFIG_NAMING_CONVENTIONS_AS_GROUND_TRUTH) {
         // If configured to do so, in the absence of ground truth, use Naming Conventions - Contains candidate set
-        groundTruthPairSet = techniqueMap.get(Technique.NS_CONTAINS);
+        groundTruthPairSet = techniqueMap.get(Technique.NCC);
+      }
+
+      if (groundTruthPairSet != null) {
+        Set<String> groundTruthSet = new HashSet<>();
+        for (MethodValuePair methodValuePair : groundTruthPairSet) {
+          groundTruthSet.add(methodValuePair.getMethod());
+        }
+
+        String bordaWinningMethod = winnersMap.get(test);
+        int listIdx = 0;
+        listIdx++;
+        if (groundTruthSet.contains(bordaWinningMethod)) {
+          truePositives++;
+          SortedSet<MethodValuePair> methodValueSet = new TreeSet<>();
+          methodValueSet.add(new MethodValuePair(bordaWinningMethod, 1.0));
+          avgPrecisionNumerator += Utilities.functionLevelPrecisionAtK(methodValueSet,
+              groundTruthSet, listIdx);
+          falseNegatives += groundTruthPairSet.size() - 1;
+        } else {
+          falsePositives++;
+          falseNegatives += groundTruthPairSet.size();
+        }
+
+        avgPrecisionDenominator += groundTruthSet.size();
+      } else {
+        // Most tests won't have explicitly annotated ground truth data. OK to ignore.
+        // System.out.printf("No ground truth data for test %s.%n", test);
+      }
+    }
+
+    double averagePrecision = (avgPrecisionDenominator == 0) ? 0 :
+        avgPrecisionNumerator / avgPrecisionDenominator;
+
+    Logger.get().logAndPrintLn("Borda Count - true positives: " + truePositives);
+    Logger.get().logAndPrintLn("Borda Count - false positives: " + falsePositives);
+    Logger.get().logAndPrintLn("Borda Count - false negatives: " + falseNegatives);
+
+    double precision = EvaluationMetrics
+        .computePrecision(truePositives, falsePositives);
+    double recall = EvaluationMetrics.computeRecall(truePositives, falseNegatives);
+    double fScore = EvaluationMetrics.computeFScore(precision, recall);
+
+    Logger.get().logAndPrintLn("Borda Count - precision: " + precision);
+    Logger.get().logAndPrintLn("Borda Count - recall: " + recall);
+    Logger.get().logAndPrintLn("Borda Count - fScore: " + fScore);
+
+    return new EvaluationMetrics(truePositives, falsePositives, falseNegatives, bpref,
+        averagePrecision);
+  }
+
+  // NOTE: This drops entries without ground truth data unless configured to use naming conventions as ground truth.
+  public static Table<Technique, String, EvaluationMetrics> computeEvaluationMetrics(
+      Configuration config, Table<String, Technique, SortedSet<MethodValuePair>> candidateTable,
+      Main.ScoreType scoreType) {
+    // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
+    Table<Technique, String, EvaluationMetrics> metricTable = HashBasedTable.create();
+
+    //HashMap<String, SortedSet<MethodValuePair>> groundTruthMap = new HashMap<>();
+
+    HashMap<Integer, Integer> truePositiveDepths = new HashMap<>();
+    // For each test, get the ground truth answer, then measure the other techniques against the ground truth answer.
+    for (Map.Entry<String, Map<Technique, SortedSet<MethodValuePair>>> testEntry : candidateTable
+        .rowMap().entrySet()) {
+      String test = testEntry.getKey();
+
+      if (test.contains("ScatterPlotTest.testReplaceDataset")) {
+        System.out.println("Debugging new ground truth format");
+      }
+
+      // Obtain ground truth data
+      Map<Technique, SortedSet<MethodValuePair>> techniqueMap = testEntry.getValue();
+      SortedSet<MethodValuePair> groundTruthPairSet = techniqueMap.get(Technique.GROUND_TRUTH);
+      //groundTruthMap.put(test, groundTruthPairSet);
+
+      if (groundTruthPairSet == null && CONFIG_NAMING_CONVENTIONS_AS_GROUND_TRUTH) {
+        // If configured to do so, in the absence of ground truth, use Naming Conventions - Contains candidate set
+        groundTruthPairSet = techniqueMap.get(Technique.NCC);
       }
 
       if (groundTruthPairSet != null) {
@@ -595,6 +736,11 @@ public class FunctionLevelMetricsProvider {
         // For every technique
         for (Technique technique : Utilities.getTechniques(config, Configuration.Level.METHOD,
             scoreType)) {
+
+          /*if (technique.equals(Technique.STATIC_LCBA)) {
+            Logger.get().logAndPrintLn("Debugging static method level matching");
+          }*/
+
           SortedSet<MethodValuePair> candidateMethodSet = candidateTable.get(test, technique);
           if (candidateMethodSet == null) {
             candidateMethodSet = new TreeSet<>(); // if no entry in the candidate table for the given test and technique, treat as empty set.
@@ -617,6 +763,12 @@ public class FunctionLevelMetricsProvider {
               truePositiveSet.add(methodValuePair);
               avgPrecisionNumerator += Utilities.functionLevelPrecisionAtK(candidateMethodSet,
                   groundTruthSet, listIdx);
+
+              if (technique.equals(Technique.COMBINED)) {
+                Integer depth = Utilities.getGroundTruthDepth(test, methodValuePair.getMethod());
+                truePositiveDepths.putIfAbsent(depth, 0);
+                truePositiveDepths.put(depth, truePositiveDepths.get(depth) + 1);
+              }
             } else {
               falsePositives++;
             }
@@ -633,6 +785,15 @@ public class FunctionLevelMetricsProvider {
 
           int falseNegatives = groundTruthPairSet.size()
               - truePositives; // elements in the ground truth set that were not in the candidate set
+
+          /*Logger.get().logAndPrintLn("Test: " + test);
+          Logger.get().logAndPrintLn("True Positives: " + truePositives);
+          Logger.get().logAndPrintLn("False Positives: " + falsePositives);
+          Logger.get().logAndPrintLn("False Negatives: " + falseNegatives);*/
+          /*if (falseNegatives > 0 && technique.equals(Technique.STATIC_LCS_B_N)) {
+            Logger.get().logAndPrintLn("DEBUGGING MISSING RECALL");
+            Logger.get().logAndPrintLn("STATIC_LCS_B_N missing pair for test: " + test);
+          }*/
 
           // Compute bpref
           double bpref = 0.0;
@@ -663,6 +824,10 @@ public class FunctionLevelMetricsProvider {
         // System.out.printf("No ground truth data for test %s.%n", test);
       }
     }
+
+    Utilities.logger.info("True Positive depths for " + config.getProjects().get(0) + ":");
+    Utilities.logger.info(truePositiveDepths.toString());
+
     //ResultsWriter.writeOutMethodLevelGroundTruth(groundTruthMap);
     return metricTable;
   }
@@ -765,5 +930,55 @@ public class FunctionLevelMetricsProvider {
     // Discount by call depth
     double discountedScore = score * Math.pow(config.getCallDepthDiscountFactor(), callDepth);
     return discountedScore;
+  }
+
+  private void runCombinedScoreOptimisationExperiment(Table<String, String, Map<Technique,
+      Double>> relevanceTable, boolean normalisedWithinTestByTechnique) {
+    for (Technique technique : config.getMethodLevelTechniqueList()) {
+      MethodScoresTensor methodScoresTensor = new PureMethodScoresTensor(config, relevanceTable,
+          normalisedWithinTestByTechnique);
+
+      // Aggregate the results
+      // Keys: Test, Technique, Ranked list of method candidates
+      Table<String, Technique, SortedSet<MethodValuePair>> aggregatedResults =
+          computeAggregatedResults(config, relevanceTable, methodScoresTensor);
+
+      // Build candidate set
+      // Keys: Test, Technique, Candidate set of methods
+      Table<String, Technique, SortedSet<MethodValuePair>> candidateTable = buildCandidateSetTable(
+          config, aggregatedResults);
+
+      Map<String, SortedSet<MethodValuePair>> groundTruthMap =
+          candidateTable.column(Technique.GROUND_TRUTH);
+      ResultsWriter.writeOutMethodLevelGroundTruth(config, groundTruthMap);
+
+      // Compute evaluation metrics for each test
+      // Keys: Technique, Test, Evaluation Metrics (true positives, etc)
+      Table<Technique, String, EvaluationMetrics> metricTable = computeEvaluationMetrics(config,
+          candidateTable, Main.ScoreType.PURE);
+
+      printFunctionLevelMetricsSummary(config, metricTable, Main.ScoreType.PURE);
+    }
+  }
+
+  public static void printFunctionLevelMetricsSummary(Configuration config,
+                                                       Table<Technique, String, EvaluationMetrics> functionLevelMetricsTable, Main.ScoreType scoreType) {
+    // System.out.println("======= AGGREGATED TECHNIQUE EVALUATION METRICS =======");
+    // SpectraParser.printEvaluationMetrics(config.getTechniqueList(), null, metricsTable);
+
+    config.printConfiguration();
+
+    System.out.println("======= TECHNIQUE METRICS =======");
+    TechniqueMetricsProvider.printTechniqueMetrics(Utilities.getTechniques(config,
+        Configuration.Level.METHOD, scoreType),
+        TechniqueMetricsProvider.computeTechniqueMetrics(functionLevelMetricsTable));
+
+    System.out.println("======= TECHNIQUE METRICS DATA =======");
+    TechniqueMetricsProvider.printTechniqueMetricsData(Utilities.getTechniques(config,
+        Configuration.Level.METHOD, scoreType),
+        TechniqueMetricsProvider.computeTechniqueMetrics(functionLevelMetricsTable));
+
+    int testCount = functionLevelMetricsTable.columnKeySet().size();
+    System.out.printf("Total number of tests: %d %n", testCount);
   }
 }

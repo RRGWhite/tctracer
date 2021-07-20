@@ -2,6 +2,7 @@ package ctt.metrics;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import ctt.Logger;
 import ctt.SpectraParser;
 import ctt.types.EvaluationMetrics;
 import ctt.types.Technique;
@@ -40,6 +41,11 @@ public class TechniqueMetricsProvider {
         totalAveragePrecision += evaluationMetrics.getAveragePrecision();
       }
 
+      /*Logger.get().logAndPrintLn("Technique: " + technique);
+      Logger.get().logAndPrintLn("Total True Positives: " + totalTruePositives);
+      Logger.get().logAndPrintLn("Total False Positives: " + totalFalsePositives);
+      Logger.get().logAndPrintLn("Total False Negatives: " + totalFalseNegatives);*/
+
       double precision = EvaluationMetrics
           .computePrecision(totalTruePositives, totalFalsePositives);
       double recall = EvaluationMetrics.computeRecall(totalTruePositives, totalFalseNegatives);
@@ -52,6 +58,12 @@ public class TechniqueMetricsProvider {
       techniqueMetrics.put(technique, SpectraParser.Metric.F_SCORE, fScore);
       techniqueMetrics.put(technique, SpectraParser.Metric.MAP, meanAveragePrecision);
       techniqueMetrics.put(technique, SpectraParser.Metric.BPREF, bpref);
+      techniqueMetrics.put(technique, SpectraParser.Metric.TRUE_POSITIVES,
+          (double) totalTruePositives);
+      techniqueMetrics.put(technique, SpectraParser.Metric.FALSE_POSITIVES,
+          (double) totalFalsePositives);
+      techniqueMetrics.put(technique, SpectraParser.Metric.FALSE_NEGATIVES,
+          (double) totalFalseNegatives);
 
       // System.out.printf("%s:%n\tPrecision: %f | Recall: %f | F-Score: %f %n", technique.toString(), precision, recall, fScore);
     }
@@ -66,6 +78,9 @@ public class TechniqueMetricsProvider {
         SpectraParser.Metric.RECALL,
         SpectraParser.Metric.MAP,
         SpectraParser.Metric.F_SCORE,
+        SpectraParser.Metric.TRUE_POSITIVES,
+        SpectraParser.Metric.FALSE_POSITIVES,
+        SpectraParser.Metric.FALSE_NEGATIVES
         // Metric.BPREF,
     };
 
@@ -100,6 +115,9 @@ public class TechniqueMetricsProvider {
         SpectraParser.Metric.RECALL,
         SpectraParser.Metric.MAP,
         SpectraParser.Metric.F_SCORE,
+        SpectraParser.Metric.TRUE_POSITIVES,
+        SpectraParser.Metric.FALSE_POSITIVES,
+        SpectraParser.Metric.FALSE_NEGATIVES
         // Metric.BPREF,
     };
 

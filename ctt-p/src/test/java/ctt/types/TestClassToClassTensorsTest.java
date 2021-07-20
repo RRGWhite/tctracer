@@ -53,17 +53,17 @@ public class TestClassToClassTensorsTest {
         Map<Technique, Double> scores = new HashMap<>();
         for (Technique technique : config.getMethodLevelTechniqueList()) {
           double score;
-          if (technique.equals(Technique.NS_CONTAINS)) {
+          if (technique.equals(Technique.NCC)) {
             score = (double) random.nextInt(2);
           } else if (technique.equals(Technique.NS_LEVENSHTEIN)) {
             score = (double) random.nextInt(10);
-          } else if (technique.equals(Technique.LAST_CALL_BEFORE_ASSERT)) {
+          } else if (technique.equals(Technique.LCBA)) {
             score = (double) random.nextInt(2);
           } else {
             score = random.nextDouble();
           }
 
-          if (technique.equals(Technique.IR_TFIDF_32)) {
+          if (technique.equals(Technique.TFIDF)) {
             tfIdf32ClassScore += score;
           }
 
@@ -105,7 +105,7 @@ public class TestClassToClassTensorsTest {
 
     String functionToInspect = testClassToClassTensors.getFunctions().get(0);
     String testToInspect = testClassToClassTensors.getTests().get(0);
-    Technique techniqueToInspect = Technique.IR_TFIDF_32;
+    Technique techniqueToInspect = Technique.TFIDF;
 
     Utilities.logger.info("Manually validating TestClassToClassTensors using " + functionToInspect +
         ", " + testToInspect + ", and " + techniqueToInspect);

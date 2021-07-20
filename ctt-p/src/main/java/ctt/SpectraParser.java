@@ -66,7 +66,10 @@ public class SpectraParser {
     F_SCORE("F-Score"),
     MAP("MAP"),
     BPREF("Bpref"),
-    AUPRC("AUPRC");
+    AUPRC("AUPRC"),
+    TRUE_POSITIVES("True Positives"),
+    FALSE_POSITIVES("False Positives"),
+    FALSE_NEGATIVES("False Negatives");
 
     private final String text;
 
@@ -99,7 +102,11 @@ public class SpectraParser {
   public static TestCollection parseJSONFile(File file) throws FileNotFoundException {
     BufferedReader br = new BufferedReader(new FileReader(file));
     Gson gson = new Gson();
-    return gson.fromJson(br, TestCollection.class);
+    try {
+      return gson.fromJson( br, TestCollection.class );
+    } catch (Exception e) {
+      return null;
+    }
   }
 
   public CollectedComputedMetrics computeMetrics(TestCollection testCollection, boolean verbose) {

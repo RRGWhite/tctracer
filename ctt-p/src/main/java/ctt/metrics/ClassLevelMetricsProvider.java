@@ -8,8 +8,10 @@ import ctt.Main;
 import ctt.ResultsWriter;
 import ctt.Utilities;
 import ctt.coverage.CoverageAnalyser;
+import ctt.ml.MLConnector;
 import ctt.types.ClassDepthPair;
 import ctt.types.ClassLevelMetrics;
+import ctt.types.MethodValuePair;
 import ctt.types.scores.clazz.AugmentedClassScoresTensor;
 import ctt.types.scores.clazz.ClassScoresTensor;
 import ctt.types.scores.clazz.PureClassScoresTensor;
@@ -30,12 +32,16 @@ import org.apache.commons.text.similarity.SimilarityScore;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -82,17 +88,19 @@ public class ClassLevelMetricsProvider {
         Main.ScoreType.PURE);*/
 
     Table<Technique, String, List<String>> traceabilityPredictions =
-        computeTraceabilityPredictions(pureClassScoresTensor, Main.ScoreType.PURE);
+        computeTraceabilityPredictions(config, pureClassScoresTensor, Main.ScoreType.PURE);
 
     if (verbose) {
       printPredictedClassToClassLinks(traceabilityPredictions);
     }
 
     ResultsWriter.writeOutClassLevelTraceabilityPredictions(config, traceabilityPredictions,
-        Main.ScoreType.PURE);
+        Main.ScoreType.PURE, pureClassScoresTensor);
+    ResultsWriter.writeOutClassLevelGroundTruthScores(config, pureClassScoresTensor,
+        Main.ScoreType.PURE, getOracleLinksForProject(config, config.getProjects().get(0)));
 
     Table<Technique, String, EvaluationMetrics> evaluationMetricsTable =
-        computeEvaluationMetrics(traceabilityPredictions, Main.ScoreType.PURE);
+        computeEvaluationMetrics(config, traceabilityPredictions);
 
     ClassLevelMetrics classLevelMetrics = new ClassLevelMetrics(pureClassScoresTensor,
         evaluationMetricsTable);
@@ -121,17 +129,17 @@ public class ClassLevelMetricsProvider {
         Main.ScoreType.AUGMENTED);*/
 
     Table<Technique, String, List<String>> traceabilityPredictions =
-        computeTraceabilityPredictions(augmentedClassScoresTensor, Main.ScoreType.AUGMENTED);
+        computeTraceabilityPredictions(config, augmentedClassScoresTensor, Main.ScoreType.AUGMENTED);
 
     if (verbose) {
       printPredictedClassToClassLinks(traceabilityPredictions);
     }
 
     ResultsWriter.writeOutClassLevelTraceabilityPredictions(config, traceabilityPredictions,
-        Main.ScoreType.AUGMENTED);
+        Main.ScoreType.AUGMENTED, augmentedClassScoresTensor);
 
     Table<Technique, String, EvaluationMetrics> evaluationMetricsTable =
-        computeEvaluationMetrics(traceabilityPredictions, Main.ScoreType.AUGMENTED);
+        computeEvaluationMetrics(config, traceabilityPredictions);
 
     ClassLevelMetrics augmentedClassLevelMetrics = new ClassLevelMetrics(augmentedClassScoresTensor,
         evaluationMetricsTable);
@@ -231,39 +239,20 @@ public class ClassLevelMetricsProvider {
 
         // Tarantula
         double suspiciousness = 1.0 / (1.0 + passed / totalPassed);
-        valueMap.put(Technique.FAULT_LOC_TARANTULA_CLASS,
+        valueMap.put(Technique.TARANTULA_CLASS,
             computeDiscountedScore(suspiciousness, testClassFqn, nonTestClassFqn,
                 classDepthPair.getCallDepth()));
         //System.out.println("Suspiciousness for nonTestClassFqn " + nonTestClassFqn + " , testClassFqn: " + testClassFqn + " = " + suspiciousness);
 
         // tf-idf values
-        // If we are here, we are looking at a testClassFqn that this nonTestClassFqn is executed by. All other cells get a default value of 0 (handles the 'otherwise' case).
-        double tf1 = 1.0; // binary
-        double tf2 = 1.0 / testClassMap.get(testClassFqn).size();
         double tf3 = Math.log(1.0 + 1.0 / testClassMap.get(testClassFqn)
             .size()); // the more methods this testClassFqn tests, the lower this value.
 
-        double idf1 = (double) testClassesExecutingNonTestClass.size() / testClassMap.size();
         double idf2 = Math.log((double) testClassMap.size() / testClassesExecutingNonTestClass.size());
 
-        double tfidf_11 = tf1 * idf1;
-        double tfidf_12 = tf1 * idf2;
-        double tfidf_21 = tf2 * idf1;
-        double tfidf_22 = tf2 * idf2;
-        double tfidf_31 = tf3 * idf1;
         double tfidf_32 = tf3 * idf2;
 
-        valueMap.put(Technique.IR_TFIDF_11_CLASS,
-            computeDiscountedScore(tfidf_11, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_12_CLASS,
-            computeDiscountedScore(tfidf_12, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_21_CLASS,
-            computeDiscountedScore(tfidf_21, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_22_CLASS,
-            computeDiscountedScore(tfidf_22, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_31_CLASS,
-            computeDiscountedScore(tfidf_31, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.IR_TFIDF_32_CLASS,
+        valueMap.put(Technique.TFIDF_CLASS,
             computeDiscountedScore(tfidf_32, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
       }
     }
@@ -287,7 +276,9 @@ public class ClassLevelMetricsProvider {
       if (testClassName.contains("testClassFqn")) {
         testClassName = testClassName.replace("testClassFqn", "");
       }
-      testClassName = testClassName.toLowerCase().replace("test", "");
+      testClassName = testClassName.toLowerCase()
+          .replace("testcase", "")
+          .replace("test", "");
 
       Set<ClassDepthPair> methodsExecutedByTest = entry.getValue();
 
@@ -340,34 +331,38 @@ public class ClassLevelMetricsProvider {
         valueMap.put(Technique.NC_CLASS, computeDiscountedScore(ncMatchFound ? 1.0 : 0.0, testClassFqn,
             nonTestClassFqn,
                 classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_CLASS,
+        valueMap.put(Technique.LCS_B_N_CLASS,
             computeDiscountedScore(score_longestCommonSubsequence, testClassFqn, nonTestClassFqn,
                 classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_N_CLASS,
-            computeDiscountedScore(score_longestCommonSubsequence, testClassFqn, nonTestClassFqn,
-                classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_FUZ_CLASS,
+        valueMap.put(Technique.LCS_U_N_CLASS,
             computeDiscountedScore(score_longestCommonSubsequenceFuzzy, testClassFqn,
                 nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS,
-            computeDiscountedScore(score_longestCommonSubsequenceFuzzy, testClassFqn,
-                nonTestClassFqn, classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_LEVENSHTEIN_CLASS,
+        valueMap.put(Technique.LEVENSHTEIN_N_CLASS,
             computeDiscountedScore(score_levenshtein, testClassFqn, nonTestClassFqn,
                 classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_LEVENSHTEIN_N_CLASS,
-            computeDiscountedScore(score_levenshtein, testClassFqn, nonTestClassFqn,
-                classDepthPair.getCallDepth()));
-        valueMap.put(Technique.NS_CONTAINS_CLASS,
+        valueMap.put(Technique.NCC_CLASS,
             computeDiscountedScore(contains ? 1.0 : 0.0, testClassFqn, nonTestClassFqn,
                 classDepthPair.getCallDepth()));
 
-        // Coverage
-        /*if (coverageData != null) {
-          double coverageScore = CoverageAnalyser.getCoverageScore(coverageData, testClassFqn, nonTestClassFqn);
-          valueMap.put(Technique.COVERAGE,
-              computeDiscountedScore(coverageScore, testClassFqn, nonTestClassFqn, classDepthPair.getCallDepth()));
-        }*/
+        //Add static technique scores
+        /*valueMap.put(Technique.STATIC_NC_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_NC_CLASS, testClassFqn, nonTestClassFqn));
+        valueMap.put(Technique.STATIC_NCC_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_NCC_CLASS, testClassFqn, nonTestClassFqn));
+        valueMap.put(Technique.STATIC_LCS_B_N_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_LCS_B_N_CLASS, testClassFqn, nonTestClassFqn));
+        valueMap.put(Technique.STATIC_LCS_U_N_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_LCS_U_N_CLASS, testClassFqn, nonTestClassFqn));
+        valueMap.put(Technique.STATIC_LEVENSHTEIN_N_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_LEVENSHTEIN_N_CLASS, testClassFqn, nonTestClassFqn));
+        valueMap.put(Technique.STATIC_LCBA_CLASS,
+            StaticTechniquesProvider.get(config, true).getClassLevelScore(
+                Technique.STATIC_LCBA_CLASS, testClassFqn, nonTestClassFqn));*/
       }
     }
 
@@ -390,7 +385,21 @@ public class ClassLevelMetricsProvider {
             HashMap::new);
 
         // Each method in callsBeforeAssert has 1.0 relevance
-        valueMap.put(Technique.LAST_CALL_BEFORE_ASSERT_CLASS, 1.0);
+        valueMap.put(Technique.LCBA_CLASS, 1.0);
+      }
+    }
+
+    StaticTechniquesProvider staticTechniquesProvider = new StaticTechniquesProvider(config, true);
+    relevanceTable = staticTechniquesProvider.computeClassLevelScores(relevanceTable);
+
+    if (Arrays.asList(config.getClassLevelTechniqueList()).contains(Technique.COMBINED_CLASS_FFN)) {
+      MLConnector mlConnector = new MLConnector(config, relevanceTable, Configuration.Level.CLASS);
+      if (!mlConnector.isClassLevelModelTrained()) {
+        mlConnector.train();
+      }
+
+      if (mlConnector.isClassLevelModelTrained()) {
+        relevanceTable = mlConnector.addFFNScores();
       }
     }
 
@@ -455,12 +464,12 @@ public class ClassLevelMetricsProvider {
     return testClassToClassTensors;
   }
 
-  private Table<Technique, String, EvaluationMetrics> computeEvaluationMetrics(
-      Table<Technique, String, List<String>> traceabilityPredictions, Main.ScoreType scoreType) {
+  public static Table<Technique, String, EvaluationMetrics> computeEvaluationMetrics(
+      Configuration config, Table<Technique, String, List<String>> traceabilityPredictions) {
     Table<Technique, String, EvaluationMetrics> evaluationMetrics = HashBasedTable.create();
     Map<String, List<String>> oracleLinks = new HashMap<>();
     for (String project : config.getProjects()) {
-      oracleLinks.putAll(getOracleLinksForProject(project));
+      oracleLinks.putAll(getOracleLinksForProject(config, project));
     }
 
     for (Cell<Technique, String, List<String>> cell : traceabilityPredictions.cellSet()) {
@@ -556,8 +565,8 @@ public class ClassLevelMetricsProvider {
     }
   }
 
-  private Table<Technique, String, List<String>> computeTraceabilityPredictions(
-      ClassScoresTensor classScoresTensor, Main.ScoreType scoreType) {
+  public static Table<Technique, String, List<String>> computeTraceabilityPredictions(
+      Configuration config, ClassScoresTensor classScoresTensor, Main.ScoreType scoreType) {
     Utilities.logger.info("Constructing class traceability predictions");
     Table<Technique, String, List<String>> predictions = HashBasedTable.create();
 
@@ -594,13 +603,14 @@ public class ClassLevelMetricsProvider {
       }
     }
 
-    printPredictionsForGrouthTruth(predictions);
+    printPredictionsForGrouthTruth(config, predictions);
 
     Utilities.logger.info("Class traceability predictions constructed");
     return predictions;
   }
 
-  private void printPredictionsForGrouthTruth(Table<Technique, String, List<String>> predictions) {
+  private static void printPredictionsForGrouthTruth(Configuration config, Table<Technique, String,
+                                                     List<String>> predictions) {
     Map<String, List<String>> combinedPredictions = predictions.row(Technique.COMBINED_CLASS);
     if (config.getTestClassesForGroundTruth() == null || combinedPredictions.size() == 0) {
       return;
@@ -616,7 +626,8 @@ public class ClassLevelMetricsProvider {
     }
   }
 
-  private String getOneToOneTraceabilityPredictionForClass(String testClass, Map<String, Double> classScores) {
+  private static String getOneToOneTraceabilityPredictionForClass(String testClass,
+                                                            Map<String, Double> classScores) {
     double bestScore = 0;
     String bestPrediction = "none";
 
@@ -630,7 +641,7 @@ public class ClassLevelMetricsProvider {
     return bestPrediction;
   }
 
-  private ArrayList<String> getOneToManyTraceabilityPredictionForClass(
+  private static ArrayList<String> getOneToManyTraceabilityPredictionForClass(
       String testClass, Map<String, Double> classScores, double threshold) {
     ArrayList<String> predictions = new ArrayList<>();
 
@@ -713,7 +724,8 @@ public class ClassLevelMetricsProvider {
     System.out.println(renderedTable);
   }
 
-  private Map<String, List<String>> extractDeveloperLinks(String project) {
+  private static Map<String, List<String>> extractDeveloperLinks(Configuration config,
+                                                                 String project) {
     Map<String, List<String>> developerLinks = new HashMap<>();
 
     String baseDir;
@@ -759,9 +771,10 @@ public class ClassLevelMetricsProvider {
     return developerLinks;
   }
 
-  private Map<String, List<String>> getOracleLinksForProject(String project) {
+  private static Map<String, List<String>> getOracleLinksForProject(Configuration config,
+                                                                    String project) {
     Map<String, List<String>> oracleLinks = new HashMap<>();
-    String oracleFilePath = getOracleLinksFilePathForProject(project);
+    String oracleFilePath = getOracleLinksFilePathForProject(config, project);
     ArrayList<String> oracleFileLines = Utilities.readLinesFromFile(oracleFilePath);
     boolean firstLine = true;
     for (String csvLine : oracleFileLines) {
@@ -791,13 +804,13 @@ public class ClassLevelMetricsProvider {
     }
 
     if (oracleLinks.isEmpty() && config.isAutoExtractDeveloperLinks()) {
-      oracleLinks = extractDeveloperLinks(project);
+      oracleLinks = extractDeveloperLinks(config, project);
     }
 
     return oracleLinks;
   }
 
-  private String getOracleLinksFilePathForProject(String project) {
+  private static String getOracleLinksFilePathForProject(Configuration config, String project) {
     String oracleFilePath = config.getProjectBaseDirs().get(project) + "/" + project + "-oracle"
         + "-class-links.csv";
     return oracleFilePath;

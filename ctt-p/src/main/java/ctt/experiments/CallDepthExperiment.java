@@ -31,6 +31,9 @@ public class CallDepthExperiment implements IExperiment {
       Metric.RECALL,
       Metric.MAP,
       Metric.F_SCORE,
+      SpectraParser.Metric.TRUE_POSITIVES,
+      SpectraParser.Metric.FALSE_POSITIVES,
+      SpectraParser.Metric.FALSE_NEGATIVES
   };
 
   private static final double MAX_CALL_DEPTH_DISCOUNT = 1.0;

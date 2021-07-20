@@ -5,11 +5,15 @@ import com.google.common.collect.Sets;
 import com.google.common.collect.Table;
 import ctt.types.EvaluationMetrics;
 import ctt.types.FunctionLevelMetrics;
+import ctt.types.HitSpectrum;
+import ctt.types.Method;
 import ctt.types.MethodDepthPair;
 import ctt.types.MethodValuePair;
 import ctt.types.Technique;
+import ctt.types.TestCollection;
 import de.vandermeer.asciitable.AsciiTable;
 import de.vandermeer.skb.interfaces.transformers.textformat.TextAlignment;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -21,8 +25,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +39,8 @@ import java.util.stream.Stream;
 public class Utilities {
   public static final Logger logger = LogManager.getLogger();
   public static String programStartTimeStamp = getCurrentTimestamp();
+  public static HashMap<String, ArrayList<MethodDepthPair>> groundTruthFunctionsToDepthMap = new HashMap<>();
+  public static HashMap<String, ArrayList<MethodDepthPair>> allFunctionsToDepthMap = new HashMap<>();
 
   // Utility function that implements a function similar to Java 8's computeIfAbsent for Guava tables
   public static <R, C, V> V createIfAbsent(Table<R, C, V> table, R rowKey, C columnKey,
@@ -67,7 +73,6 @@ public class Utilities {
 
   public static Technique getTechniqueForMethodLevel(Technique technique) {
     switch (technique) {
-
       case GROUND_TRUTH:
         return Technique.GROUND_TRUTH;
       case GROUND_TRUTH_CLASS:
@@ -78,106 +83,96 @@ public class Utilities {
         return Technique.NC;
       case NC_MULTI:
         return Technique.NC;
-      case NS_CONTAINS:
-        return Technique.NS_CONTAINS;
-      case NS_CONTAINS_CLASS:
-        return Technique.NS_CONTAINS;
-      case NS_CONTAINS_MULTI:
-        return Technique.NS_CONTAINS;
-      case NS_COMMON_SUBSEQ:
-        return Technique.NS_COMMON_SUBSEQ;
-      case NS_COMMON_SUBSEQ_CLASS:
-        return Technique.NS_COMMON_SUBSEQ;
-      case NS_COMMON_SUBSEQ_MULTI:
-        return Technique.NS_COMMON_SUBSEQ;
-      case NS_COMMON_SUBSEQ_FUZ:
-        return Technique.NS_COMMON_SUBSEQ_FUZ;
-      case NS_COMMON_SUBSEQ_FUZ_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_FUZ;
-      case NS_COMMON_SUBSEQ_FUZ_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_FUZ;
-      case NS_COMMON_SUBSEQ_N:
-        return Technique.NS_COMMON_SUBSEQ_N;
-      case NS_COMMON_SUBSEQ_N_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_N;
-      case NS_COMMON_SUBSEQ_N_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_N;
-      case NS_COMMON_SUBSEQ_FUZ_N:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N;
-      case NS_COMMON_SUBSEQ_FUZ_N_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N;
-      case NS_COMMON_SUBSEQ_FUZ_N_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N;
-      case NS_LEVENSHTEIN:
-        return Technique.NS_LEVENSHTEIN;
-      case NS_LEVENSHTEIN_CLASS:
-        return Technique.NS_LEVENSHTEIN;
-      case NS_LEVENSHTEIN_MULTI:
-        return Technique.NS_LEVENSHTEIN;
-      case NS_LEVENSHTEIN_N:
-        return Technique.NS_LEVENSHTEIN_N;
-      case NS_LEVENSHTEIN_N_CLASS:
-        return Technique.NS_LEVENSHTEIN_N;
-      case NS_LEVENSHTEIN_N_MULTI:
-        return Technique.NS_LEVENSHTEIN_N;
-      case LAST_CALL_BEFORE_ASSERT:
-        return Technique.LAST_CALL_BEFORE_ASSERT;
-      case LAST_CALL_BEFORE_ASSERT_CLASS:
-        return Technique.LAST_CALL_BEFORE_ASSERT;
-      case LAST_CALL_BEFORE_ASSERT_MULTI:
-        return Technique.LAST_CALL_BEFORE_ASSERT;
-      case FAULT_LOC_TARANTULA:
-        return Technique.FAULT_LOC_TARANTULA;
-      case FAULT_LOC_TARANTULA_CLASS:
-        return Technique.FAULT_LOC_TARANTULA;
-      case FAULT_LOC_TARANTULA_MULTI:
-        return Technique.FAULT_LOC_TARANTULA;
-      case FAULT_LOC_OCHIAI:
-        return Technique.FAULT_LOC_OCHIAI;
-      case IR_TFIDF_11:
-        return Technique.IR_TFIDF_11;
-      case IR_TFIDF_11_CLASS:
-        return Technique.IR_TFIDF_11;
-      case IR_TFIDF_11_MULTI:
-        return Technique.IR_TFIDF_11;
-      case IR_TFIDF_12:
-        return Technique.IR_TFIDF_12;
-      case IR_TFIDF_12_CLASS:
-        return Technique.IR_TFIDF_12;
-      case IR_TFIDF_12_MULTI:
-        return Technique.IR_TFIDF_12;
-      case IR_TFIDF_21:
-        return Technique.IR_TFIDF_21;
-      case IR_TFIDF_21_CLASS:
-        return Technique.IR_TFIDF_21;
-      case IR_TFIDF_21_MULTI:
-        return Technique.IR_TFIDF_21;
-      case IR_TFIDF_22:
-        return Technique.IR_TFIDF_22;
-      case IR_TFIDF_22_CLASS:
-        return Technique.IR_TFIDF_22;
-      case IR_TFIDF_22_MULTI:
-        return Technique.IR_TFIDF_22;
-      case IR_TFIDF_31:
-        return Technique.IR_TFIDF_31;
-      case IR_TFIDF_31_CLASS:
-        return Technique.IR_TFIDF_31;
-      case IR_TFIDF_31_MULTI:
-        return Technique.IR_TFIDF_31;
-      case IR_TFIDF_32:
-        return Technique.IR_TFIDF_32;
-      case IR_TFIDF_32_CLASS:
-        return Technique.IR_TFIDF_32;
-      case IR_TFIDF_32_MULTI:
-        return Technique.IR_TFIDF_32;
-      case COVERAGE:
-        return Technique.COVERAGE;
+      case STATIC_NC:
+        return Technique.STATIC_NC;
+      case STATIC_NC_CLASS:
+        return Technique.STATIC_NC;
+      case STATIC_NC_MULTI:
+        return Technique.STATIC_NC;
+      case NCC:
+        return Technique.NCC;
+      case NCC_CLASS:
+        return Technique.NCC;
+      case NCC_MULTI:
+        return Technique.NCC;
+      case STATIC_NCC:
+        return Technique.STATIC_NCC;
+      case STATIC_NCC_CLASS:
+        return Technique.STATIC_NCC;
+      case STATIC_NCC_MULTI:
+        return Technique.STATIC_NCC;
+      case LCS_B_N:
+        return Technique.LCS_B_N;
+      case LCS_B_N_CLASS:
+        return Technique.LCS_B_N;
+      case LCS_B_N_MULTI:
+        return Technique.LCS_B_N;
+      case STATIC_LCS_B_N:
+        return Technique.STATIC_LCS_B_N;
+      case STATIC_LCS_B_N_CLASS:
+        return Technique.STATIC_LCS_B_N;
+      case STATIC_LCS_B_N_MULTI:
+        return Technique.STATIC_LCS_B_N;
+      case LCS_U_N:
+        return Technique.LCS_U_N;
+      case LCS_U_N_CLASS:
+        return Technique.LCS_U_N;
+      case LCS_U_N_MULTI:
+        return Technique.LCS_U_N;
+      case STATIC_LCS_U_N:
+        return Technique.STATIC_LCS_U_N;
+      case STATIC_LCS_U_N_CLASS:
+        return Technique.STATIC_LCS_U_N;
+      case STATIC_LCS_U_N_MULTI:
+        return Technique.STATIC_LCS_U_N;
+      case LEVENSHTEIN_N:
+        return Technique.LEVENSHTEIN_N;
+      case LEVENSHTEIN_N_CLASS:
+        return Technique.LEVENSHTEIN_N;
+      case LEVENSHTEIN_N_MULTI:
+        return Technique.LEVENSHTEIN_N;
+      case STATIC_LEVENSHTEIN_N:
+        return Technique.STATIC_LEVENSHTEIN_N;
+      case STATIC_LEVENSHTEIN_N_CLASS:
+        return Technique.STATIC_LEVENSHTEIN_N;
+      case STATIC_LEVENSHTEIN_N_MULTI:
+        return Technique.STATIC_LEVENSHTEIN_N;
+      case LCBA:
+        return Technique.LCBA;
+      case LCBA_CLASS:
+        return Technique.LCBA;
+      case LCBA_MULTI:
+        return Technique.LCBA;
+      case STATIC_LCBA:
+        return Technique.STATIC_LCBA;
+      case STATIC_LCBA_CLASS:
+        return Technique.STATIC_LCBA;
+      case STATIC_LCBA_MULTI:
+        return Technique.STATIC_LCBA;
+      case TARANTULA:
+        return Technique.TARANTULA;
+      case TARANTULA_CLASS:
+        return Technique.TARANTULA;
+      case TARANTULA_MULTI:
+        return Technique.TARANTULA;
+      case TFIDF:
+        return Technique.TFIDF;
+      case TFIDF_CLASS:
+        return Technique.TFIDF;
+      case TFIDF_MULTI:
+        return Technique.TFIDF;
       case COMBINED:
         return Technique.COMBINED;
       case COMBINED_CLASS:
         return Technique.COMBINED;
       case COMBINED_MULTI:
         return Technique.COMBINED;
+      case COMBINED_FFN:
+        return Technique.COMBINED_FFN;
+      case COMBINED_CLASS_FFN:
+        return Technique.COMBINED_FFN;
+      case COMBINED_MULTI_FFN:
+        return Technique.COMBINED_FFN;
     }
 
     return null;
@@ -196,102 +191,96 @@ public class Utilities {
         return Technique.NC_CLASS;
       case NC_MULTI:
         return Technique.NC_CLASS;
-      case NS_CONTAINS:
-        return Technique.NS_CONTAINS_CLASS;
-      case NS_CONTAINS_CLASS:
-        return Technique.NS_CONTAINS_CLASS;
-      case NS_CONTAINS_MULTI:
-        return Technique.NS_CONTAINS_CLASS;
-      case NS_COMMON_SUBSEQ:
-        return Technique.NS_COMMON_SUBSEQ_CLASS;
-      case NS_COMMON_SUBSEQ_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_CLASS;
-      case NS_COMMON_SUBSEQ_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_CLASS;
-      case NS_COMMON_SUBSEQ_N:
-        return Technique.NS_COMMON_SUBSEQ_N_CLASS;
-      case NS_COMMON_SUBSEQ_N_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_N_CLASS;
-      case NS_COMMON_SUBSEQ_N_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_N_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ_N:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ_N_CLASS:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS;
-      case NS_COMMON_SUBSEQ_FUZ_N_MULTI:
-        return Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS;
-      case NS_LEVENSHTEIN:
-        return Technique.NS_LEVENSHTEIN_CLASS;
-      case NS_LEVENSHTEIN_CLASS:
-        return Technique.NS_LEVENSHTEIN_CLASS;
-      case NS_LEVENSHTEIN_MULTI:
-        return Technique.NS_LEVENSHTEIN_CLASS;
-      case NS_LEVENSHTEIN_N:
-        return Technique.NS_LEVENSHTEIN_N_CLASS;
-      case NS_LEVENSHTEIN_N_CLASS:
-        return Technique.NS_LEVENSHTEIN_N_CLASS;
-      case NS_LEVENSHTEIN_N_MULTI:
-        return Technique.NS_LEVENSHTEIN_N_CLASS;
-      case LAST_CALL_BEFORE_ASSERT:
-        return Technique.LAST_CALL_BEFORE_ASSERT_CLASS;
-      case LAST_CALL_BEFORE_ASSERT_CLASS:
-        return Technique.LAST_CALL_BEFORE_ASSERT_CLASS;
-      case LAST_CALL_BEFORE_ASSERT_MULTI:
-        return Technique.LAST_CALL_BEFORE_ASSERT_CLASS;
-      case FAULT_LOC_TARANTULA:
-        return Technique.FAULT_LOC_TARANTULA_CLASS;
-      case FAULT_LOC_TARANTULA_CLASS:
-        return Technique.FAULT_LOC_TARANTULA_CLASS;
-      case FAULT_LOC_TARANTULA_MULTI:
-        return Technique.FAULT_LOC_TARANTULA_CLASS;
-      case IR_TFIDF_11:
-        return Technique.IR_TFIDF_11_CLASS;
-      case IR_TFIDF_11_CLASS:
-        return Technique.IR_TFIDF_11_CLASS;
-      case IR_TFIDF_11_MULTI:
-        return Technique.IR_TFIDF_11_CLASS;
-      case IR_TFIDF_12:
-        return Technique.IR_TFIDF_12_CLASS;
-      case IR_TFIDF_12_CLASS:
-        return Technique.IR_TFIDF_12_CLASS;
-      case IR_TFIDF_12_MULTI:
-        return Technique.IR_TFIDF_12_CLASS;
-      case IR_TFIDF_21:
-        return Technique.IR_TFIDF_21_CLASS;
-      case IR_TFIDF_21_CLASS:
-        return Technique.IR_TFIDF_21_CLASS;
-      case IR_TFIDF_21_MULTI:
-        return Technique.IR_TFIDF_21_CLASS;
-      case IR_TFIDF_22:
-        return Technique.IR_TFIDF_22_CLASS;
-      case IR_TFIDF_22_CLASS:
-        return Technique.IR_TFIDF_22_CLASS;
-      case IR_TFIDF_22_MULTI:
-        return Technique.IR_TFIDF_22_CLASS;
-      case IR_TFIDF_31:
-        return Technique.IR_TFIDF_31_CLASS;
-      case IR_TFIDF_31_CLASS:
-        return Technique.IR_TFIDF_31_CLASS;
-      case IR_TFIDF_31_MULTI:
-        return Technique.IR_TFIDF_31_CLASS;
-      case IR_TFIDF_32:
-        return Technique.IR_TFIDF_32_CLASS;
-      case IR_TFIDF_32_CLASS:
-        return Technique.IR_TFIDF_32_CLASS;
-      case IR_TFIDF_32_MULTI:
-        return Technique.IR_TFIDF_32_CLASS;
+      case STATIC_NC:
+        return Technique.STATIC_NC_CLASS;
+      case STATIC_NC_CLASS:
+        return Technique.STATIC_NC_CLASS;
+      case STATIC_NC_MULTI:
+        return Technique.STATIC_NC_CLASS;
+      case NCC:
+        return Technique.NCC_CLASS;
+      case NCC_CLASS:
+        return Technique.NCC_CLASS;
+      case NCC_MULTI:
+        return Technique.NCC_CLASS;
+      case STATIC_NCC:
+        return Technique.STATIC_NCC_CLASS;
+      case STATIC_NCC_CLASS:
+        return Technique.STATIC_NCC_CLASS;
+      case STATIC_NCC_MULTI:
+        return Technique.STATIC_NCC_CLASS;
+      case LCS_B_N:
+        return Technique.LCS_B_N_CLASS;
+      case LCS_B_N_CLASS:
+        return Technique.LCS_B_N_CLASS;
+      case LCS_B_N_MULTI:
+        return Technique.LCS_B_N_CLASS;
+      case STATIC_LCS_B_N:
+        return Technique.STATIC_LCS_B_N_CLASS;
+      case STATIC_LCS_B_N_CLASS:
+        return Technique.STATIC_LCS_B_N_CLASS;
+      case STATIC_LCS_B_N_MULTI:
+        return Technique.STATIC_LCS_B_N_CLASS;
+      case LCS_U_N:
+        return Technique.LCS_U_N_CLASS;
+      case LCS_U_N_CLASS:
+        return Technique.LCS_U_N_CLASS;
+      case LCS_U_N_MULTI:
+        return Technique.LCS_U_N_CLASS;
+      case STATIC_LCS_U_N:
+        return Technique.STATIC_LCS_U_N_CLASS;
+      case STATIC_LCS_U_N_CLASS:
+        return Technique.STATIC_LCS_U_N_CLASS;
+      case STATIC_LCS_U_N_MULTI:
+        return Technique.STATIC_LCS_U_N_CLASS;
+      case LEVENSHTEIN_N:
+        return Technique.LEVENSHTEIN_N_CLASS;
+      case LEVENSHTEIN_N_CLASS:
+        return Technique.LEVENSHTEIN_N_CLASS;
+      case LEVENSHTEIN_N_MULTI:
+        return Technique.LEVENSHTEIN_N_CLASS;
+      case STATIC_LEVENSHTEIN_N:
+        return Technique.STATIC_LEVENSHTEIN_N_CLASS;
+      case STATIC_LEVENSHTEIN_N_CLASS:
+        return Technique.STATIC_LEVENSHTEIN_N_CLASS;
+      case STATIC_LEVENSHTEIN_N_MULTI:
+        return Technique.STATIC_LEVENSHTEIN_N_CLASS;
+      case LCBA:
+        return Technique.LCBA_CLASS;
+      case LCBA_CLASS:
+        return Technique.LCBA_CLASS;
+      case LCBA_MULTI:
+        return Technique.LCBA_CLASS;
+      case STATIC_LCBA:
+        return Technique.STATIC_LCBA_CLASS;
+      case STATIC_LCBA_CLASS:
+        return Technique.STATIC_LCBA_CLASS;
+      case STATIC_LCBA_MULTI:
+        return Technique.STATIC_LCBA_CLASS;
+      case TARANTULA:
+        return Technique.TARANTULA_CLASS;
+      case TARANTULA_CLASS:
+        return Technique.TARANTULA_CLASS;
+      case TARANTULA_MULTI:
+        return Technique.TARANTULA_CLASS;
+      case TFIDF:
+        return Technique.TFIDF_CLASS;
+      case TFIDF_CLASS:
+        return Technique.TFIDF_CLASS;
+      case TFIDF_MULTI:
+        return Technique.TFIDF_CLASS;
       case COMBINED:
         return Technique.COMBINED_CLASS;
       case COMBINED_CLASS:
         return Technique.COMBINED_CLASS;
       case COMBINED_MULTI:
         return Technique.COMBINED_CLASS;
+      case COMBINED_FFN:
+        return Technique.COMBINED_CLASS_FFN;
+      case COMBINED_CLASS_FFN:
+        return Technique.COMBINED_CLASS_FFN;
+      case COMBINED_MULTI_FFN:
+        return Technique.COMBINED_CLASS_FFN;
     }
 
     return null;
@@ -345,8 +334,7 @@ public class Utilities {
 
   public static void writeStringToFile(String strToWrite, String dstFilePath, boolean append) {
     if (dstFilePath == null) {
-      logger.error("FileSystemHandler.writeToDisk rejecting null destination file "
-          + "path");
+      logger.error("FileSystemHandler.writeToDisk rejecting null destination file path");
       return;
     }
 
@@ -629,5 +617,180 @@ public class Utilities {
     }
 
     return EvaluationMetrics.computePrecision(truePositives, falsePositives);
+  }
+
+  public static <T extends Method> ArrayList<T> readMethodsFromFiles(String inputFolder,
+                                                              Configuration.ArtefactType artefactType,
+                                                              boolean filterOnClassNameForArtefactType) {
+    //Logger.get().logAndPrint("Reading files from " + inputFolder + "...");
+    //Logger.get().startShowingWorkingOutput();
+    ArrayList<T> allMethodList = new ArrayList<>();
+
+    File folder = new File(inputFolder);
+    String[] extensions = {"java"};
+
+    List<File> listOfFiles = (List<File>) FileUtils.listFiles(folder, extensions, true);
+    for (File file : listOfFiles) {
+      String filePath = file.getAbsolutePath();
+
+      //Filter on class name in cases where src and test are mixed in the dir
+      if (filterOnClassNameForArtefactType) {
+        if (artefactType == Configuration.ArtefactType.TEST
+            && !file.getName().toLowerCase().contains("test")) {
+          continue;
+        } else if (artefactType == Configuration.ArtefactType.FUNCTION
+            && file.getName().toLowerCase().contains("test")){
+          continue;
+        }
+      }
+
+      // parse each file into method (if possible)
+      MethodParser<T> methodParser = new MethodParser<>(filePath, inputFolder, artefactType);
+      try {
+        /*if (filePath.contains("RecordReaderDataSetiteratorTest.java")) {
+          System.out.println("Debugging missed test methods");
+        }*/
+        ArrayList<T> methodList = methodParser.parseMethods();
+        // add the extracted methods to the big list
+        allMethodList.addAll(methodList);
+      } catch (Exception e) {
+        ExceptionHandler.handleCaughtThrowable(e, false);
+      }
+    }
+
+    //Logger.get().stopShowingWorkingOutput();
+    //Logger.get().logAndPrintLn("done");
+    return allMethodList;
+  }
+
+  public static String removePackagesFromFqnParamTypes(String fqn) {
+    String paramsString = getParamsStringFromFqn(fqn);
+
+    //ArrayList<String> paramTypes = new ArrayList<>();
+
+    String newParamString = "";
+    if (!paramsString.isEmpty()) {
+      paramsString = MethodParser.eraseGenericTypeArgs(paramsString);
+
+      boolean first = true;
+      String[] splitParamsString = paramsString.split(",");
+      for (String param : splitParamsString) {
+        String[] splitParamString = param.split("\\.");
+
+        String paramType = splitParamString[splitParamString.length - 1];
+        if (paramType.contains("$")) {
+          paramType = paramType.split("\\$")[1];
+        }
+
+        paramType = paramType.trim();
+
+        //paramTypes.add(paramType);
+
+        if (first) {
+          first = false;
+          newParamString = newParamString + paramType;
+        } else {
+          newParamString = newParamString + ", " + paramType;
+        }
+      }
+    }
+
+    int idx = fqn.indexOf('(');
+    if (idx < 1) {
+      return fqn;
+    }
+
+    String newFqn = fqn.substring(0, idx);
+    newFqn = newFqn + "(" + newParamString + ")";
+    return newFqn;
+  }
+
+  public static String getParamsStringFromFqn(String fqn) {
+    try {
+      String paramsString = fqn.substring( fqn.indexOf( '(' ) );
+      paramsString = paramsString.replace( "(", "" ).replace( ")", "" );
+      return paramsString;
+    } catch (Exception e) {
+      return fqn;
+    }
+  }
+
+  public static void printGroundTruthDepths(TestCollection testCollection) {
+    groundTruthFunctionsToDepthMap = new HashMap<>();
+    allFunctionsToDepthMap = new HashMap<>();
+    ctt.Logger.get().logAndPrintLn("***   Start ground truth depths   ***\n");
+    for (HitSpectrum hitSpectrum : testCollection.tests) {
+      for (Map.Entry<String, Integer> hits : hitSpectrum.hitSet.entrySet()) {
+        String functionName = removePackagesFromFqnParamTypes(hits.getKey());
+        if (functionName.contains("<init>")) {
+          functionName = replaceInitWithConstructorName(functionName);
+        }
+
+        allFunctionsToDepthMap.putIfAbsent(hitSpectrum.getTestName(), new ArrayList<>());
+        allFunctionsToDepthMap.get(hitSpectrum.getTestName()).add(new MethodDepthPair(
+            functionName, hits.getValue()));
+      }
+
+      for (String groundTruthStr : hitSpectrum.groundTruth) {
+        if (groundTruthStr.contains("<init>")) {
+          groundTruthStr = replaceInitWithConstructorName(groundTruthStr);
+        }
+
+        for (String hitMethod : hitSpectrum.hitSet.keySet()) {
+          String hitMethodComparator = hitMethod;
+          if (hitMethodComparator.contains("<init>")) {
+            hitMethodComparator = replaceInitWithConstructorName(hitMethodComparator);
+          }
+
+          if (removePackagesFromFqnParamTypes(groundTruthStr).equals(
+              removePackagesFromFqnParamTypes(hitMethodComparator))) {
+            Integer callDepth = hitSpectrum.hitSet.get(hitMethod);
+            if (callDepth != null) {
+              groundTruthFunctionsToDepthMap.putIfAbsent(hitSpectrum.getTestName(), new ArrayList<>());
+              groundTruthFunctionsToDepthMap.get(hitSpectrum.getTestName()).add(new MethodDepthPair(
+                  removePackagesFromFqnParamTypes(groundTruthStr), callDepth));
+              ctt.Logger.get().logAndPrintLn(groundTruthStr + " : " + callDepth);
+            } else {
+              System.out.println("check this");
+            }
+          }
+        }
+      }
+    }
+    ctt.Logger.get().logAndPrintLn("***   End ground truth depths   ***\n");
+  }
+
+  public static int getGroundTruthDepth(String test, String function) {
+    ArrayList<MethodDepthPair> depthPairs = groundTruthFunctionsToDepthMap.get(test);
+    if (depthPairs != null) {
+      for (MethodDepthPair depthPair : depthPairs) {
+        if (function.equals(depthPair.getMethodName())) {
+          return depthPair.getCallDepth();
+        }
+      }
+    }
+    ctt.Logger.get().logAndPrintLn("Function: " + function + " not found in " +
+          "groundTruthFunctionsToDepthMap returning default of -2");
+    return -2;
+  }
+
+  public static int getfunctionDepth(String test, String function) {
+    ArrayList<MethodDepthPair> depthPairs = allFunctionsToDepthMap.get(test);
+    if (depthPairs != null) {
+      for (MethodDepthPair depthPair : depthPairs) {
+        if (function.equals(depthPair.getMethodName())) {
+          return depthPair.getCallDepth();
+        }
+      }
+    }
+    //ctt.Logger.get().logAndPrintLn("Function: " + function + " not found in " +
+    //"allFunctionsToDepthMap returning default of -2");
+    return -2;
+  }
+
+  public static String replaceInitWithConstructorName(String method) {
+    String classfqn = Utilities.getClassFqnFromMethodFqn(method);
+    String className = classfqn.substring(classfqn.lastIndexOf('.') + 1);
+    return method.replace("<init>", className);
   }
 }

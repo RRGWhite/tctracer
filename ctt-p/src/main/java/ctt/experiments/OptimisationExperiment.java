@@ -3,7 +3,6 @@ package ctt.experiments;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import ctt.Configuration;
-import ctt.Main;
 import ctt.SpectraParser;
 import ctt.SpectraParser.Metric;
 import ctt.coverage.CoverageAnalyser.CounterType;
@@ -55,12 +54,12 @@ public class OptimisationExperiment implements IExperiment {
   // private static final double MIN_CALL_DEPTH_DISCOUNT = 0.75; // debug: for setting fixed values
 
   private Technique[] techniqueList = {
-      Technique.NS_COMMON_SUBSEQ_FUZ,
-      Technique.NS_COMMON_SUBSEQ,
-      Technique.NS_LEVENSHTEIN,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.IR_TFIDF_32,
+      Technique.LCS_B_N,
+      Technique.LCS_U_N,
+      Technique.LEVENSHTEIN_N,
+      Technique.TARANTULA,
+      Technique.TFIDF,
+      Technique.COMBINED
   };
 
   private static Metric[] metricsToRecord = {
@@ -68,7 +67,10 @@ public class OptimisationExperiment implements IExperiment {
       Metric.RECALL,
       Metric.F_SCORE,
       Metric.MAP,
-      Metric.BPREF,
+      //Metric.BPREF,
+      SpectraParser.Metric.TRUE_POSITIVES,
+      SpectraParser.Metric.FALSE_POSITIVES,
+      SpectraParser.Metric.FALSE_NEGATIVES
   };
 
   class ValueSet {

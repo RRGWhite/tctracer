@@ -6,7 +6,6 @@ import ctt.types.Technique;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,11 +19,18 @@ public class Configuration {
   public enum AugmentationType {TECHNIQUE_SCORE, COMBINED_SCORE, TFIDF, CONTAINS}
   public enum ScoreCombinationMethod {SUM, PRODUCT, AVERAGE}
   public enum Level {METHOD, CLASS}
+  public enum ArtefactType {FUNCTION, TEST}
+  public enum Platform {WINDOWS, UBUNTU}
+  private String corpusPath = "corpus";
+  private String feedForwardNetworkScript = "tctracer_ffn.py";
+  private String mlDir = "ml";
+  private Platform platform =
+      System.getProperty("os.name").toLowerCase().contains("windows") ? Platform.WINDOWS :
+          Platform.UBUNTU;
+  private String pythonCommand = platform.equals(Platform.WINDOWS) ? "python" : "python3";
 
   private Configuration() {
   }
-
-  private String corpusPath = "corpus";
 
   private Map<String, String> projectBaseDirs = Maps
       .newHashMap(ImmutableMap.<String, String>builder()
@@ -34,7 +40,42 @@ public class Configuration {
           .put("argouml", corpusPath + "/argouml-v-30-1")
           .put("apache-ant", corpusPath + "/apache-ant")
           .put("dependency-finder", corpusPath + "/dependency-finder")
-          .put("commons-collections", corpusPath + "/ccollections")
+          .put("ccollections", corpusPath + "/ccollections")
+          .put("barbecue", corpusPath + "/barbecue")
+          .put("gcviewer", corpusPath + "/gcviewer")
+          .put("terrier-core", corpusPath + "/terrier-core")
+          .put("joda-time", corpusPath + "/joda-time")
+          .put("gson", corpusPath + "/gson/gson")
+          .build()
+      );
+
+  private Map<String, String> projectSrcDirs = Maps
+      .newHashMap(ImmutableMap.<String, String>builder()
+          .put("commons-lang", projectBaseDirs.get("commons-lang") + "/src/main")
+          .put("jfreechart", projectBaseDirs.get("jfreechart") + "/source")
+          .put("commons-io", projectBaseDirs.get("commons-io") + "/src/main")
+          .put("apache-ant", projectBaseDirs.get("apache-ant") + "/src/main")
+          .put("ccollections", projectBaseDirs.get("ccollections") + "/src")
+          .put("barbecue", projectBaseDirs.get("barbecue") + "/src/main")
+          .put("gcviewer", projectBaseDirs.get("gcviewer") + "/src/main")
+          .put("terrier-core", projectBaseDirs.get("terrier-core") + "/src/core")
+          .put("joda-time", projectBaseDirs.get("joda-time") + "/src/main/java")
+          .put("gson", projectBaseDirs.get("gson") + "/src/main")
+          .build()
+      );
+
+  private Map<String, String> projectTestSrcDirs = Maps
+      .newHashMap(ImmutableMap.<String, String>builder()
+          .put("commons-lang", projectBaseDirs.get("commons-lang") + "/src/test")
+          .put("jfreechart", projectBaseDirs.get("jfreechart") + "/tests")
+          .put("commons-io", projectBaseDirs.get("commons-io") + "/src/test")
+          .put("apache-ant", projectBaseDirs.get("apache-ant") + "/src/tests")
+          .put("ccollections", projectBaseDirs.get("ccollections") + "/src")
+          .put("barbecue", projectBaseDirs.get("barbecue") + "/src/test")
+          .put("gcviewer", projectBaseDirs.get("gcviewer") + "/src/test")
+          .put("terrier-core", projectBaseDirs.get("terrier-core") + "/src/test")
+          .put("joda-time", projectBaseDirs.get("joda-time") + "/src/test/java")
+          .put("gson", projectBaseDirs.get("gson") + "/src/test")
           .build()
       );
 
@@ -43,7 +84,8 @@ public class Configuration {
   private boolean parseCttLogs = false;
 
   private List<String> functionLevelEvaluationProjects = Arrays.asList(
-      "commons-lang", "jfreechart", "commons-io");
+      "commons-lang", "jfreechart", "commons-io", "barbecue", "gcviewer", "terrier-core",
+      "joda-time", "gson");
 
   private List<String> classLevelEvaluationProjects = Arrays.asList(
       "apache-ant", "argouml", "dependency-finder", "commons-lang", "commons-io", "jfreechart");
@@ -63,160 +105,265 @@ public class Configuration {
   // Do not include ground truth technique in this list!
   private Technique[] methodLevelTechniqueList = {
       Technique.NC,
-      Technique.NS_CONTAINS,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N,
-      Technique.NS_COMMON_SUBSEQ_N,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.LAST_CALL_BEFORE_ASSERT,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.IR_TFIDF_32,
-      Technique.COMBINED
+      Technique.NCC,
+      Technique.LCS_U_N,
+      Technique.LCS_B_N,
+      Technique.LEVENSHTEIN_N,
+      Technique.LCBA,
+      Technique.TARANTULA,
+      Technique.TFIDF,
+      Technique.STATIC_NC,
+      Technique.STATIC_NCC,
+      Technique.STATIC_LCS_U_N,
+      Technique.STATIC_LCS_B_N,
+      Technique.STATIC_LEVENSHTEIN_N,
+      //Technique.STATIC_LCBA,
+      Technique.COMBINED,
+      Technique.COMBINED_FFN
   };
-
-  /*private Technique[] methodLevelCombinedScoreComponents = {
-      Technique.NC,
-      Technique.NS_CONTAINS,
-      Technique.NS_COMMON_SUBSEQ_FUZ,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N,
-      Technique.NS_COMMON_SUBSEQ,
-      Technique.NS_COMMON_SUBSEQ_N,
-      Technique.NS_LEVENSHTEIN,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.LAST_CALL_BEFORE_ASSERT,
-      Technique.FAULT_LOC_TARANTULA,
-      // Technique.IR_TFIDF_11,
-      // Technique.IR_TFIDF_12,
-      // Technique.IR_TFIDF_21,
-      // Technique.IR_TFIDF_22,
-      // Technique.IR_TFIDF_31,
-      Technique.IR_TFIDF_32,
-      Technique.COMBINED
-  };*/
 
   private Technique[] classLevelTechniqueList = {
       Technique.NC_CLASS,
-      Technique.NS_CONTAINS_CLASS,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS,
-      Technique.NS_COMMON_SUBSEQ_N_CLASS,
-      Technique.NS_LEVENSHTEIN_N_CLASS,
-      Technique.LAST_CALL_BEFORE_ASSERT_CLASS,
-      Technique.FAULT_LOC_TARANTULA_CLASS,
-      Technique.IR_TFIDF_32_CLASS,
-      Technique.COMBINED_CLASS
+      Technique.NCC_CLASS,
+      Technique.LCS_U_N_CLASS,
+      Technique.LCS_B_N_CLASS,
+      Technique.LEVENSHTEIN_N_CLASS,
+      Technique.LCBA_CLASS,
+      Technique.TARANTULA_CLASS,
+      Technique.TFIDF_CLASS,
+      Technique.STATIC_NC_CLASS,
+      Technique.STATIC_NCC_CLASS,
+      Technique.STATIC_LCS_U_N_CLASS,
+      Technique.STATIC_LCS_B_N_CLASS,
+      Technique.STATIC_LEVENSHTEIN_N_CLASS,
+      //Technique.STATIC_LCBA_CLASS,
+      Technique.COMBINED_CLASS,
+      Technique.COMBINED_CLASS_FFN
   };
-
-  /*private Technique[] classLevelCombinedScoreComponents = {
-      Technique.NC_CLASS,
-      Technique.NS_CONTAINS_CLASS,
-      Technique.NS_COMMON_SUBSEQ_FUZ_CLASS,
-      Technique.NS_COMMON_SUBSEQ_CLASS,
-      Technique.NS_LEVENSHTEIN_CLASS,
-      Technique.NS_LEVENSHTEIN_N_CLASS,
-      Technique.LAST_CALL_BEFORE_ASSERT_CLASS,
-      Technique.FAULT_LOC_TARANTULA_CLASS,
-      Technique.IR_TFIDF_32_CLASS,
-      Technique.COMBINED_CLASS
-  };*/
 
   private Technique[] multiLevelTechniqueList = {
       Technique.NC_MULTI,
-      Technique.NS_CONTAINS_MULTI,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N_MULTI,
-      Technique.NS_COMMON_SUBSEQ_N_MULTI,
-      Technique.NS_LEVENSHTEIN_N_MULTI,
-      Technique.LAST_CALL_BEFORE_ASSERT_MULTI,
-      Technique.FAULT_LOC_TARANTULA_MULTI,
-      Technique.IR_TFIDF_32_MULTI,
-      Technique.COMBINED_MULTI
+      Technique.NCC_MULTI,
+      Technique.LCS_U_N_MULTI,
+      Technique.LCS_B_N_MULTI,
+      Technique.LEVENSHTEIN_N_MULTI,
+      Technique.LCBA_MULTI,
+      Technique.TARANTULA_MULTI,
+      Technique.TFIDF_MULTI,
+      Technique.STATIC_NC_MULTI,
+      Technique.STATIC_NCC_MULTI,
+      Technique.STATIC_LCS_U_N_MULTI,
+      Technique.STATIC_LCS_B_N_MULTI,
+      Technique.STATIC_LEVENSHTEIN_N_MULTI,
+      //Technique.STATIC_LCBA_MULTI,
+      Technique.COMBINED_MULTI,
+      Technique.COMBINED_MULTI_FFN
   };
 
   // All techniques listed here will be normalized.
   private Technique[] techniquesToNormalize = {
-      Technique.NS_COMMON_SUBSEQ_FUZ_N,
-      Technique.NS_COMMON_SUBSEQ_N,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS,
-      Technique.NS_COMMON_SUBSEQ_N_CLASS,
-      Technique.NS_COMMON_SUBSEQ_FUZ_N_MULTI,
-      Technique.NS_COMMON_SUBSEQ_N_MULTI,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.NS_LEVENSHTEIN_N_CLASS,
-      Technique.NS_LEVENSHTEIN_N_MULTI,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.FAULT_LOC_TARANTULA_CLASS,
-      Technique.FAULT_LOC_TARANTULA_MULTI,
-      Technique.IR_TFIDF_11,
-      Technique.IR_TFIDF_11_CLASS,
-      Technique.IR_TFIDF_11_MULTI,
-      Technique.IR_TFIDF_12,
-      Technique.IR_TFIDF_12_CLASS,
-      Technique.IR_TFIDF_12_MULTI,
-      Technique.IR_TFIDF_21,
-      Technique.IR_TFIDF_21_CLASS,
-      Technique.IR_TFIDF_21_MULTI,
-      Technique.IR_TFIDF_22,
-      Technique.IR_TFIDF_22_CLASS,
-      Technique.IR_TFIDF_22_MULTI,
-      Technique.IR_TFIDF_31,
-      Technique.IR_TFIDF_31_CLASS,
-      Technique.IR_TFIDF_31_MULTI,
-      Technique.IR_TFIDF_32,
-      Technique.IR_TFIDF_32_CLASS,
-      Technique.IR_TFIDF_32_MULTI,
-      Technique.COVERAGE,
+      Technique.LCS_U_N,
+      Technique.LCS_B_N,
+      Technique.LCS_U_N_CLASS,
+      Technique.LCS_B_N_CLASS,
+      Technique.LCS_U_N_MULTI,
+      Technique.LCS_B_N_MULTI,
+      Technique.LEVENSHTEIN_N,
+      Technique.LEVENSHTEIN_N_CLASS,
+      Technique.LEVENSHTEIN_N_MULTI,
+      Technique.TARANTULA,
+      Technique.TARANTULA_CLASS,
+      Technique.TARANTULA_MULTI,
+      Technique.TFIDF,
+      Technique.TFIDF_CLASS,
+      Technique.TFIDF_MULTI,
       Technique.COMBINED,
       Technique.COMBINED_CLASS,
-      Technique.COMBINED_MULTI
+      Technique.COMBINED_MULTI,
+      Technique.STATIC_LCS_U_N,
+      Technique.STATIC_LCS_B_N,
+      Technique.STATIC_LCS_U_N_CLASS,
+      Technique.STATIC_LCS_B_N_CLASS,
+      Technique.STATIC_LCS_U_N_MULTI,
+      Technique.STATIC_LCS_B_N_MULTI,
+      Technique.STATIC_LEVENSHTEIN_N,
+      Technique.STATIC_LEVENSHTEIN_N_CLASS,
+      Technique.STATIC_LEVENSHTEIN_N_MULTI
   };
 
-  private Map<Technique, Double> methodLevelTechniqueWeights = Maps
+  private Technique[] methodLevelCombinedScoreComponents = {
+      Technique.NC,
+      Technique.NCC,
+      Technique.LCS_U_N,
+      Technique.LCS_B_N,
+      Technique.LEVENSHTEIN_N,
+      Technique.LCBA,
+      Technique.TARANTULA,
+      Technique.TFIDF,
+      Technique.STATIC_NC,
+      Technique.STATIC_NCC,
+      Technique.STATIC_LCS_U_N,
+      Technique.STATIC_LCS_B_N,
+      Technique.STATIC_LEVENSHTEIN_N,
+      //Technique.STATIC_LCBA
+  };
+
+  private Technique[] classLevelCombinedScoreComponents = {
+      Technique.NC_CLASS,
+      Technique.NCC_CLASS,
+      Technique.LCS_U_N_CLASS,
+      Technique.LCS_B_N_CLASS,
+      Technique.LEVENSHTEIN_N_CLASS,
+      Technique.LCBA_CLASS,
+      Technique.TARANTULA_CLASS,
+      Technique.TFIDF_CLASS,
+      Technique.STATIC_NC_CLASS,
+      Technique.STATIC_NCC_CLASS,
+      Technique.STATIC_LCS_U_N_CLASS,
+      Technique.STATIC_LCS_B_N_CLASS,
+      Technique.STATIC_LEVENSHTEIN_N_CLASS,
+      //Technique.STATIC_LCBA_CLASS
+  };
+
+  //Precision-based weights
+  /*private Map<Technique, Double> methodLevelTechniqueWeights = Maps
       .newHashMap(ImmutableMap.<Technique, Double>builder()
-          .put(Technique.NC, 0.45)
-          .put(Technique.NS_CONTAINS, 0.45)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ, 0.64)
-          .put(Technique.NS_COMMON_SUBSEQ, 0.64)
-          .put(Technique.NS_LEVENSHTEIN, 0.68)
-          .put(Technique.NS_LEVENSHTEIN_N, 0.68)
-          .put(Technique.LAST_CALL_BEFORE_ASSERT, 0.73)
-          .put(Technique.FAULT_LOC_TARANTULA, 0.73)
-          .put(Technique.IR_TFIDF_32, 0.75)
+          .put(Technique.NC, 1.000)
+          .put(Technique.NCC, 0.9206)
+          .put(Technique.LCS_U_N, 0.5408)
+          .put(Technique.LCS_B_N, 0.5250)
+          .put(Technique.LEVENSHTEIN_N, 0.7484)
+          .put(Technique.LCBA, 0.5858)
+          .put(Technique.TARANTULA, 0.5336)
+          .put(Technique.TFIDF, 0.6321)
+          .put(Technique.STATIC_NC, 0.9000)
+          .put(Technique.STATIC_NCC, 0.3321)
+          .put(Technique.STATIC_LCS_U_N, 0.2366)
+          .put(Technique.STATIC_LCS_B_N, 0.2921)
+          .put(Technique.STATIC_LEVENSHTEIN_N, 0.2986)
+          //.put(Technique.STATIC_LCBA, 0.73)
           .put(Technique.COMBINED, 1.0)
+          .put(Technique.COMBINED_FFN, 1.0)
           .build()
       );
 
   private Map<Technique, Double> classLevelTechniqueWeights = Maps
       .newHashMap(ImmutableMap.<Technique, Double>builder()
-          .put(Technique.NC_CLASS, 0.85)
-          .put(Technique.NS_CONTAINS_CLASS, 0.85)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_CLASS, 0.56)
-          .put(Technique.NS_COMMON_SUBSEQ_CLASS, 0.66)
-          .put(Technique.NS_LEVENSHTEIN_CLASS, 0.83)
-          .put(Technique.NS_LEVENSHTEIN_N_CLASS, 0.83)
-          .put(Technique.LAST_CALL_BEFORE_ASSERT_CLASS, 0.57)
-          .put(Technique.FAULT_LOC_TARANTULA_CLASS, 0.43)
-          .put(Technique.IR_TFIDF_32_CLASS, 0.36)
-          .put(Technique.COMBINED_CLASS, 0.85)
+          .put(Technique.NC_CLASS, 1.000)
+          .put(Technique.NCC_CLASS, 0.8735)
+          .put(Technique.LCS_U_N_CLASS, 0.6831)
+          .put(Technique.LCS_B_N_CLASS, 0.6068)
+          .put(Technique.LEVENSHTEIN_N_CLASS, 0.9818)
+          .put(Technique.LCBA_CLASS, 0.4437)
+          .put(Technique.TARANTULA_CLASS, 0.6417)
+          .put(Technique.TFIDF_CLASS, 0.5829)
+          .put(Technique.STATIC_NC_CLASS, 1.000)
+          .put(Technique.STATIC_NCC_CLASS, 0.8024)
+          .put(Technique.STATIC_LCS_U_N_CLASS, 0.6866)
+          .put(Technique.STATIC_LCS_B_N_CLASS, 0.9475)
+          .put(Technique.STATIC_LEVENSHTEIN_N_CLASS, 0.9589)
+          //.put(Technique.STATIC_LCBA_CLASS, 0.73)
+          .put(Technique.COMBINED_CLASS, 1.000)
+          .put(Technique.COMBINED_CLASS_FFN, 1.000)
+          .build()
+      );*/
+
+  //Even weighting
+  private Map<Technique, Double> methodLevelTechniqueWeights = Maps
+      .newHashMap(ImmutableMap.<Technique, Double>builder()
+          .put(Technique.NC, 1.000)
+          .put(Technique.NCC, 1.000)
+          .put(Technique.LCS_U_N, 1.000)
+          .put(Technique.LCS_B_N, 1.000)
+          .put(Technique.LEVENSHTEIN_N, 1.000)
+          .put(Technique.LCBA, 1.000)
+          .put(Technique.TARANTULA, 1.000)
+          .put(Technique.TFIDF, 1.000)
+          .put(Technique.STATIC_NC, 1.000)
+          .put(Technique.STATIC_NCC, 1.000)
+          .put(Technique.STATIC_LCS_U_N, 1.000)
+          .put(Technique.STATIC_LCS_B_N, 1.000)
+          .put(Technique.STATIC_LEVENSHTEIN_N, 1.000)
+          //.put(Technique.STATIC_LCBA, 0.73)
+          .put(Technique.COMBINED, 1.000)
+          .put(Technique.COMBINED_FFN, 1.000)
+          .build()
+      );
+
+  private Map<Technique, Double> classLevelTechniqueWeights = Maps
+      .newHashMap(ImmutableMap.<Technique, Double>builder()
+          .put(Technique.NC_CLASS, 1.000)
+          .put(Technique.NCC_CLASS, 1.000)
+          .put(Technique.LCS_U_N_CLASS, 1.000)
+          .put(Technique.LCS_B_N_CLASS, 1.000)
+          .put(Technique.LEVENSHTEIN_N_CLASS, 1.000)
+          .put(Technique.LCBA_CLASS, 1.000)
+          .put(Technique.TARANTULA_CLASS, 1.000)
+          .put(Technique.TFIDF_CLASS, 1.000)
+          .put(Technique.STATIC_NC_CLASS, 1.000)
+          .put(Technique.STATIC_NCC_CLASS, 1.000)
+          .put(Technique.STATIC_LCS_U_N_CLASS, 1.000)
+          .put(Technique.STATIC_LCS_B_N_CLASS, 1.000)
+          .put(Technique.STATIC_LEVENSHTEIN_N_CLASS, 1.000)
+          //.put(Technique.STATIC_LCBA_CLASS, 0.73)
+          .put(Technique.COMBINED_CLASS, 1.000)
+          .put(Technique.COMBINED_CLASS_FFN, 1.000)
           .build()
       );
 
   // Relevance values must be at or above these thresholds for a method to be included in the candidate set.
   // If not present in this map, the default is no threshold (0.0).
+  //SAVED OPTIMISED THRESHOLDS
   /*private Map<Technique, Double> thresholdData = Maps
       .newHashMap(ImmutableMap.<Technique, Double>builder()
-          .put(Technique.NS_CONTAINS, 1.00)
-          .put(Technique.NS_COMMON_SUBSEQ, 0.45)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ, 0.80)
-          .put(Technique.NS_LEVENSHTEIN, 0.35)
-          .put(Technique.NS_LEVENSHTEIN_N, 0.95)
-          .put(Technique.FAULT_LOC_TARANTULA, 0.95)
-          .put(Technique.FAULT_LOC_OCHIAI, 0.95)
-          .put(Technique.IR_TFIDF_11, 0.95)
-          .put(Technique.IR_TFIDF_12, 0.95)
-          .put(Technique.IR_TFIDF_21, 0.95)
-          .put(Technique.IR_TFIDF_22, 0.95)
-          .put(Technique.IR_TFIDF_31, 0.95)
-          .put(Technique.IR_TFIDF_32, 0.90)
-          .put(Technique.COVERAGE, 0.95)
-          .put(Technique.COMBINED, 0.90)
+          .put(Technique.NC, 1.00)
+          .put(Technique.NC_CLASS, 1.00)
+          .put(Technique.NC_MULTI, 1.00)
+          .put(Technique.STATIC_NC, 1.00)
+          .put(Technique.STATIC_NC_CLASS, 1.00)
+          .put(Technique.STATIC_NC_MULTI, 1.00)
+          .put(Technique.NCC, 1.00)
+          .put(Technique.NCC_CLASS, 1.00)
+          .put(Technique.NCC_MULTI, 1.00)
+          .put(Technique.STATIC_NCC, 1.00)
+          .put(Technique.STATIC_NCC_CLASS, 1.00)
+          .put(Technique.STATIC_NCC_MULTI, 1.00)
+          .put(Technique.LCS_B_N, 0.55)
+          .put(Technique.LCS_B_N_CLASS, 0.55)
+          .put(Technique.LCS_B_N_MULTI, 0.70)
+          .put(Technique.STATIC_LCS_B_N, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.STATIC_LCS_B_N_CLASS, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.STATIC_LCS_B_N_MULTI, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.LCS_U_N, 0.75)
+          .put(Technique.LCS_U_N_CLASS, 0.75)
+          .put(Technique.LCS_U_N_MULTI, 0.85)
+          .put(Technique.STATIC_LCS_U_N, 1.0)
+          .put(Technique.STATIC_LCS_U_N_CLASS, 1.0)
+          .put(Technique.STATIC_LCS_U_N_MULTI, 1.0)
+          .put(Technique.LEVENSHTEIN_N, 0.95)
+          .put(Technique.LEVENSHTEIN_N_CLASS, 0.95)
+          .put(Technique.LEVENSHTEIN_N_MULTI, 0.95)
+          .put(Technique.STATIC_LEVENSHTEIN_N, 0.995)
+          .put(Technique.STATIC_LEVENSHTEIN_N_CLASS, 0.995)
+          .put(Technique.STATIC_LEVENSHTEIN_N_MULTI, 0.995)
+          .put(Technique.LCBA, 1.0)
+          .put(Technique.LCBA_CLASS, 1.0)
+          .put(Technique.LCBA_MULTI, 1.0)
+          .put(Technique.STATIC_LCBA, 1.0)
+          .put(Technique.STATIC_LCBA_CLASS, 1.0)
+          .put(Technique.STATIC_LCBA_MULTI, 1.0)
+          .put(Technique.TARANTULA, 0.995)
+          .put(Technique.TARANTULA_CLASS, 0.995)
+          .put(Technique.TARANTULA_MULTI, 0.999)
+          .put(Technique.TFIDF, 0.90)
+          .put(Technique.TFIDF_CLASS, 0.90)
+          .put(Technique.TFIDF_MULTI, 0.95)
+          .put(Technique.COMBINED, 0.80)
+          .put(Technique.COMBINED_CLASS, 0.80)
+          .put(Technique.COMBINED_MULTI, 0.95)
+          .put(Technique.COMBINED_FFN, 0.90)
+          .put(Technique.COMBINED_CLASS_FFN, 0.90)
+          .put(Technique.COMBINED_MULTI_FFN, 0.95)
           .build()
       );*/
 
@@ -225,85 +372,76 @@ public class Configuration {
           .put(Technique.NC, 1.00)
           .put(Technique.NC_CLASS, 1.00)
           .put(Technique.NC_MULTI, 1.00)
-          .put(Technique.NS_CONTAINS, 1.00)
-          .put(Technique.NS_CONTAINS_CLASS, 1.00)
-          .put(Technique.NS_CONTAINS_MULTI, 1.00)
-          .put(Technique.NS_COMMON_SUBSEQ, 0.45)
-          .put(Technique.NS_COMMON_SUBSEQ_CLASS, 0.45)
-          .put(Technique.NS_COMMON_SUBSEQ_MULTI, 0.45)
-          .put(Technique.NS_COMMON_SUBSEQ_N, 0.55)
-          .put(Technique.NS_COMMON_SUBSEQ_N_CLASS, 0.55)
-          .put(Technique.NS_COMMON_SUBSEQ_N_MULTI, 0.55)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ, 0.80)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_CLASS, 0.80)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_MULTI, 0.80)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_N, 0.75)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_N_CLASS, 0.75)
-          .put(Technique.NS_COMMON_SUBSEQ_FUZ_N_MULTI, 0.75)
-          .put(Technique.NS_LEVENSHTEIN, 0.35)
-          .put(Technique.NS_LEVENSHTEIN_CLASS, 0.35)
-          .put(Technique.NS_LEVENSHTEIN_MULTI, 0.35)
-          .put(Technique.NS_LEVENSHTEIN_N, 0.95)
-          .put(Technique.NS_LEVENSHTEIN_N_CLASS, 0.95)
-          .put(Technique.NS_LEVENSHTEIN_N_MULTI, 0.95)
-          .put(Technique.LAST_CALL_BEFORE_ASSERT, 1.0)
-          .put(Technique.LAST_CALL_BEFORE_ASSERT_CLASS, 1.0)
-          .put(Technique.LAST_CALL_BEFORE_ASSERT_MULTI, 1.0)
-          .put(Technique.FAULT_LOC_TARANTULA, 0.995)
-          .put(Technique.FAULT_LOC_TARANTULA_CLASS, 0.995)
-          .put(Technique.FAULT_LOC_TARANTULA_MULTI, 0.995)
-          .put(Technique.FAULT_LOC_OCHIAI, 0.95)
-          .put(Technique.IR_TFIDF_11, 0.95)
-          .put(Technique.IR_TFIDF_11_CLASS, 0.95)
-          .put(Technique.IR_TFIDF_11_MULTI, 0.95)
-          .put(Technique.IR_TFIDF_12, 0.95)
-          .put(Technique.IR_TFIDF_12_CLASS, 0.95)
-          .put(Technique.IR_TFIDF_12_MULTI, 0.95)
-          .put(Technique.IR_TFIDF_21, 0.95)
-          .put(Technique.IR_TFIDF_21_CLASS, 0.95)
-          .put(Technique.IR_TFIDF_21_MULTI, 0.95)
-          .put(Technique.IR_TFIDF_22, 0.95)
-          .put(Technique.IR_TFIDF_22_CLASS, 0.95)
-          .put(Technique.IR_TFIDF_22_MULTI, 0.95)
-          .put(Technique.IR_TFIDF_31, 0.95)
-          .put(Technique.IR_TFIDF_31_CLASS, 0.95)
-          .put(Technique.IR_TFIDF_31_MULTI, 0.95)
-          .put(Technique.IR_TFIDF_32, 0.90)
-          .put(Technique.IR_TFIDF_32_CLASS, 0.90)
-          .put(Technique.IR_TFIDF_32_MULTI, 0.90)
-          .put(Technique.COVERAGE, 0.95)
+          .put(Technique.STATIC_NC, 1.00)
+          .put(Technique.STATIC_NC_CLASS, 1.00)
+          .put(Technique.STATIC_NC_MULTI, 1.00)
+          .put(Technique.NCC, 1.00)
+          .put(Technique.NCC_CLASS, 1.00)
+          .put(Technique.NCC_MULTI, 1.00)
+          .put(Technique.STATIC_NCC, 1.00)
+          .put(Technique.STATIC_NCC_CLASS, 1.00)
+          .put(Technique.STATIC_NCC_MULTI, 1.00)
+          .put(Technique.LCS_B_N, 0.55)
+          .put(Technique.LCS_B_N_CLASS, 0.55)
+          .put(Technique.LCS_B_N_MULTI, 0.70)
+          .put(Technique.STATIC_LCS_B_N, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.STATIC_LCS_B_N_CLASS, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.STATIC_LCS_B_N_MULTI, 1.0) // Set to  0.00001 to check for full recall
+          .put(Technique.LCS_U_N, 0.75)
+          .put(Technique.LCS_U_N_CLASS, 0.75)
+          .put(Technique.LCS_U_N_MULTI, 0.85)
+          .put(Technique.STATIC_LCS_U_N, 1.0)
+          .put(Technique.STATIC_LCS_U_N_CLASS, 1.0)
+          .put(Technique.STATIC_LCS_U_N_MULTI, 1.0)
+          .put(Technique.LEVENSHTEIN_N, 0.95)
+          .put(Technique.LEVENSHTEIN_N_CLASS, 0.95)
+          .put(Technique.LEVENSHTEIN_N_MULTI, 0.95)
+          .put(Technique.STATIC_LEVENSHTEIN_N, 0.995)
+          .put(Technique.STATIC_LEVENSHTEIN_N_CLASS, 0.995)
+          .put(Technique.STATIC_LEVENSHTEIN_N_MULTI, 0.995)
+          .put(Technique.LCBA, 1.0)
+          .put(Technique.LCBA_CLASS, 1.0)
+          .put(Technique.LCBA_MULTI, 1.0)
+          .put(Technique.STATIC_LCBA, 1.0)
+          .put(Technique.STATIC_LCBA_CLASS, 1.0)
+          .put(Technique.STATIC_LCBA_MULTI, 1.0)
+          .put(Technique.TARANTULA, 0.995)
+          .put(Technique.TARANTULA_CLASS, 0.995)
+          .put(Technique.TARANTULA_MULTI, 0.999)
+          .put(Technique.TFIDF, 0.90)
+          .put(Technique.TFIDF_CLASS, 0.90)
+          .put(Technique.TFIDF_MULTI, 0.95)
           .put(Technique.COMBINED, 0.80)
           .put(Technique.COMBINED_CLASS, 0.80)
-          .put(Technique.COMBINED_MULTI, 0.80)
+          .put(Technique.COMBINED_MULTI, 0.95)
+          .put(Technique.COMBINED_FFN, 0.90)
+          .put(Technique.COMBINED_CLASS_FFN, 0.90)
+          .put(Technique.COMBINED_MULTI_FFN, 0.95)
           .build()
       );
 
   private List<Technique> techniquesToAugment = Arrays.asList(
       Technique.NC,
-      Technique.NS_CONTAINS,
-      Technique.NS_COMMON_SUBSEQ,
-      Technique.NS_COMMON_SUBSEQ_FUZ,
-      Technique.NS_LEVENSHTEIN,
-      Technique.NS_LEVENSHTEIN_N,
-      Technique.FAULT_LOC_TARANTULA,
-      Technique.FAULT_LOC_OCHIAI,
-      Technique.IR_TFIDF_11,
-      Technique.IR_TFIDF_12,
-      Technique.IR_TFIDF_21,
-      Technique.IR_TFIDF_22,
-      Technique.IR_TFIDF_31,
-      Technique.IR_TFIDF_32,
-      Technique.COMBINED);
+      Technique.NCC,
+      Technique.LCS_B_N,
+      Technique.LCS_U_N,
+      Technique.LEVENSHTEIN_N,
+      Technique.TARANTULA,
+      Technique.TFIDF,
+      Technique.COMBINED,
+      Technique.COMBINED_FFN);
 
   private boolean normaliseClassScore = true;
   private AugmentationType augmentationType = AugmentationType.COMBINED_SCORE;
   private ScoreCombinationMethod scoreCombinationMethod = ScoreCombinationMethod.AVERAGE;
-  private boolean useWeightedCombination = false;
+  private boolean useTechniqueWeightingForCombinedScore = true;
+  private boolean useTechniqueWeightingForAugmentation = false;
   private double weightingZeroPenalty = 0.01;
   private double percentileThreshold = 0.90;
   private double commonThresholdValue = -1.0; // Set if all threshold values are the same (except NS_CONTAINS)
   private boolean createClassLevelGroundTruthSample = false;
   private boolean autoExtractDeveloperLinks = false;
+  private boolean runCombinedScoreOptimisationExperiment = false;
 
   // List of tests to inspect (print to standard out)
   private String[] testTrackList = {};
@@ -342,13 +480,19 @@ public class Configuration {
         ",\nnormaliseClassScore=" + normaliseClassScore +
         ",\ntestTrackaugmentationTypeList=" + augmentationType +
         ",\nscoreCombinationMethod=" + scoreCombinationMethod +
-        ",\nuseWeightedCombination=" + useWeightedCombination +
+        ",\nuseWeightedCombination=" + useTechniqueWeightingForCombinedScore +
         ",\nweightingZeroPenalty=" + weightingZeroPenalty +
         '}';
   }
 
   public Map<String, String> getProjectBaseDirs() {
     return projectBaseDirs;
+  }
+
+  public Map<String, String> getProjectSrcDirs() { return projectSrcDirs; }
+
+  public Map<String, String> getProjectTestSrcDirs() {
+    return projectTestSrcDirs;
   }
 
   public String[] getProjectBaseDirsForProjects() {
@@ -455,8 +599,8 @@ public class Configuration {
     return scoreCombinationMethod;
   }
 
-  public boolean isUseWeightedCombination() {
-    return useWeightedCombination;
+  public boolean isUseTechniqueWeightingForCombinedScore() {
+    return useTechniqueWeightingForCombinedScore;
   }
 
   public double getWeightingZeroPenalty() {
@@ -471,12 +615,12 @@ public class Configuration {
   // Range: 0-1
   public void setAllThresholdValues(double value) {
     for (Map.Entry<Technique, Double> thresholdEntry : thresholdData.entrySet()) {
-      if (thresholdEntry.getKey() != Technique.NS_CONTAINS
-          && thresholdEntry.getKey() != Technique.NS_CONTAINS_CLASS
-          && thresholdEntry.getKey() != Technique.NS_CONTAINS_MULTI
-          && thresholdEntry.getKey() != Technique.LAST_CALL_BEFORE_ASSERT
-          && thresholdEntry.getKey() != Technique.LAST_CALL_BEFORE_ASSERT_CLASS
-          && thresholdEntry.getKey() != Technique.LAST_CALL_BEFORE_ASSERT_MULTI) {
+      if (thresholdEntry.getKey() != Technique.NCC
+          && thresholdEntry.getKey() != Technique.NCC_CLASS
+          && thresholdEntry.getKey() != Technique.NCC_MULTI
+          && thresholdEntry.getKey() != Technique.LCBA
+          && thresholdEntry.getKey() != Technique.LCBA_CLASS
+          && thresholdEntry.getKey() != Technique.LCBA_MULTI) {
         thresholdEntry.setValue(value);
       }
     }
@@ -487,11 +631,27 @@ public class Configuration {
   // Range: 0-1
   public void setAllClassLevelThresholdValues(double value) {
     for (Map.Entry<Technique, Double> thresholdEntry : thresholdData.entrySet()) {
-      if (thresholdEntry.getKey() != Technique.NS_CONTAINS) {
+      if (thresholdEntry.getKey() != Technique.NCC) {
         thresholdEntry.setValue(value);
       }
     }
     commonThresholdValue = value;
+  }
+
+  public String getCorpusPath() {
+    return corpusPath;
+  }
+
+  public String getFeedForwardNetworkScript() {
+    return feedForwardNetworkScript;
+  }
+
+  public String getMlDir() {
+    return mlDir;
+  }
+
+  public String getPythonCommand() {
+    return pythonCommand;
   }
 
   public String[] getTestTrackList() {
@@ -516,6 +676,14 @@ public class Configuration {
 
   public boolean isAutoExtractDeveloperLinks() {
     return autoExtractDeveloperLinks;
+  }
+
+  public boolean isRunCombinedScoreOptimisationExperiment() {
+    return runCombinedScoreOptimisationExperiment;
+  }
+
+  public boolean isUseTechniqueWeightingForAugmentation() {
+    return useTechniqueWeightingForAugmentation;
   }
 
   public static class Builder {
@@ -571,7 +739,7 @@ public class Configuration {
     // Range: 0-1
     public Builder setThresholdValue(double value) {
       for (Map.Entry<Technique, Double> thresholdEntry : config.thresholdData.entrySet()) {
-        if (thresholdEntry.getKey() != Technique.NS_CONTAINS) {
+        if (thresholdEntry.getKey() != Technique.NCC) {
           thresholdEntry.setValue(value);
         }
       }

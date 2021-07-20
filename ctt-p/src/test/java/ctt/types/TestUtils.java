@@ -30,11 +30,11 @@ public class TestUtils {
         Map<Technique, Double> scores = new HashMap<>();
         for (Technique technique : config.getMethodLevelTechniqueList()) {
           double score;
-          if (technique.equals(Technique.NS_CONTAINS)) {
+          if (technique.equals(Technique.NCC)) {
             score = (double) random.nextInt(2);
           } else if (technique.equals(Technique.NS_LEVENSHTEIN)) {
             score = (double) random.nextInt(10);
-          } else if (technique.equals(Technique.LAST_CALL_BEFORE_ASSERT)) {
+          } else if (technique.equals(Technique.LCBA)) {
             score = (double) random.nextInt(2);
           } else {
             score = random.nextDouble();

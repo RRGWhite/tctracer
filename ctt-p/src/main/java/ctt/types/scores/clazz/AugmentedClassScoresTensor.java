@@ -99,7 +99,7 @@ public class AugmentedClassScoresTensor extends ClassScoresTensor {
                                                          INDArray unweightedClassLevelScores) {
     INDArray methodLevelScores;
     INDArray classLevelScores;
-    if (config.isUseWeightedCombination()) {
+    if (config.isUseTechniqueWeightingForAugmentation()) {
       methodLevelScores = weightMethodLevelScores(unweightedMethodLevelScores);
       classLevelScores = weightClassLevelScores(unweightedClassLevelScores);
     } else {
@@ -280,7 +280,7 @@ public class AugmentedClassScoresTensor extends ClassScoresTensor {
     classLevelCombinedIndices[2] = NDArrayIndex.point(techniques.indexOf(Technique.COMBINED_CLASS));
     INDArray classLevelCombinedMatrix = newScoresTensor_S.get(classLevelCombinedIndices);
 
-    if (config.isUseWeightedCombination()) {
+    if (config.isUseTechniqueWeightingForAugmentation()) {
       methodLevelCombinedMatrix.muli(config.getClassLevelTechniqueWeights().get(Technique.COMBINED));
       classLevelCombinedMatrix.muli(config.getClassLevelTechniqueWeights().get(Technique.COMBINED_CLASS));
     }

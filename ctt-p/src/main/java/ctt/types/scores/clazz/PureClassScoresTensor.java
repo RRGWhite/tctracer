@@ -14,7 +14,6 @@ import org.nd4j.linalg.indexing.conditions.LessThanOrEqual;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * Created by RRGWhite on 06/08/2019
@@ -116,7 +115,7 @@ public class PureClassScoresTensor extends ClassScoresTensor{
 
     INDArray scoresToCombine = scoresTensor_S.dup();
 
-    if (config.isUseWeightedCombination()) {
+    if (config.isUseTechniqueWeightingForCombinedScore()) {
       INDArray weightVector = Nd4j.zeros(techniques.size());
       for (Technique technique : techniques) {
         weightVector.putScalar(techniques.indexOf(technique),

@@ -7,6 +7,7 @@ import ctt.coverage.CoverageAnalyser.CounterType;
 import ctt.coverage.CoverageAnalyser.CoverageStat;
 import ctt.experiments.OptimisationExperiment;
 import ctt.experiments.ThresholdExperiment;
+import ctt.metrics.FunctionLevelMetricsProvider;
 import ctt.metrics.TechniqueMetricsProvider;
 import ctt.types.CollectedComputedMetrics;
 import ctt.types.EvaluationMetrics;
@@ -17,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.commons.io.FileUtils;
 import org.checkerframework.checker.units.qual.A;
+import sun.security.krb5.Config;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,6 +29,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -45,27 +48,35 @@ public class Main {
   }
 
   public static void main(String[] args) throws Exception {
-    ArrayList<String> projects = new ArrayList<>();
+    List<String> projects = new ArrayList<>();
     //projects.add("apache-ant");
-    //projects.add("commons-io");
-    //projects.add("commons-lang");
-    projects.add("commons-collections");
-    //projects.add("jfreechart");
+    //projects.add("ccollections");
+    projects.add("commons-lang");
+    projects.add("jfreechart");
+    projects.add("gson");
+    projects.add("commons-io");
+
+    //Abandoned projects
+    //projects.add("barbecue");
+    //projects.add("gcviewer");
+    //projects.add("terrier-core");
+    //projects.add("joda-time");
 
     //gatherLogs(projects, true);
     //deleteLogs(projects);
     singleRun(projects);
     //experimentRun(projects);
+    //techniqueAblationExperimentRun(projects);
   }
 
-  private static void singleRun(ArrayList<String> projects) throws Exception {
+  private static void singleRun(List<String> projects) throws Exception {
     for (String project : projects) {
-      // Run single configuration
-      Configuration config = new Configuration.Builder()
-          .setProjects(Arrays.asList(project))
-          .setIsSingleProject(true)
-          .setParseCttLogs(true)
-          .build();
+    // Run single configuration
+    Configuration config = new Configuration.Builder()
+        .setProjects(Arrays.asList(project))
+        .setIsSingleProject(true)
+        .setParseCttLogs(false)
+        .build();
 
       // Parse execution trace -> produce hit spectra.
       // Only needs to be done once per project - can be commented out once hit spectrum is generated.
@@ -117,9 +128,9 @@ public class Main {
     }
 
     if (Utilities.allProjectsHaveFunctionLevelEvaluation(config)) {
-      printFunctionLevelMetricsSummary(config, aggregatedFunctionLevelMetricsTable,
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config, aggregatedFunctionLevelMetricsTable,
           ScoreType.PURE);
-      printFunctionLevelMetricsSummary(config, aggregatedAugmentedFunctionLevelMetricsTable,
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config, aggregatedAugmentedFunctionLevelMetricsTable,
           ScoreType.AUGMENTED);
 
       ResultsWriter.writeOutFunctionLevelValidationSummary(ScoreType.PURE, config,
@@ -142,7 +153,7 @@ public class Main {
     }
   }
 
-  private static void experimentRun(ArrayList<String> projects) throws Exception {
+  private static void experimentRun(List<String> projects) throws Exception {
 
     // Run an experiment
     Table<String, String, Map<CounterType, CoverageStat>> coverageData = null;
@@ -167,6 +178,59 @@ public class Main {
 
       experiment.runOn(config, testCollections, coverageData);
       experiment.printSummary();
+    }
+  }
+
+  private static void techniqueAblationExperimentRun(List<String> projects) throws Exception {
+    for (String project : projects) {
+      // Run single configuration
+      Configuration config = new Configuration.Builder()
+          .setProjects(Arrays.asList(project))
+          .setIsSingleProject(true)
+          .setParseCttLogs(false)
+          .build();
+
+      for (Technique methodLevelTechnique :
+          new Configuration.Builder().build().getMethodLevelTechniqueList()) {
+        if (methodLevelTechnique.toString().toLowerCase().contains("combined")) {
+          continue;
+        }
+
+        Technique classLevelTechnique = Utilities.getTechniqueForClassLevel(methodLevelTechnique);
+
+        double originalMethodLevelTechniqueWeight =
+            config.getMethodLevelTechniqueWeights().get(methodLevelTechnique);
+        double originalClassLevelTechniqueWeight =
+            config.getClassLevelTechniqueWeights().get(classLevelTechnique);
+
+        Utilities.logger.info("Setting " + methodLevelTechnique + " to 0");
+        Utilities.logger.info("Setting " + classLevelTechnique + " to 0");
+
+        config.getMethodLevelTechniqueWeights().put(methodLevelTechnique, 0.0);
+        config.getClassLevelTechniqueWeights().put(classLevelTechnique, 0.0);
+
+        // Parse execution trace -> produce hit spectra.
+        // Only needs to be done once per project - can be commented out once hit spectrum is generated.
+        if (config.isParseCttLogs()) {
+          logParse(getLogsDirectory(config.getProjectBaseDirs().get(config.getProjects().get(0))),
+              getSpectrumDirectory(config.getProjectBaseDirs().get(config.getProjects().get(0))));
+        }
+
+        spectrumParse(config,
+            getSpectrumDirectory(config.getProjectBaseDirs().get(config.getProjects().get(0))),
+            getCoverageReportsPath(config.getProjectBaseDirs().get(config.getProjects().get(0))));
+
+
+        Utilities.logger.info("Resetting " + methodLevelTechnique + " to " +
+            originalMethodLevelTechniqueWeight);
+        Utilities.logger.info("Resetting " + classLevelTechnique + " to " +
+            originalClassLevelTechniqueWeight);
+
+        config.getMethodLevelTechniqueWeights().put(methodLevelTechnique,
+            originalMethodLevelTechniqueWeight);
+        config.getClassLevelTechniqueWeights().put(classLevelTechnique,
+            originalClassLevelTechniqueWeight);
+      }
     }
   }
 
@@ -303,6 +367,10 @@ public class Main {
     SpectraParser parser = new SpectraParser(config, coverageData);
     TestCollection aggregatedTestCollection = getProjectTestCollection(inputDirectory);
 
+    Utilities.printGroundTruthDepths(aggregatedTestCollection);
+    //RETURNING HERE JUST TO GET THE GROUND TRUTH DEPTHS
+    //return;
+
     if (config.isCreateClassLevelGroundTruthSample()) {
       ArrayList<String> testClasses = getTestClassesFromTestCollection(aggregatedTestCollection);
       config.setTestClassesForGroundTruth(randomlySelectTestClassesSample(testClasses));
@@ -312,26 +380,11 @@ public class Main {
         VERBOSE);
     logger.info("Analysis complete.");
 
-    // To view un-normalised traceability scores for a method-test pair, uncomment this section.
-    // parser.printTraceabilityMatrix(Technique.TECHNIQUE_NAME_HERE,
-    //         Arrays.asList(
-    //                 "TEST_NAME_HERE"
-    //         ),
-    //         Arrays.asList(
-    //                 "METHOD_NAME_HERE"
-    //         ));
-
-    // To view normalised traceability scores for a single test, uncomment this section.
-    // parser.printTestTraceabilityMatrix(Technique.TECHNIQUE_NAME_HERE,
-    //         Arrays.asList(
-    //                 "TEST_NAME_HERE"
-    //         ));
-
     if (Utilities.allProjectsHaveFunctionLevelEvaluation(config)) {
-      printFunctionLevelMetricsSummary(config,
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config,
           computedMetrics.getFunctionLevelMetrics().getMetricTable(),
           ScoreType.PURE);
-      printFunctionLevelMetricsSummary(config,
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config,
           computedMetrics.getAugmentedFunctionLevelMetrics().getMetricTable(),
           ScoreType.AUGMENTED);
 
@@ -480,8 +533,10 @@ public class Main {
     System.out.printf("%d hit spectra parsed. %n", files.length);
 
     if (Utilities.allProjectsHaveFunctionLevelEvaluation(config)) {
-      printFunctionLevelMetricsSummary(config, aggregatedFunctionLevelMetricsTable, ScoreType.PURE);
-      printFunctionLevelMetricsSummary(config, aggregatedAugmentedFunctionLevelMetricsTable,
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config,
+          aggregatedFunctionLevelMetricsTable,
+          ScoreType.PURE);
+      FunctionLevelMetricsProvider.printFunctionLevelMetricsSummary(config, aggregatedAugmentedFunctionLevelMetricsTable,
           ScoreType.AUGMENTED);
 
       ResultsWriter.writeOutFunctionLevelValidationSummary(ScoreType.PURE, config,
@@ -501,27 +556,6 @@ public class Main {
       ResultsWriter.writeOutClassLevelValidationSummary(ScoreType.AUGMENTED, config,
           TechniqueMetricsProvider.computeTechniqueMetrics(aggregatedAugmentedClassLevelMetricsTable));
     }
-  }
-
-  private static void printFunctionLevelMetricsSummary(Configuration config,
-      Table<Technique, String, EvaluationMetrics> functionLevelMetricsTable, ScoreType scoreType) {
-    // System.out.println("======= AGGREGATED TECHNIQUE EVALUATION METRICS =======");
-    // SpectraParser.printEvaluationMetrics(config.getTechniqueList(), null, metricsTable);
-
-    config.printConfiguration();
-
-    System.out.println("======= TECHNIQUE METRICS =======");
-    TechniqueMetricsProvider.printTechniqueMetrics(Utilities.getTechniques(config,
-        Configuration.Level.METHOD, scoreType),
-        TechniqueMetricsProvider.computeTechniqueMetrics(functionLevelMetricsTable));
-
-    System.out.println("======= TECHNIQUE METRICS DATA =======");
-    TechniqueMetricsProvider.printTechniqueMetricsData(Utilities.getTechniques(config,
-        Configuration.Level.METHOD, scoreType),
-        TechniqueMetricsProvider.computeTechniqueMetrics(functionLevelMetricsTable));
-
-    int testCount = functionLevelMetricsTable.columnKeySet().size();
-    System.out.printf("Total number of tests: %d %n", testCount);
   }
 
   private static void printClassLevelMetricsSummary(Configuration config,

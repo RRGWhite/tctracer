@@ -2,6 +2,7 @@ package ctt.coverage;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import ctt.Utilities;
 import org.apache.bcel.classfile.Utility;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -157,7 +158,9 @@ public class CoverageAnalyser {
                   Integer.parseInt(counterCovered));
 
               Map<CounterType, CoverageStat> counterMap = createIfAbsent(coverageData,
-                  unifiedTestName, unifiedMethodName, HashMap::new);
+                  Utilities.removePackagesFromFqnParamTypes(unifiedTestName),
+                  Utilities.removePackagesFromFqnParamTypes(unifiedMethodName),
+                  HashMap::new);
               switch (counterType) {
                 case "INSTRUCTION":
                   counterMap.put(CounterType.INSTRUCTION, stat);

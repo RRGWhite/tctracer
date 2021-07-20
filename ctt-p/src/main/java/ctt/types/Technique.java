@@ -9,58 +9,53 @@ public enum Technique {
   NC("Naming Conventions"),
   NC_CLASS("Naming Conventions - Class"),
   NC_MULTI("Naming Conventions - Multi"),
-  NS_CONTAINS("NS - Contains"), // Whether method name is contained in the test name
-  NS_CONTAINS_CLASS("NS - Contains - Class"), // Whether method name is contained in the test name
-  NS_CONTAINS_MULTI("NS - Contains - Multi"), // Whether method name is contained in the test name
-  NS_COMMON_SUBSEQ("NS - LCS-B"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_CLASS("NS - LCS-B - Class"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_MULTI("NS - LCS-B - Multi"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_N("NS - LCS-B (Normalised)"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_N_CLASS("NS - LCS-B - Class (Normalised)"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_N_MULTI("NS - LCS-B - Multi (Normalised)"), // Name similarity - longest common subsequence
-  NS_COMMON_SUBSEQ_FUZ("NS - LCS-U"), // Longest common subsequence normalised on method name
-  NS_COMMON_SUBSEQ_FUZ_CLASS("NS - LCS-U - Class"), // Longest common subsequence normalised on// method name
-  NS_COMMON_SUBSEQ_FUZ_MULTI("NS - LCS-U - Multi"), // Longest common subsequence normalised on// method name
-  NS_COMMON_SUBSEQ_FUZ_N("NS - LCS-U (Normalised)"), // Longest common subsequence normalised on method name
-  NS_COMMON_SUBSEQ_FUZ_N_CLASS("NS - LCS-U - Class (Normalised)"), // Longest common subsequence normalised on// method name
-  NS_COMMON_SUBSEQ_FUZ_N_MULTI("NS - LCS-U - Multi (Normalised)"), // Longest common subsequence normalised on// method name
-  NS_LEVENSHTEIN("NS - Levenshtein"), // Levenshtein distance
-  NS_LEVENSHTEIN_CLASS("NS - Levenshtein - Class"), // Levenshtein distance
-  NS_LEVENSHTEIN_MULTI("NS - Levenshtein - Multi"), // Levenshtein distance
-  NS_LEVENSHTEIN_N("NS - Levenshtein (Normalised)"), // Scores are normalised across the methods executed by a test.
-  NS_LEVENSHTEIN_N_CLASS("NS - Levenshtein (Normalised) - Class"), // Scores are normalised across the
-  // methods executed by a test.
-  NS_LEVENSHTEIN_N_MULTI("NS - Levenshtein (Normalised) - Multi"), // Scores are normalised across the
-  // methods executed by a test.
-  LAST_CALL_BEFORE_ASSERT("Last Call Before Assert"),
-  LAST_CALL_BEFORE_ASSERT_CLASS("Last Call Before Assert - Class"),
-  LAST_CALL_BEFORE_ASSERT_MULTI("Last Call Before Assert - Multi"),
-  FAULT_LOC_TARANTULA("Fault Loc - Tarantula"),
-  FAULT_LOC_TARANTULA_CLASS("Fault Loc - Tarantula - Class"),
-  FAULT_LOC_TARANTULA_MULTI("Fault Loc - Tarantula - Multi"),
-  FAULT_LOC_OCHIAI("Fault Loc - Ochiai"), // not implemented
-  IR_TFIDF_11("tf-idf - 1_1"),
-  IR_TFIDF_11_CLASS("tf-idf - 1_1 - Class"),
-  IR_TFIDF_11_MULTI("tf-idf - 1_1 - Multi"),
-  IR_TFIDF_12("tf-idf - 1_2"),
-  IR_TFIDF_12_CLASS("tf-idf - 1_2 - Class"),
-  IR_TFIDF_12_MULTI("tf-idf - 1_2 - Multi"),
-  IR_TFIDF_21("tf-idf - 2_1"),
-  IR_TFIDF_21_CLASS("tf-idf - 2_1 - Class"),
-  IR_TFIDF_21_MULTI("tf-idf - 2_1 - Multi"),
-  IR_TFIDF_22("tf-idf - 2_2"),
-  IR_TFIDF_22_CLASS("tf-idf - 2_2 - Class"),
-  IR_TFIDF_22_MULTI("tf-idf - 2_2 - Multi"),
-  IR_TFIDF_31("tf-idf - 3_1"),
-  IR_TFIDF_31_CLASS("tf-idf - 3_1 - Class"),
-  IR_TFIDF_31_MULTI("tf-idf - 3_1 - Multi"),
-  IR_TFIDF_32("tf-idf - 3_2"),
-  IR_TFIDF_32_CLASS("tf-idf - 3_2 - Class"),
-  IR_TFIDF_32_MULTI("tf-idf - 3_2 - Multi"),
-  COVERAGE("Coverage"), // Use coverage scores directly as traceability scores. (normalised)
-  COMBINED("Combined"), // Use coverage scores directly as traceability scores. (normalised)
-  COMBINED_CLASS("Combined-Class"),
-  COMBINED_MULTI("Combined-Multi");
+  NCC("Naming Conventions Contains"), // Whether method name is contained in the test name
+  NCC_CLASS("Naming Conventions Contains - Class"), // Whether method name is contained in the test name
+  NCC_MULTI("Naming Conventions Contains - Multi"), // Whether method name is contained in the test name
+  LCS_B_N("LCS-B (Normalised)"), // Name similarity - longest common subsequence
+  LCS_B_N_CLASS("LCS-B - Class (Normalised) - Class"), // Name similarity - longest common subsequence
+  LCS_B_N_MULTI("LCS-B - Multi (Normalised)"), // Name similarity - longest common subsequence
+  LCS_U_N("LCS-U (Normalised)"), // Longest common subsequence normalised on method name
+  LCS_U_N_CLASS("LCS-U - Class (Normalised) - Class"), // Longest common subsequence normalised on method name
+  LCS_U_N_MULTI("LCS-U - Multi (Normalised)"), // Longest common subsequence normalised on method name
+  LEVENSHTEIN_N("NS - Levenshtein (Normalised)"), // Scores are normalised across the methods executed by a test.
+  LEVENSHTEIN_N_CLASS("NS - Levenshtein (Normalised) - Class"), // Scores are normalised across
+  // the methods executed by a test.
+  LEVENSHTEIN_N_MULTI("NS - Levenshtein (Normalised) - Multi"), // Scores are normalised across
+  // the methods executed by a test.
+  LCBA("Last Call Before Assert"),
+  LCBA_CLASS("Last Call Before Assert - Class"),
+  LCBA_MULTI("Last Call Before Assert - Multi"),
+  TARANTULA("Fault Loc - Tarantula"),
+  TARANTULA_CLASS("Fault Loc - Tarantula - Class"),
+  TARANTULA_MULTI("Fault Loc - Tarantula - Multi"),
+  TFIDF("tf-idf - 3_2"),
+  TFIDF_CLASS("tf-idf - 3_2 - Class"),
+  TFIDF_MULTI("tf-idf - 3_2 - Multi"),
+  COMBINED("Combined"),
+  COMBINED_CLASS("Combined - Class"),
+  COMBINED_MULTI("Combined - Multi"),
+  COMBINED_FFN("Combined - Feed Forward Network"),
+  COMBINED_CLASS_FFN("Combined - Feed Forward Network - Class"),
+  COMBINED_MULTI_FFN("Combined - Feed Forward Network - Multi"),
+  STATIC_NC("Static Naming Conventions"),
+  STATIC_NC_CLASS("Static Naming Conventions - Class"),
+  STATIC_NC_MULTI("Static Naming Conventions - Multi"),
+  STATIC_NCC("Static Naming Conventions Contains"),
+  STATIC_NCC_CLASS("Static Naming Conventions Contains - Class"),
+  STATIC_NCC_MULTI("Static Naming Conventions Contains - Multi"),
+  STATIC_LCS_B_N("Static LCS-B (Normalised)"),
+  STATIC_LCS_B_N_CLASS("Static LCS-B - Class (Normalised) - Class"),
+  STATIC_LCS_B_N_MULTI("Static LCS-B - Multi (Normalised)"),
+  STATIC_LCS_U_N("Static LCS-U (Normalised)"),
+  STATIC_LCS_U_N_CLASS("Static LCS-U - Class (Normalised) - Class"),
+  STATIC_LCS_U_N_MULTI("Static LCS-U - Multi (Normalised)"),
+  STATIC_LEVENSHTEIN_N("Static NS - Levenshtein (Normalised)"),
+  STATIC_LEVENSHTEIN_N_CLASS("Static NS - Levenshtein (Normalised) - Class"),
+  STATIC_LEVENSHTEIN_N_MULTI("Static NS - Levenshtein (Normalised) - Multi"),
+  STATIC_LCBA("Static Last Call Before Assert"),
+  STATIC_LCBA_CLASS("Static Last Call Before Assert - Class"),
+  STATIC_LCBA_MULTI("Static Last Call Before Assert - Multi");
 
   private final String text;
 
